@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140731222535) do
 
   create_table "social_infos", force: true do |t|
+    t.integer  "user_id"
     t.string   "homepage_url"
     t.string   "facebook_url"
     t.string   "twitter_url"
@@ -58,7 +59,6 @@ ActiveRecord::Schema.define(version: 20140731222535) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "social_info_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

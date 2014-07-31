@@ -2,6 +2,8 @@ class CreateSocialInfos < ActiveRecord::Migration
   def change
     create_table :social_infos do |t|
 
+      t.integer :user_id
+
       t.string  :homepage_url
 
       t.string  :facebook_url
@@ -31,6 +33,6 @@ class CreateSocialInfos < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_column :users, :social_info_id, :integer
+    #add_column :users, :social_info_id, :integer
   end
 end

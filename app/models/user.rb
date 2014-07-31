@@ -5,5 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :social_info
-  
+
+  after_create :after_create
+
+  def after_create
+    self.social_info = SocialInfo.new
+    self.social_info.save
+  end
+
 end

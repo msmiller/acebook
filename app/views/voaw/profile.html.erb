@@ -1,0 +1,39 @@
+<h4>Update Profile</h4>
+
+<%= form_tag("/profile") do %>
+  <div class="row">
+    <div class="large-6 columns">
+      <div><%= label_tag "Handle" %><%= text_field_tag :handle, @pilot.handle, :name => "pilot[handle]" %></div>
+      <div><%= label_tag "Name" %><%= text_field_tag :name, @pilot.name, :name => "pilot[name]" %></div>
+      <div><%= label_tag "Squadron" %>
+        <%= text_field_tag :squadron, @pilot.squadron, :name => "pilot[squadron]", :style => "width:48%;float:left;" %>
+        <%= select_tag :known_squads, options_for_select(Voaw::Games['aw'][:countries], @pilot.aw_country), :style => "width:48%;float:right;",
+        :onchange => "$('#squadron').val(this.value);" %>
+      </div>
+      <div><%= label_tag "City" %><%= text_field_tag :city, @pilot.city, :name => "pilot[city]" %></div>
+      <div><%= label_tag "State/Province" %><%= text_field_tag :state, @pilot.state, :name => "pilot[state]" %></div>
+      <div><%= label_tag "Country" %><%= text_field_tag :country, @pilot.country, :name => "pilot[country]" %></div>
+      <div><%= label_tag "Other Handles" %><%= text_field_tag :other_handles, @pilot.other_handles, :name => "pilot[other_handles]" %></div>
+    </div>
+    <div class="large-6 columns">
+      <div><%= label_tag "Air Warrior ID" %><%= text_field_tag :aw_cpid, @pilot.aw_cpid, :name => "pilot[aw_cpid]" %></div>
+      <div><%= label_tag "Air Warrior Country" %>
+        <%= select_tag :aw_country, options_for_select(Voaw::Games['aw'][:countries], @pilot.aw_country), :name => "pilot[aw_country]" %></div>
+      <div><%= label_tag "WarBirds ID" %><%= text_field_tag :wb_cpid, @pilot.wb_cpid, :name => "pilot[wb_cpid]" %></div>
+      <div><%= label_tag "WarBirds Country" %>
+        <%= select_tag :wb_country, options_for_select(Voaw::Games['wb'][:countries], @pilot.wb_country), :name => "pilot[wb_country]" %></div>
+      <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]" %></div>                     
+      <div><%= label_tag "Aces High Country" %>
+        <%= select_tag :ah_country, options_for_select(Voaw::Games['ah'][:countries], @pilot.ah_country), :name => "pilot[ah_country]" %></div>    
+      <div><%= label_tag "Planes" %><%= text_field_tag :planes, @pilot.planes, :name => "pilot[planes]" %></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div><%= label_tag "Bio/Blurb" %><%= text_area_tag 'message', @pilot.message, :name => "pilot[message]", :rows => 15 %></div>
+    </div>
+  </div>
+
+  <%= button_tag "Submit" %>
+
+<% end -%>

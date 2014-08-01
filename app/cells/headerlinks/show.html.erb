@@ -3,9 +3,9 @@ Login
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 Signup
 <% else -%>
-<%= @user.user_info.handle %>
+<%= link_to @user.user_info.handle, "/profile" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
-Profile
+<%= link_to "Account", "/users/edit" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 <%= link_to "Esc-P", "/users/sign_out", :method => :delete %>
 <% end -%>

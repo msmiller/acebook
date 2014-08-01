@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 gem 'compass'
 gem 'foundation-rails'
 
+# gem 'formtastic', "~> 2.2"
+
 gem "will_paginate", "~> 3.0.5"             # 
 gem "mail_form", "~> 1.5.0"                 # 
 gem "auto_html", "~> 1.6.4"                 # 

@@ -12,6 +12,8 @@ class CreateUserInfos < ActiveRecord::Migration
       t.string  :state
       t.string  :country
 
+      t.text    :message
+
       t.string  :planes
 
       t.string  :aw_cpid, :limit => 8

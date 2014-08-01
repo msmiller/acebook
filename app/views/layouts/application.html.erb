@@ -12,8 +12,47 @@
   </head>
 
   <body>
+    <script type="text/javascript">
+    <%= extend_gritter :time => 1000 %>
+    </script>
+    <%= gflash %>
 
-    <%= yield %>
+    <% # http://foundation.zurb.com/docs/index.php -%>
+    <div class="container">
+      <% if false #admin_logged_in? 
+        -%>
+      <div class="row">
+        <div class="twelve columns minibar">
+          <%= #render :partial => "blocks/minibar" if logged_in? # or adminbar 
+          %>      
+        </div>
+      </div>
+      <% end -%>
+      <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px">
+        <div class="large-6 columns" style="line-height:60px;">
+          <h1 style="vertical-align:middle;"><%= link_to "VOAW Pilot Register", "/" %>
+        </div>
+        <div class="large-6 columns" style="text-align:right;">
+          <%= render_cell :headerlinks, :show, :user => @current_user %>               
+        </div>
+      </div>
+
+      <div class="row" id="yield">
+        <div class="large-12 columns">
+          <%= yield %>
+        </div>
+      </div>
+
+      <div class="row footer">
+        <div class="large-6 column slideleft ">
+          <%= render_cell :footerlinks, :show %>        
+        </div>
+        <div class="large-6 column slideright ">
+          <%= render_cell :copyright, :show %>        
+        </div>
+      </div>
+    </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

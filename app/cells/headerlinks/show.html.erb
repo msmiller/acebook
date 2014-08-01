@@ -1,0 +1,11 @@
+<% if @user.nil? -%>
+Login
+&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+Signup
+<% else -%>
+<%= @user.user_info.handle %>
+&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+Profile
+&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+<%= link_to "Esc-P", "/users/sign_out", :method => :delete %>
+<% end -%>

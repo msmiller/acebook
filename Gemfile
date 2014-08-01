@@ -56,3 +56,5 @@ gem "devise"
 
 gem "high_voltage"
 gem "gritter"
+
+gem "versionomy"

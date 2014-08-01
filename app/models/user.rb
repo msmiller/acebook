@@ -24,4 +24,10 @@ class User < ActiveRecord::Base
 
   end
 
+  # I'm the only one who'll mess with the database
+  def is_admin?
+    self.email == "mark.s.miller@gmail.com"
+  end
+
+
 end

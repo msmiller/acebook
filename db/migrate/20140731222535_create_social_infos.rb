@@ -16,7 +16,7 @@ class CreateSocialInfos < ActiveRecord::Migration
 
       t.string  :github_url
       t.string  :deviantart_url
-      t.string  :flkickr_url
+      t.string  :flickr_url
       t.string  :instagram_url
       t.string  :pinterest_url
       t.string  :vimeo_url

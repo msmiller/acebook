@@ -13,6 +13,7 @@ class CreateUserInfos < ActiveRecord::Migration
       t.string  :country
 
       t.text    :message
+      t.integer :year_started
 
       t.string  :planes
 

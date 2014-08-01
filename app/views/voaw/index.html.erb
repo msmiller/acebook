@@ -3,7 +3,15 @@
 <table id="voawpilots">
   <thead>
     <tr>
-      <th>Handle</th><th>Squadron</th><th>Name</th><th>City</th><th>AW</th><th>WB</th><th>AH</th><th>Details</th>
+      <th>Handle</th>
+      <th>Squadron</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>AW</th>
+      <th>WB</th>
+      <th>AH</th>
+      <th>Start</th>
+      <th>Details</th>
     </tr>
     <%= render :partial => 'voaw_row', :collection => @pilots %>
   </thead>
@@ -12,3 +20,6 @@
 </table>
 
 https://github.com/rweng/jquery-datatables-rails
+
+<div id="myModal" class="reveal-modal" data-reveal></div>
+

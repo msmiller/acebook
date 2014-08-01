@@ -12,15 +12,16 @@ class CreateSocialInfos < ActiveRecord::Migration
       t.string  :googleplus_url
       t.string  :linkedin_url
 
-      t.string  :skype_url
+      t.string  :skype_url # skip
 
       t.string  :github_url
+      
       t.string  :deviantart_url
       t.string  :flickr_url
       t.string  :instagram_url
       t.string  :pinterest_url
       t.string  :vimeo_url
-      t.string  :imdb_url
+      t.string  :imdb_url # skip
       t.string  :youtube_url
 
       t.string  :steam_url

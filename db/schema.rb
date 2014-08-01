@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140801001851) do
     t.string   "skype_url"
     t.string   "github_url"
     t.string   "deviantart_url"
-    t.string   "flkickr_url"
+    t.string   "flickr_url"
     t.string   "instagram_url"
     t.string   "pinterest_url"
     t.string   "vimeo_url"
@@ -56,10 +56,11 @@ ActiveRecord::Schema.define(version: 20140801001851) do
     t.string   "handle"
     t.string   "name"
     t.string   "other_handles"
-    t.string   "squardon"
+    t.string   "squadron"
     t.string   "city"
     t.string   "state"
     t.string   "country"
+    t.text     "message"
     t.string   "planes"
     t.string   "aw_cpid",       limit: 8
     t.string   "wb_cpid",       limit: 8

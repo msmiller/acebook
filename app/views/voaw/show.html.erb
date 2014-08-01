@@ -1,0 +1,5 @@
+<% if @pilot.nil? -%>
+<h3>Pilot not found!</h3>
+<% else -%>
+<h3><%= @pilot.user_info.handle %></h3>
+<% end -%>

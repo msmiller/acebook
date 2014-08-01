@@ -1,7 +1,7 @@
 <% if @user.nil? -%>
-Login
+<%= link_to "Login", "/users/sign_in" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
-Signup
+<%= link_to "Signup", "/users/sign_up" %>
 <% else -%>
 <%= link_to @user.user_info.handle, "/profile" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;

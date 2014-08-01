@@ -60,3 +60,5 @@ gem "high_voltage"
 gem "gritter"
 
 gem "versionomy"
+gem 'country_select', github: 'stefanpenner/country_select'
+gem 'activevalidators'

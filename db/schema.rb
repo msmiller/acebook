@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731222535) do
+ActiveRecord::Schema.define(version: 20140801001851) do
+
+  create_table "game_infos", force: true do |t|
+    t.integer  "user_id"
+    t.boolean  "played",               default: false
+    t.string   "game_code",  limit: 2
+    t.string   "cpid",       limit: 8
+    t.string   "country"
+    t.string   "squadron"
+    t.string   "plane"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "social_infos", force: true do |t|
     t.integer  "user_id"
@@ -35,6 +47,17 @@ ActiveRecord::Schema.define(version: 20140731222535) do
     t.string   "tumblr_url"
     t.string   "blogger_url"
     t.string   "wordpress_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_infos", force: true do |t|
+    t.integer  "user_id"
+    t.string   "handle"
+    t.string   "other_handles"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -9,6 +9,9 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag "application" %>
+
   </head>
 
   <body>
@@ -18,18 +21,10 @@
 
     <% # http://foundation.zurb.com/docs/index.php -%>
     <div class="container">
-      <% if false #admin_logged_in? 
-        -%>
-      <div class="row">
-        <div class="twelve columns minibar">
-          <%= #render :partial => "blocks/minibar" if logged_in? # or adminbar 
-          %>      
-        </div>
-      </div>
-      <% end -%>
+
       <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px">
         <div class="large-6 columns" style="line-height:60px;">
-          <h1 style="vertical-align:middle;"><%= link_to "VOAW Pilot Register", "/" %>
+          <h1 style="vertical-align:middle;"><%= link_to "VOAW Pilot Register", root_url %>
         </div>
         <div class="large-6 columns" style="text-align:right;">
           <%= render_cell :headerlinks, :show, :user => @current_user %>               
@@ -51,8 +46,6 @@
         </div>
       </div>
     </div>
-
-    <%= javascript_include_tag "application" %>
 
     <% flash.each do |name, msg|    -%>
       <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:") %>

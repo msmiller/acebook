@@ -14,7 +14,9 @@
  *= require_self
  *= require foundation_and_overrides
  *= require voaw
- 
+
+ *= require dataTables/jquery.dataTables.foundation
+
  *= require gritter
 
  */

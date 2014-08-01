@@ -1,6 +1,6 @@
 <h4>Veterans of Online Air Wars</h4>
 <br>
-<table id="voawpilots">
+<table id="voawpilots" class="datatable" style="width:100%;">
   <thead>
     <tr>
       <th>Handle</th>
@@ -13,13 +13,21 @@
       <th>Start</th>
       <th>Details</th>
     </tr>
-    <%= render :partial => 'voaw_row', :collection => @pilots %>
   </thead>
   <tbody>
+    <%= render :partial => 'voaw_row', :collection => @pilots %>
   </tbody>
 </table>
 
-https://github.com/rweng/jquery-datatables-rails
-
 <div id="myModal" class="reveal-modal" data-reveal></div>
+
+<script type="text/javascript">
+$('.datatable').dataTable({
+  "paging": false,
+    "info": false
+  // Optional, if you want full pagination controls.
+  // Check dataTables documentation to learn more about available options.
+  // http://datatables.net/reference/option/pagingType
+});
+</script>
 

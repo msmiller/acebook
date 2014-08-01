@@ -62,3 +62,5 @@ gem "gritter"
 gem "versionomy"
 gem 'country_select', github: 'stefanpenner/country_select'
 gem 'activevalidators'
+
+gem "activeadmin", github: 'gregbell/active_admin'

@@ -44,7 +44,7 @@
 
       <div class="row footer">
         <div class="large-6 column slideleft ">
-          <%= render_cell :footerlinks, :show %>        
+          <%= render_cell :footerlinks, :show, :user => @current_user %>        
         </div>
         <div class="large-6 column slideright ">
           <%= render_cell :copyright, :show %>        

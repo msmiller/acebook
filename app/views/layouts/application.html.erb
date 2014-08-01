@@ -12,9 +12,8 @@
   </head>
 
   <body>
-    <script type="text/javascript">
-    <% #= extend_gritter :time => 1000 %>
-    </script>
+
+
     <%= gflash %>
 
     <% # http://foundation.zurb.com/docs/index.php -%>
@@ -54,5 +53,10 @@
     </div>
 
     <%= javascript_include_tag "application" %>
+
+    <% flash.each do |name, msg|    -%>
+      <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:") %>
+    <% end -%>
+
   </body>
 </html>

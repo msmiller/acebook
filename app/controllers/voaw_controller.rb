@@ -19,6 +19,7 @@ class VoawController < ApplicationController
       @pilot.update_attributes(wtf)
       soc = {}.merge(params['social'])
       @social.update_attributes(soc)
+      flash[:notice] = "Profile updated."
     end
 
   end

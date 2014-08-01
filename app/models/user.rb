@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_one :user_info
   has_one :social_info
-  has_many :game_infos
+  #has_many :game_infos #, :order => "id ASC"
 
   after_create :after_create
 
@@ -18,9 +18,9 @@ class User < ActiveRecord::Base
     self.social_info = SocialInfo.new
     self.social_info.save
 
-    self.game_infos.create(:game_code => "aw")
-    self.game_infos.create(:game_code => "wb")
-    self.game_infos.create(:game_code => "ah")
+    #self.game_infos.create(:game_code => "aw")
+    #self.game_infos.create(:game_code => "wb")
+    #self.game_infos.create(:game_code => "ah")
 
   end
 

@@ -2,7 +2,8 @@ class VoawController < ApplicationController
 
   def index
     @current_user = current_user
-    @all_users = User.all.sort { |x,y| x.user_info.handle <=> y.user_info.handle }
+    #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
+    @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
   end
 
 end

@@ -2,6 +2,7 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
+Host with [ninefold.com](http://ninefold.com)
 ### What is this repository for? ###
 
 * Quick summary

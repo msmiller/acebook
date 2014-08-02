@@ -3,7 +3,9 @@
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 <%= link_to "Signup", "/users/sign_up" %>
 <% else -%>
-<%= link_to @user.user_info.handle, "/profile" %>
+<%= @user.user_info.handle %>
+&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+<%= link_to "Profile", "/profile" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
 <%= link_to "Account", "/users/edit" %>
 &nbsp;&nbsp;&bull;&nbsp;&nbsp;

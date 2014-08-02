@@ -73,6 +73,7 @@ gem 'jquery-datatables-rails', '~> 2.1.10.0.4'
 # https://github.com/rweng/jquery-datatables-rails
 
 group :production do
-#  gem 'pg'
+  #gem 'pg'
+  gem 'rails_12factor'
 end
 

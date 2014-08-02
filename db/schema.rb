@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20140801193607) do
     t.string   "city"
     t.string   "state"
     t.string   "country"
+    t.text     "message"
     t.string   "planes"
     t.string   "aw_cpid",       limit: 8
     t.string   "wb_cpid",       limit: 8
@@ -102,7 +103,6 @@ ActiveRecord::Schema.define(version: 20140801193607) do
     t.string   "ah_country"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "message"
     t.integer  "year_started"
   end
 

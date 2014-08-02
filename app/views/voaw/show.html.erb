@@ -1,6 +1,7 @@
 <% if @pilot.nil? -%>
 <h3>Pilot not found!</h3>
 <% else -%>
+<div class="profilewrapper">
 
 <div style="float:right;"><%= @pilot.user_info.year_started %></div>
 <h3><%= @pilot.user_info.handle %></h3>
@@ -10,18 +11,18 @@
   &nbsp;&nbsp;&bull;&nbsp;&nbsp;<%= [@pilot.user_info.city, @pilot.user_info.state, @pilot.user_info.country].reject{ |x| x.blank? }.join(", ") %></p>
   <% end %>
 
-<div style="border-top: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px;">
+<div style="border-top: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px; line-height:14px;">
   <div class="row">
     <div class="large-4 columns"><% unless @pilot.user_info.aw_cpid.blank? %>
-      <b>Air Warrior:</b> <%= @pilot.user_info.aw_cpid -%>
+      <b>Air Warrior:</b> <%= @pilot.user_info.aw_cpid -%><br />
         <%= " <span class='gcountry'>(#{@pilot.user_info.aw_country})</span>".html_safe if !@pilot.user_info.aw_country.blank? -%>
     <% end -%></div>
     <div class="large-4 columns"><% unless @pilot.user_info.wb_cpid.blank? %>
-      <b>WarBirds:</b> <%= @pilot.user_info.wb_cpid-%>
+      <b>WarBirds:</b> <%= @pilot.user_info.wb_cpid-%><br />
         <%= " <span class='gcountry'>(#{@pilot.user_info.wb_country})</span>".html_safe if !@pilot.user_info.wb_country.blank? -%>
     <% end -%></div>
     <div class="large-4 columns"><% unless @pilot.user_info.ah_cpid.blank? %>
-      <b>Aces High:</b> <%= @pilot.user_info.ah_cpid -%>
+      <b>Aces High:</b> <%= @pilot.user_info.ah_cpid -%><br />
         <%= " <span class='gcountry'>(#{@pilot.user_info.ah_country})</span>".html_safe if !@pilot.user_info.ah_country.blank? -%>
     <% end -%></div>
   </div>
@@ -46,6 +47,8 @@
 <%= link_to k.gsub("_url", ""), v, :class => "tiny radius button socialbtn", :target => "_blank" unless v.blank? %>
 <% end -%>
   </div></div>
+</div>
+
 </div>
 
 <% end -%>

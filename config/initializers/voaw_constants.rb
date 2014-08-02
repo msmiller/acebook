@@ -14,6 +14,8 @@ Voaw::Games = {
 }
 
 Voaw::Icons = [
+  "sheep",
+  "crosshairs",
   "a26",
   "beaufighter",
   "f6f",

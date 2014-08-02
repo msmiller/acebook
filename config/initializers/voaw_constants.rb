@@ -49,7 +49,7 @@ Voaw::Version = Versionomy.create(
   :tiny => 0,
   #:tiny2 => 0,
   :release_type => :preview,
-  :preview_version => 1
+  :preview_version => 2
   )
 
 Voaw::Date = "2.AUG.2014"

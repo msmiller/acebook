@@ -18,9 +18,9 @@
       <div><%= label_tag "Other Handles" %><%= text_field_tag :other_handles, @pilot.other_handles, :name => "pilot[other_handles]" %></div>
     </div>
     <div class="large-3 columns" style="background: #eee;">
-      <div><%= label_tag "Air Warrior ID" %><%= text_field_tag :aw_cpid, @pilot.aw_cpid, :name => "pilot[aw_cpid]", :placeholder => "8-char max" %></div>
-      <div><%= label_tag "WarBirds ID" %><%= text_field_tag :wb_cpid, @pilot.wb_cpid, :name => "pilot[wb_cpid]", :placeholder => "8-char max" %></div>
-      <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]", :placeholder => "8-char max" %></div>
+      <div><%= label_tag "Air Warrior ID" %><%= text_field_tag :aw_cpid, @pilot.aw_cpid, :name => "pilot[aw_cpid]", :placeholder => "16-char max" %></div>
+      <div><%= label_tag "WarBirds ID" %><%= text_field_tag :wb_cpid, @pilot.wb_cpid, :name => "pilot[wb_cpid]", :placeholder => "16-char max" %></div>
+      <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]", :placeholder => "16-char max" %></div>
       <div><%= label_tag "Planes" %><%= text_field_tag :planes, @pilot.planes, :name => "pilot[planes]" %></div>
       <div><%= label_tag "Icon" %><%= select_tag :icon, options_for_select(Voaw::Icons, @pilot.icon), :name => "pilot[icon]" %></div>
     </div>

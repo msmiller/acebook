@@ -1,7 +1,7 @@
 # BUGS.todo
 
 - Admin breaks for editing infos and socials
-- Asset crashes for IE stuff
+- Asset crashes for IE stuff @done(2014-08-02)
 
 # TODO.todo
 
@@ -9,3 +9,4 @@
 - Before/after photo links
 - Truncate city name in list @done(2014-08-02)
 - Make handle/squad/name nowrap @done(2014-08-02)
+- Extend cpid's to 16 chars

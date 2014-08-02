@@ -6,7 +6,7 @@
     </a></td>
   <td nowrap><%= voaw_row.squadron %></td>
   <td nowrap><%= voaw_row.name %></td>
-  <td><%= voaw_row.city %></td>
+  <td><%= truncate(voaw_row.city, length: 17)  %></td>
   <td><%= voaw_row.aw_cpid %></td>
   <td><%= voaw_row.wb_cpid %></td>
   <td><%= voaw_row.ah_cpid %></td>

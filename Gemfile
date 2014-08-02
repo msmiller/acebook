@@ -68,7 +68,7 @@ gem "activeadmin", github: 'gregbell/active_admin'
 gem 'jquery-datatables-rails', '~> 2.1.10.0.4'
 # https://github.com/rweng/jquery-datatables-rails
 
-group :production do
-  gem 'pg'
-end
+#group :production do
+#  gem 'pg'
+#end
 

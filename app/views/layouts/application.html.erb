@@ -50,7 +50,6 @@
     </div>
 
     <% flash.each do |name, msg|    -%>
-    <%= "#{name} = #{msg}" %>
       <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:")  %>
     <% end -%>
 

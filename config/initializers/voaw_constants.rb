@@ -16,10 +16,12 @@ Voaw::Games = {
 require 'versionomy'
 
 Voaw::Version = Versionomy.create(
-  :major => 0,
+  :major => 1,
   :minor => 0,
   :tiny => 0,
-  :tiny2 => 1
+  #:tiny2 => 0,
+  :release_type => :preview,
+  :preview_version => 1
   )
 
 Voaw::Date = "31.JUL.2014"

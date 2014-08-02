@@ -20,7 +20,9 @@
     <div class="large-3 columns" style="background: #eee;">
       <div><%= label_tag "Air Warrior ID" %><%= text_field_tag :aw_cpid, @pilot.aw_cpid, :name => "pilot[aw_cpid]" %></div>
       <div><%= label_tag "WarBirds ID" %><%= text_field_tag :wb_cpid, @pilot.wb_cpid, :name => "pilot[wb_cpid]" %></div>
-      <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]" %></d      <div><%= label_tag "Planes" %><%= text_field_tag :planes, @pilot.planes, :name => "pilot[planes]" %></div>
+      <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]" %></div>
+      <div><%= label_tag "Planes" %><%= text_field_tag :planes, @pilot.planes, :name => "pilot[planes]" %></div>
+      <div><%= label_tag "Icon" %><%= select_tag :icon, options_for_select(Voaw::Icons, @pilot.icon), :name => "pilot[icon]" %></div>
     </div>
     <div class="large-3 columns" style="background: #eee;">
       <div><%= label_tag "Air Warrior Country" %>

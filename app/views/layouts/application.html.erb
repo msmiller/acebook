@@ -6,6 +6,8 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "acebook" %></title>
 
+    <%= favicon_link_tag 'favicon.ico' %>
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -24,7 +26,7 @@
 
       <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px">
         <div class="large-6 columns" style="line-height:60px;">
-          <h1 style="vertical-align:middle;"><%= link_to "acebook", root_url, :id => "logo" %>
+          <h1 style="vertical-align:middle;"><%= link_to "&spades; acebook".html_safe, root_url, :id => "logo" %>
         </div>
         <div class="large-6 columns" style="text-align:right;">
           <%= render_cell :headerlinks, :show, :user => @current_user %>               
@@ -48,7 +50,8 @@
     </div>
 
     <% flash.each do |name, msg|    -%>
-      <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:") %>
+    <%= "#{name} = #{msg}" %>
+      <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:")  %>
     <% end -%>
 
   </body>

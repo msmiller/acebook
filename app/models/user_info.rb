@@ -6,4 +6,8 @@ class UserInfo < ActiveRecord::Base
     UserInfo.all.collect{|u| u.squadron}.uniq.sort
   end
 
+  def get_icon
+    self.icon.blank? ? "sheep" : self.icon
+  end
+
 end

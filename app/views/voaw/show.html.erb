@@ -2,14 +2,21 @@
 <h3>Pilot not found!</h3>
 <% else -%>
 <div class="profilewrapper">
+  <div class="row">
 
-<div style="float:right;"><%= @pilot.user_info.year_started %></div>
+<div class="large-10 columns">
 <h3><%= @pilot.user_info.handle %></h3>
 <% if @pilot.user_info.squadron %><h5><%= @pilot.user_info.squadron %><h5><% end -%>
 <p><b><%= @pilot.user_info.name %></b>
   <% if @pilot.user_info.city %>
   &nbsp;&nbsp;&bull;&nbsp;&nbsp;<%= [@pilot.user_info.city, @pilot.user_info.state, @pilot.user_info.country].reject{ |x| x.blank? }.join(", ") %></p>
   <% end %>
+</div>
+<div class="large-2 columns" style="text-align:right;">
+  <%= @pilot.user_info.year_started %><br>
+  <%= image_tag "icons/#{@pilot.user_info.get_icon}.gif", :class => 'proficon' %>
+</div>
+</div>
 
 <div style="border-top: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px; line-height:14px;">
   <div class="row">

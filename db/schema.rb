@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801193607) do
+ActiveRecord::Schema.define(version: 20140802171933) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 20140801193607) do
     t.string   "city"
     t.string   "state"
     t.string   "country"
-    t.text     "message"
     t.string   "planes"
     t.string   "aw_cpid",       limit: 8
     t.string   "wb_cpid",       limit: 8
@@ -103,7 +102,9 @@ ActiveRecord::Schema.define(version: 20140801193607) do
     t.string   "ah_country"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "message"
     t.integer  "year_started"
+    t.string   "icon"
   end
 
   create_table "users", force: true do |t|

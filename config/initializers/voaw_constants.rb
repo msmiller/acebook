@@ -17,6 +17,7 @@ Voaw::Icons = [
   "sheep",
   "crosshairs",
   "a26",
+  "b17",
   "beaufighter",
   "f6f",
   "f8f",

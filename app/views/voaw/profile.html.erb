@@ -7,8 +7,7 @@
       <div><%= label_tag "Name" %><%= text_field_tag :name, @pilot.name, :name => "pilot[name]" %></div>
       <div><%= label_tag "Squadron" %>
         <%= text_field_tag :squadron, @pilot.squadron, :name => "pilot[squadron]", :style => "width:48%;float:left;" %>
-        <%= select_tag :known_squads, options_for_select(UserInfo::active_squads, @pilot.squadron.to_s), :style => "width:48%;float:right;",
-        :onchange => "$('#squadron').val(this.value);" %>
+
       </div>
       <div><%= label_tag "City" %><%= text_field_tag :city, @pilot.city, :name => "pilot[city]" %></div>
       <div><%= label_tag "State/Province" %><%= text_field_tag :state, @pilot.state, :name => "pilot[state]", :style => "width:48%;float:left;" %></div>

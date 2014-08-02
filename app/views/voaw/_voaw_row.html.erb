@@ -1,5 +1,5 @@
 <tr>
-  <td><%= voaw_row.handle %></td>
+  <td><b><a href="/show/<%= voaw_row.user_id %>" data-reveal-id="myModal" data-reveal-ajax="true"><%= voaw_row.handle %></a></b></td>
   <td><%= voaw_row.squadron %></td>
   <td><%= voaw_row.name %></td>
   <td><%= voaw_row.city %></td>
@@ -7,5 +7,4 @@
   <td><%= voaw_row.wb_cpid %></td>
   <td><%= voaw_row.ah_cpid %></td>
   <td><%= voaw_row.year_started %></td>
-  <td><a href="/show/<%= voaw_row.user_id %>" data-reveal-id="myModal" data-reveal-ajax="true">Details</a></td>
 </tr>

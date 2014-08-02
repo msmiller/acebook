@@ -1,5 +1,7 @@
 class VoawController < ApplicationController
 
+  include AutoHtml
+
   def index
     @current_user = current_user
     #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }

@@ -11,7 +11,7 @@ class UserInfo < ActiveRecord::Base
   end
 
   def row_addr
-    [self.city, self.state].compact.join(", ")
+    [self.city, self.state].reject{ |x| x.blank? }.join(", ")
   end
 
 end

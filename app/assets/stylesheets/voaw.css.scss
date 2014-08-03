@@ -8,13 +8,17 @@
 
 
 
-table#voawpilots td { font-weight: normal; font-size: 12px; font-family: helvetica, sans-serif !important; }
+table#voawpilots td { 
+  font-weight: normal; /*font-size: 12px; */
+  font-family: helvetica, sans-serif !important; vertical-align: top; 
+}
 
 label { text-transform: uppercase; font-weight: bold; }
 
 #pilot_country { width:48%;float:right; }
 
 .gcountry { font-size: 10pt; }
+.smallertext { font-size: 9pt; }
 
 a:link { text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -23,6 +27,6 @@ a:hover { text-decoration: underline; }
 .profilewrapper { font-size: 1em !important; }
 .socialbtn { margin:5px; font-family: Verdana, Geneva, sans-serif !important; text-transform: uppercase; font-size: 12px !important;}
 
-.miniicon { width: 24px; height: 24px; margin-right: 8px;}
+.miniicon { width: 30px; height: 30px; margin-right: 8px; float:left;}
 .proficon { width: 90px; height: 90px; }
 

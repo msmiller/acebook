@@ -7,7 +7,9 @@
 .footer { font-size: 12px; border-top: 1px solid #ddd; margin-top: 10px; padding-top: 5px; }
 
 #logobtn {
-  padding:2px 7px;color:white;background:#008cba;border-radius:6px;
+  color:white;background:#008cba;border-radius:6px;
+  width: 60px; height:60px;display:block;float:left;
+  text-align: center; margin-right:8px;
 }
 h1#title a:hover { color: black !important; text-decoration: none; }
 #logobtn:hover { background-color: black !important; text-decoration: none; }

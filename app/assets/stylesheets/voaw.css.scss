@@ -12,6 +12,9 @@ table#voawpilots td {
   font-weight: normal; /*font-size: 12px; */
   font-family: helvetica, sans-serif !important; vertical-align: top; 
 }
+table#voawpilots th { 
+  background-color: #eee;
+}
 
 label { text-transform: uppercase; font-weight: bold; }
 
@@ -25,7 +28,8 @@ a:hover { text-decoration: underline; }
 
 #logo { font-family: Tahoma, Verdana, Segoe, sans-serif; font-weight: bold; }
 .profilewrapper { font-size: 1em !important; }
-.socialbtn { margin:5px; font-family: Verdana, Geneva, sans-serif !important; text-transform: uppercase; font-size: 12px !important;}
+.socialbtn { margin:5px; font-family: Verdana, Geneva, sans-serif !important; 
+  text-transform: uppercase; font-size: 12px !important;}
 
 .miniicon { width: 30px; height: 30px; margin-right: 8px; float:left;}
 .proficon { width: 90px; height: 90px; }

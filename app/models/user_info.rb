@@ -10,4 +10,8 @@ class UserInfo < ActiveRecord::Base
     self.icon.blank? ? "sheep" : self.icon
   end
 
+  def row_addr
+    [self.city, self.state].compact.join(", ")
+  end
+
 end

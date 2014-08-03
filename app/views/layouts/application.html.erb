@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "acebook" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Acebook" %></title>
 
     <%= favicon_link_tag '/favicon.ico' %>
 
@@ -24,9 +24,9 @@
     <% # http://foundation.zurb.com/docs/index.php -%>
     <div class="container">
 
-      <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px">
+      <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px;margin-top:10px;">
         <div class="large-6 columns" style="line-height:60px;">
-          <h1 style="vertical-align:middle;"><%= link_to "acebook", root_url, :id => "logo" %>
+          <h1 style="vertical-align:middle;" id="title"><%= link_to "<span id='logobtn'>&spades;</span> Acebook".html_safe, root_url, :id => "logo" %>
         </div>
         <div class="large-6 columns" style="text-align:right;">
           <%= render_cell :headerlinks, :show, :user => @current_user %>               

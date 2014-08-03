@@ -3,3 +3,4 @@
 Rails.application.config.assets.precompile += %w( gritter-close.png )
 Rails.application.config.assets.precompile += %w( ie-spacer.gif )
 Rails.application.config.assets.precompile += %w( favicon.ico )
+Rails.application.config.assets.precompile += %w( acebook.gif )

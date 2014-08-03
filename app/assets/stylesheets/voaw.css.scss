@@ -11,6 +11,11 @@
   width: 56px; height:56px;display:block;float:left;
   text-align: center; margin-right:8px;vertical-align: middle;
 }
+#logoimage {
+    width: 56px; height:56px;float:left;
+  text-align: center; margin-right:8px;
+  border-radius:6px;
+}
 h1#title a:hover { color: black !important; text-decoration: none; }
 #logobtn:hover { background-color: black !important; text-decoration: none; }
 

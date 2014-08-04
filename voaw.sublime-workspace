@@ -287,7 +287,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1620,
+				"buffer_size": 1792,
 				"line_ending": "Unix"
 			}
 		},
@@ -303,15 +303,7 @@
 			"file": "app/assets/stylesheets/foundation_and_overrides.scss",
 			"settings":
 			{
-				"buffer_size": 43078,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/voaw.css.scss",
-			"settings":
-			{
-				"buffer_size": 1018,
+				"buffer_size": 43081,
 				"line_ending": "Unix"
 			}
 		},
@@ -340,18 +332,10 @@
 			}
 		},
 		{
-			"file": "db/migrate/20140731235641_create_user_infos.rb",
-			"settings":
-			{
-				"buffer_size": 616,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "config/initializers/assets.rb",
 			"settings":
 			{
-				"buffer_size": 325,
+				"buffer_size": 389,
 				"line_ending": "Unix"
 			}
 		},
@@ -367,7 +351,15 @@
 			"file": "config/initializers/voaw_constants.rb",
 			"settings":
 			{
-				"buffer_size": 821,
+				"buffer_size": 862,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/voaw.css.scss",
+			"settings":
+			{
+				"buffer_size": 1678,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,7 +399,7 @@
 			"file": "app/views/voaw/_voaw_row.html.erb",
 			"settings":
 			{
-				"buffer_size": 528,
+				"buffer_size": 597,
 				"line_ending": "Unix"
 			}
 		},
@@ -492,6 +484,7 @@
 	},
 	"file_history":
 	[
+		"/Users/msmiller/Development/voaw/db/migrate/20140731235641_create_user_infos.rb",
 		"/Users/msmiller/Development/voaw/db/migrate/20140802223517_lengthen_cpids.rb",
 		"/Users/msmiller/Development/voaw/db/migrate/20140802171933_add_icon_to_user_info.rb",
 		"/Users/msmiller/Development/voaw/app/assets/stylesheets/voaw.css.scss",
@@ -538,7 +531,6 @@
 		"/Users/msmiller/Development/voaw/app/cells/copyright/show.html.erb",
 		"/Users/msmiller/Development/voaw/db/migrate/20140801001851_create_game_infos.rb",
 		"/Users/msmiller/Development/voaw/db/migrate/20140731220158_devise_create_users.rb",
-		"/Users/msmiller/Development/voaw/db/migrate/20140731235641_create_user_infos.rb",
 		"/Users/msmiller/Development/voaw/config/initializers/voaw_constants.rb",
 		"/Users/msmiller/Development/voaw/app/controllers/application_controller.rb",
 		"/Users/msmiller/Development/voaw/lib/templates/erb/scaffold/_form.html.erb",
@@ -639,6 +631,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"top",
 			"length",
 			"text",
 			"8-ch",
@@ -765,8 +758,7 @@
 			"manager",
 			"current_account",
 			"current_user",
-			"progress",
-			"form"
+			"progress"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -800,7 +792,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -808,15 +800,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1620,
+						"buffer_size": 1792,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1497,
-								1497
+								969,
+								969
 							]
 						],
 						"settings":
@@ -826,7 +818,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 453.0,
+						"translation.y": 286.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -862,15 +854,15 @@
 					"file": "app/assets/stylesheets/foundation_and_overrides.scss",
 					"settings":
 					{
-						"buffer_size": 43078,
+						"buffer_size": 43081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1241,
-								1241
+								25271,
+								25271
 							]
 						],
 						"settings":
@@ -878,39 +870,13 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 439.0,
+						"translation.y": 11817.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/assets/stylesheets/voaw.css.scss",
-					"settings":
-					{
-						"buffer_size": 1018,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								396,
-								396
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "app/assets/stylesheets/application.css",
 					"settings":
 					{
@@ -936,7 +902,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app/views/voaw/profile.html.erb",
 					"settings":
 					{
@@ -972,7 +938,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "app/views/voaw/index.html.erb",
 					"settings":
 					{
@@ -1000,55 +966,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "db/migrate/20140731235641_create_user_infos.rb",
-					"settings":
-					{
-						"buffer_size": 616,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								396,
-								403
-							],
-							[
-								434,
-								441
-							],
-							[
-								472,
-								479
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "config/initializers/assets.rb",
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								325,
-								325
+								387,
+								387
 							]
 						],
 						"settings":
@@ -1062,7 +992,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 7,
 					"file": "app/controllers/voaw_controller.rb",
 					"settings":
 					{
@@ -1090,19 +1020,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 8,
 					"file": "config/initializers/voaw_constants.rb",
 					"settings":
 					{
-						"buffer_size": 821,
+						"buffer_size": 862,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								789,
-								789
+								758,
+								758
 							]
 						],
 						"settings":
@@ -1112,7 +1042,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 470.0,
+						"translation.y": 642.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1120,11 +1050,37 @@
 			]
 		},
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 11,
+					"buffer": 9,
+					"file": "app/assets/stylesheets/voaw.css.scss",
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1674,
+								1674
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 464.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "app/views/pages/about.html.erb",
 					"settings":
 					{
@@ -1145,7 +1101,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1154,7 +1112,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "app/views/pages/links.html.erb",
 					"settings":
 					{
@@ -1180,7 +1138,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "Gemfile",
 					"settings":
 					{
@@ -1206,7 +1164,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "app/cells/footerlinks/show.html.erb",
 					"settings":
 					{
@@ -1232,24 +1190,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "app/views/voaw/_voaw_row.html.erb",
 					"settings":
 					{
-						"buffer_size": 528,
+						"buffer_size": 597,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								365,
-								366
+								119,
+								190
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1258,7 +1218,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "app/views/voaw/show.html.erb",
 					"settings":
 					{
@@ -1286,7 +1246,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "app/models/user_info.rb",
 					"settings":
 					{

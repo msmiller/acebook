@@ -16,14 +16,17 @@ Voaw::Games = {
 Voaw::Icons = [
   "sheep",
   "crosshairs",
+  "a6m",
   "a26",
   "b17",
   "beaufighter",
+  "f4u",
   "f6f",
   "f8f",
   "fw190",
   "he162",
   "hurricane2",
+  "il2m3",
   "ju88",
   "ki-100",
   "la7",
@@ -38,7 +41,8 @@ Voaw::Icons = [
   "p51",
   "seafury",
   "spitfire",
-  "wellington"
+  "wellington",
+  "yak3"
 ]
 
 require 'versionomy'
@@ -46,10 +50,10 @@ require 'versionomy'
 Voaw::Version = Versionomy.create(
   :major => 1,
   :minor => 0,
-  :tiny => 0,
+  :tiny => 1,
   #:tiny2 => 0,
-  :release_type => :preview,
-  :preview_version => 3
+  #:release_type => :preview,
+  #:preview_version => 3
   )
 
-Voaw::Date = "2.AUG.2014"
+Voaw::Date = "3.AUG.2014"

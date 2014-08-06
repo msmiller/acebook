@@ -17,6 +17,10 @@
           <td>Average Start</td>
           <td><%= @avg_start_years / @avg_start_players %></td>
         </tr>
+       <tr>
+          <td>Total Pilots</td>
+          <td><%= @allplayers %></td>
+        </tr>
       </tbody>
     </table>
 
@@ -26,7 +30,7 @@
     <table>
       <tbody>
         <tr>
-          <td><b>Air Warrior Players</b></td>
+          <td><b>Air Warrior Pilots</b></td>
           <td><%= @awplayers %></td>
         </tr>
         <% @awcountries.each_pair do |k,v| -%>
@@ -35,7 +39,7 @@
         </tr>
         <% end -%>
         <tr>
-          <td><b>WarBirds Players</b></td>
+          <td><b>WarBirds Pilots</b></td>
           <td><%= @wbplayers %></td>
         </tr>
         <% @wbcountries.each_pair do |k,v| -%>
@@ -44,7 +48,7 @@
         </tr>
         <% end -%>
         <tr>
-          <td><b>Aces High Players</b></td>
+          <td><b>Aces High Pilots</b></td>
           <td><%= @ahplayers %></td>
         </tr>
         <% @ahcountries.each_pair do |k,v| -%>

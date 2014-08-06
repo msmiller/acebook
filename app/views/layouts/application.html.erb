@@ -25,7 +25,7 @@
     <% # http://foundation.zurb.com/docs/index.php -%>
     <div class="container">
 
-      <div class="row header" style="border-bottom:1px solid #ddd;margin-bottom:10px;">
+      <div class="row header">
         <div class="large-5 columns" style="line-height:60px;">
           <h1 style="vertical-align:middle;margin-top:20px;" id="title"><%= link_to image_tag("acebook.gif", :id => "logoimage") + " Acebook", root_url, :id => "logo" %>
         </div>
@@ -35,6 +35,8 @@
         </div>
       </div>
 
+      <%= render :partial => "/layouts/menu" %>
+      
       <div class="row" id="yield">
         <div class="large-12 columns">
           <%= yield %>

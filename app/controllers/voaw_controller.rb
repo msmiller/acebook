@@ -32,6 +32,9 @@ class VoawController < ApplicationController
   end
 
   def stats
+
+    @current_user = current_user
+
     @earliest = UserInfo.all.order("year_started ASC").first
     @latest = UserInfo.where("year_started IS NOT NULL").order("year_started DESC").first
     @icons = UserInfo.group('icon').count.to_a.sort { |x,y| y[1] <=> x[1] }

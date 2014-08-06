@@ -51,7 +51,7 @@
 <div style="line-height:12px; border-top: 1px solid #ccc; padding-top: 10px;">
     <div class="row"><div class="large-12 columns">
 <% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
-<%= link_to k.gsub("_url", ""), v, :class => "tiny radius button socialbtn", :target => "_blank" unless v.blank? %>
+<%= link_to k.gsub("_url", ""), add_http(v), :class => "tiny radius button socialbtn", :target => "_blank" unless v.blank? %>
 <% end -%>
   </div></div>
 </div>

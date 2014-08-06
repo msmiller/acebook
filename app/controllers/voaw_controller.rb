@@ -39,6 +39,9 @@ class VoawController < ApplicationController
     @awplayers = UserInfo.where("handle IS NOT NULL AND aw_cpid IS NOT NULL AND aw_cpid != ''").count
     @wbplayers = UserInfo.where("handle IS NOT NULL AND wb_cpid IS NOT NULL AND wb_cpid != ''").count
     @ahplayers = UserInfo.where("handle IS NOT NULL AND ah_cpid IS NOT NULL AND ah_cpid != ''").count
+
+    @avg_start_years = UserInfo.where("handle IS NOT NULL AND year_started IS NOT NULL AND year_started != 0").sum(:year_started)
+    @avg_start_players = UserInfo.where("handle IS NOT NULL AND year_started IS NOT NULL AND year_started != 0").count
   end
 
 end

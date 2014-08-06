@@ -26,21 +26,32 @@
     <table>
       <tbody>
         <tr>
-          <td>Air Warrior Players</td>
+          <td><b>Air Warrior Players</b></td>
           <td><%= @awplayers %></td>
         </tr>
+        <% @awcountries.each_pair do |k,v| -%>
         <tr>
-          <td>WarBirds Players</td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
+        </tr>
+        <% end -%>
+        <tr>
+          <td><b>WarBirds Players</b></td>
           <td><%= @wbplayers %></td>
         </tr>
+        <% @wbcountries.each_pair do |k,v| -%>
         <tr>
-          <td>Aces High Players</td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
+        </tr>
+        <% end -%>
+        <tr>
+          <td><b>Aces High Players</b></td>
           <td><%= @ahplayers %></td>
         </tr>
+        <% @ahcountries.each_pair do |k,v| -%>
         <tr>
-          <td>Total Players</td>
-          <td><%= @allplayers %></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
         </tr>
+        <% end -%>
       </tbody>
     </table>
 

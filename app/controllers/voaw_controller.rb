@@ -35,6 +35,11 @@ class VoawController < ApplicationController
     @earliest = UserInfo.all.order("year_started ASC").first
     @latest = UserInfo.where("year_started IS NOT NULL").order("year_started DESC").first
     @icons = UserInfo.group('icon').count.to_a.sort { |x,y| y[1] <=> x[1] }
+
+    @awcountries = UserInfo.group('aw_country').count
+    @wbcountries = UserInfo.group('wb_country').count
+    @ahcountries = UserInfo.group('ah_country').count
+
     @allplayers = UserInfo.where("handle IS NOT NULL").count
     @awplayers = UserInfo.where("handle IS NOT NULL AND aw_cpid IS NOT NULL AND aw_cpid != ''").count
     @wbplayers = UserInfo.where("handle IS NOT NULL AND wb_cpid IS NOT NULL AND wb_cpid != ''").count

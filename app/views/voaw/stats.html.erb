@@ -45,12 +45,12 @@
 
     <table>
       <tbody>
-        <% @icons.each_pair do |i,c| -%>
+        <% @icons.each do |i| -%>
         <% unless i.blank? %>
         <tr>
-          <td><%= image_tag "icons/#{i}.gif", :class => 'miniicon' %></td>
-          <td><%= i %></td>
-          <td><%= c %></td>
+          <td><%= image_tag "icons/#{i[0]}.gif", :class => 'miniicon' %></td>
+          <td><%= i[0] %></td>
+          <td><%= i[1] %></td>
         </tr>
         <% end %>
         <% end %>

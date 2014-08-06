@@ -50,10 +50,10 @@ require 'versionomy'
 Voaw::Version = Versionomy.create(
   :major => 1,
   :minor => 0,
-  :tiny => 1,
+  :tiny => 2,
   #:tiny2 => 0,
   #:release_type => :preview,
   #:preview_version => 3
   )
 
-Voaw::Date = "3.AUG.2014"
+Voaw::Date = "6.AUG.2014"

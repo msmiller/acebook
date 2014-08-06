@@ -1,0 +1,10 @@
+<div class="row">
+  <nav class="top-bar" data-topbar>
+    <section class="top-bar-section">
+      <ul class="left" id="menulist">
+        <li <%= "class='active'".html_safe if current_page?(root_url) %>><%= link_to "ROSTER", root_url %></li>
+        <li <%= "class='active'".html_safe if current_page?("/stats") %>><%= link_to "STATS", "/stats" %></li>
+      </ul>
+    </section>
+  </nav>
+</div>

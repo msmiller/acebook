@@ -34,7 +34,7 @@ class VoawController < ApplicationController
   def stats
     @earliest = UserInfo.all.order("year_started ASC").first
     @latest = UserInfo.where("year_started IS NOT NULL").order("year_started DESC").first
-    @icons = UserInfo.group('icon').count
+    @icons = UserInfo.group('icon').count.sort.to_h
     @allplayers = UserInfo.count
     @awplayers = UserInfo.where("aw_cpid IS NOT NULL").count
     @wbplayers = UserInfo.where("wb_cpid IS NOT NULL").count

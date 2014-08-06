@@ -46,10 +46,13 @@
     <table>
       <tbody>
         <% @icons.each_pair do |i,c| -%>
+        <% unless i.blank? %>
         <tr>
           <td><%= image_tag "icons/#{i}.gif", :class => 'miniicon' %></td>
+          <td><%= i %></td>
           <td><%= c %></td>
         </tr>
+        <% end %>
         <% end %>
       </tbody>
     </table>

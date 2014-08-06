@@ -46,7 +46,7 @@
     <table>
       <tbody>
         <% @icons.each do |i| -%>
-        <% unless i.blank? %>
+        <% unless i[0].blank? %>
         <tr>
           <td><%= image_tag "icons/#{i[0]}.gif", :class => 'miniicon' %></td>
           <td><%= i[0] %></td>

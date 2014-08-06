@@ -1,24 +1,26 @@
 # BUGS.todo
-
 - Admin breaks for editing infos and socials
 - Asset crashes for IE stuff @done(2014-08-02)
+- Add http:// to links
 
 # TODO.todo
-
-- B-17 icon @done(2014-08-02)
 - Before/after photo links
+- Stats
 - Truncate city name in list @done(2014-08-02)
 - Make handle/squad/name nowrap @done(2014-08-02)
 - Extend cpid's to 16 chars @done(2014-08-02)
 - acebook.us @done(2014-08-03)
-- Icon for:
-	- Zeke @done(2014-08-03)
-	- P40
-	- Sturmi @done(2014-08-03)
-	- B25
-	- Yak @done(2014-08-03)
-	- F4U @done(2014-08-03)
 - Acebook icon @done(2014-08-03)
 - Timeline
 - Lore
 - Links
+
+# Icons for.todo
+- B17 @done(2014-08-02)
+- Zeke @done(2014-08-03)
+- P40
+- Sturmi @done(2014-08-03)
+- B25
+- Yak @done(2014-08-03)
+- F4U @done(2014-08-03)
+- Stuka

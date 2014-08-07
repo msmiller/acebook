@@ -4,6 +4,8 @@
       <ul class="left" id="menulist">
         <li <%= "class='active'".html_safe if current_page?(root_url) %>><%= link_to "ROSTER", root_url %></li>
         <li <%= "class='active'".html_safe if current_page?("/stats") %>><%= link_to "STATS", "/stats" %></li>
+        <li <%= "class='active'".html_safe if current_page?("/timeline") %>><%= link_to "TIMELINE", "/timeline" %></li>
+        <li <%= "class='active'".html_safe if current_page?("/lore") %>><%= link_to "LORE", "/lore" %></li>
       </ul>
     </section>
   </nav>

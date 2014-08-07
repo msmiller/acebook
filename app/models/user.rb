@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_one :social_info, dependent: :destroy
   #has_many :game_infos, dependent: :destroy #, :order => "id ASC"
 
+  has_many :lores
+  has_many :timelines
+
   after_create :after_create
 
   def after_create
@@ -24,6 +27,9 @@ class User < ActiveRecord::Base
 
   end
 
+  def display_name
+    self.user_info.name
+  end
   # I'm the only one who'll mess with the database
   def is_admin?
     self.email == "mark.s.miller@gmail.com"

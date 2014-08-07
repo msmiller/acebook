@@ -15,6 +15,8 @@
  *= require foundation_and_overrides
  *= require voaw
 
+ *= require timelines
+ 
  *= require dataTables/jquery.dataTables.foundation
 
  *= require gritter

@@ -49,3 +49,20 @@ a:hover { text-decoration: underline; }
 
 #menulist a { text-decoration: none; }
 #menulist a:hover { color: gold;}
+
+/* --- FOR LORE/TIMELINE --- */
+
+dd.accordion-navigation a { 
+  padding-top: 8px !important; padding-bottom: 8px !important;
+  text-decoration: none;
+  }
+dd.accordion-navigation.active a { 
+background: #bcd !important;
+  /* border-bottom: 1px solid #008cba; */
+}
+
+dd.accordion-navigation div.content {
+    padding-top: 10px !important; padding-bottom: 10px !important;
+
+}
+

@@ -1,0 +1,11 @@
+<H2>Lore</h2>
+<dl class="accordion" data-accordion>
+  <% @lores.each_with_index do |tl,i| -%>
+  <dd class="accordion-navigation">
+    <a href="#panel_<%= i %>"><b><%= tl.title %></b></a>
+    <div id="panel_<%= i %>" class="content">
+      <%= tl.body %>
+    </div>
+  </dd>
+  <% end -%>
+</dl>

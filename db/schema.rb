@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802223517) do
+ActiveRecord::Schema.define(version: 20140807080812) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -58,6 +58,15 @@ ActiveRecord::Schema.define(version: 20140802223517) do
     t.datetime "updated_at"
   end
 
+  create_table "lores", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "approved"
+  end
+
   create_table "social_infos", force: true do |t|
     t.integer  "user_id"
     t.string   "homepage_url"
@@ -82,6 +91,19 @@ ActiveRecord::Schema.define(version: 20140802223517) do
     t.string   "wordpress_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "timelines", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "month"
+    t.integer  "year"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "approved"
+    t.string   "game",       limit: 16
+    t.string   "kind",       limit: 16
   end
 
   create_table "user_infos", force: true do |t|

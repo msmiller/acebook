@@ -1,0 +1,11 @@
+<H2>Timeline</h2>
+<dl class="accordion" data-accordion>
+  <% @timelines.each_with_index do |tl,i| -%>
+  <dd class="accordion-navigation">
+    <a href="#panel_<%= i %>"><div class="timelinedate"><%= Date::MONTHNAMES[tl.month] %> <%= tl.year %></div> <b><%= tl.title %></b></a>
+    <div id="panel_<%= i %>" class="content">
+      <%= tl.body %>
+    </div>
+  </dd>
+  <% end -%>
+</dl>

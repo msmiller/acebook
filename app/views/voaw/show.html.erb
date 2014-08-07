@@ -7,9 +7,12 @@
 <div class="large-10 columns">
 <h3><%= @pilot.user_info.handle %></h3>
 <% if @pilot.user_info.squadron %><h5><%= @pilot.user_info.squadron %><h5><% end -%>
+<% if @current_user -%>
 <p><b><%= @pilot.user_info.name %></b>
   <% if @pilot.user_info.city %>
-  &nbsp;&nbsp;&bull;&nbsp;&nbsp;<%= [@pilot.user_info.city, @pilot.user_info.state, @pilot.user_info.country].reject{ |x| x.blank? }.join(", ") %></p>
+  &nbsp;&nbsp;&bull;&nbsp;&nbsp;<%= [@pilot.user_info.city, @pilot.user_info.state, @pilot.user_info.country].reject{ |x| x.blank? }.join(", ") %>
+</p>
+<% end -%>
   <% end %>
 </div>
 <div class="large-2 columns" style="text-align:right;">

@@ -5,10 +5,14 @@
       <br>
       <span class="smallertext"><%= voaw_row.squadron %></span>
     </td>
+  <% if @current_user -%>
   <td nowrap>
+    <%= render :partial => "social_icons", :locals => { :socials => voaw_row.user.social_info } %>
     <%= voaw_row.name %>
     <br>
-    <span class="smallertext"><%= truncate(voaw_row.row_addr, length: 30)  %></span></td>
+    <span class="smallertext"><%= truncate(voaw_row.row_addr, length: 30)  %></span>
+  </td>
+  <% end -%>
   <td><%= voaw_row.aw_cpid %></td>
   <td><%= voaw_row.wb_cpid %></td>
   <td><%= voaw_row.ah_cpid %></td>

@@ -27,6 +27,8 @@ class VoawController < ApplicationController
   end
 
   def show
+    @current_user = current_user
+
     @pilot = User.find(params[:id])
     render :layout => nil
   end
@@ -39,9 +41,9 @@ class VoawController < ApplicationController
     @latest = UserInfo.where("year_started IS NOT NULL").order("year_started DESC").first
     @icons = UserInfo.group('icon').count.to_a.sort { |x,y| y[1] <=> x[1] }
 
-    @awcountries = UserInfo.where("handle IS NOT NULL AND aw_cpid IS NOT NULL AND aw_cpid != ''").group('aw_country').count
-    @wbcountries = UserInfo.where("handle IS NOT NULL AND wb_cpid IS NOT NULL AND wb_cpid != ''").group('wb_country').count
-    @ahcountries = UserInfo.where("handle IS NOT NULL AND ah_cpid IS NOT NULL AND ah_cpid != ''").group('ah_country').count
+    @awcountries = UserInfo.where("handle IS NOT NULL AND aw_cpid IS NOT NULL AND aw_cpid != '' AND aw_country != ''").group('aw_country').count
+    @wbcountries = UserInfo.where("handle IS NOT NULL AND wb_cpid IS NOT NULL AND wb_cpid != '' AND wb_country != ''").group('wb_country').count
+    @ahcountries = UserInfo.where("handle IS NOT NULL AND ah_cpid IS NOT NULL AND ah_cpid != '' AND ah_country != ''").group('ah_country').count
 
     @allplayers = UserInfo.where("handle IS NOT NULL").count
     @awplayers = UserInfo.where("handle IS NOT NULL AND aw_cpid IS NOT NULL AND aw_cpid != ''").count

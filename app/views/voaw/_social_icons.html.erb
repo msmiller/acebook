@@ -1,0 +1,12 @@
+<div style='float:right;'>
+  <%= link_to image_tag("social-home.png", :class => ''), 
+      add_http(socials.homepage_url), :class => "", :target => "_blank" unless socials.homepage_url.blank? %>
+  <%= link_to image_tag("social-twitter.png", :class => ''), 
+      add_http(socials.twitter_url), :class => "", :target => "_blank" unless socials.twitter_url.blank? %>
+  <%= link_to image_tag("social-facebook.png", :class => ''), 
+      add_http(socials.facebook_url), :class => "", :target => "_blank"  unless socials.facebook_url.blank? %>
+  <%= link_to image_tag("social-google_plus.png", :class => ''), 
+      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.googleplus_url.blank? %>
+  <%= link_to image_tag("social-wordpress.png", :class => ''), 
+      add_http(socials.wordpress_url), :class => "", :target => "_blank"  unless socials.wordpress_url.blank? %>
+</div>

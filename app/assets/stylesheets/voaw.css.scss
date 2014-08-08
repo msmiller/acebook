@@ -92,3 +92,11 @@ span.minibullit {
   font-size:11px;
   color: #888;
 }
+
+a.contenteditlink {
+  background: white !important;
+}
+
+a.contenteditlink:hover {
+  text-decoration: underline;
+}

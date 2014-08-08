@@ -14,7 +14,7 @@
       <div class="contentlegend">
         <%= tl.user.user_info.handle %>
         <% if current_user.is_admin? || tl.user_id == current_user.id -%>
-          | EDIT
+          | <%= link_to "EDIT", "#", :class => "contenteditlink", :style => "background: white !important;" %>
         <% end -%>
       </div>
     </div>

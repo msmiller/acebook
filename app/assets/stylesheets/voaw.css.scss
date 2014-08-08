@@ -55,6 +55,7 @@ a:hover { text-decoration: underline; }
 dd.accordion-navigation a { 
   padding-top: 8px !important; padding-bottom: 8px !important;
   text-decoration: none;
+  border-top: 1px solid white;
   }
 dd.accordion-navigation.active a { 
 background: #bcd !important;
@@ -86,3 +87,8 @@ span.minibullit {
 
 }
 
+.contentlegend {
+  text-align: right;
+  font-size:10px;
+  color: #999;
+}

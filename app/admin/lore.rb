@@ -14,17 +14,17 @@ ActiveAdmin.register Lore do
   #  permitted
   # end
 
-form do |f|
-  f.inputs do
-    f.input :user_id
-    f.input :title
-    f.input :body
-    f.input :game, as: :select, collection: Voaw::Games.keys
-    f.input :kind, as: :select, collection: Lore::KINDS.keys # collect { |x| x[0] }
-    f.input :approved
-    #f.input :gallery_id, as: :select, collection: Gallery.select(:name).uniq
-    #f.input :file
+  form do |f|
+    f.inputs do
+      f.input :user
+      f.input :title
+      f.input :body
+      f.input :game, as: :select, collection: Voaw::Games.keys
+      f.input :kind, as: :select, collection: Lore::KINDS.keys # collect { |x| x[0] }
+      f.input :approved
+
+      f.actions
+    end
   end
-end
 
 end

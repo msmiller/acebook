@@ -1,4 +1,4 @@
-<H2>Lore</h2>
+<H2><%= render :partial => "shared/add_content_button" %>Lore</h2>
 <dl class="accordion" data-accordion>
   <% @lores.each_with_index do |tl,i| -%>
   <dd class="accordion-navigation">
@@ -7,10 +7,11 @@
         <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
       </span>
       <span class="minibullit"><%= tl.game %></span>
-      &nbsp;&nbsp;<b><%= tl.title %></b>
+      &nbsp; &nbsp; &nbsp; <b><%= tl.title %></b>
     </a>
     <div id="panel_<%= i %>" class="content">
       <%= tl.body %>
+      <div class="contentlegend"><%= tl.user.user_info.handle %></div>
     </div>
   </dd>
   <% end -%>

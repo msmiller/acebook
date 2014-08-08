@@ -13,7 +13,7 @@
       <%= tl.body %>
       <div class="contentlegend">
         <%= tl.user.user_info.handle %>
-        <% if tl.user.is_admin? || tl.user_id == current_user.id -%>
+        <% if current_user.is_admin? || tl.user_id == current_user.id -%>
           | EDIT
         <% end -%>
       </div>

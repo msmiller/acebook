@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 20140807080812) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "approved"
+    t.string   "game",       limit: 16
+    t.string   "kind",       limit: 16
   end
 
   create_table "social_infos", force: true do |t|
@@ -115,7 +117,6 @@ ActiveRecord::Schema.define(version: 20140807080812) do
     t.string   "city"
     t.string   "state"
     t.string   "country"
-    t.text     "message"
     t.string   "planes"
     t.string   "aw_cpid",       limit: 16
     t.string   "wb_cpid",       limit: 16
@@ -125,6 +126,7 @@ ActiveRecord::Schema.define(version: 20140807080812) do
     t.string   "ah_country"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "message"
     t.integer  "year_started"
     t.string   "icon"
   end

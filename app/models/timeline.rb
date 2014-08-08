@@ -1,6 +1,13 @@
 class Timeline < ActiveRecord::Base
 
   belongs_to :user
+
+  KINDS = {
+    "convention" => "Convention",
+    "scenario" => "Scenario",
+    "news" => "Game/Company News",
+    "event" => "Other Event"
+  }
   
   def create
     #@user = User.new(user_params)

@@ -27,13 +27,19 @@ class User < ActiveRecord::Base
 
   end
 
+  # For ActiveAdmin
   def display_name
     self.user_info.name
   end
+
   # I'm the only one who'll mess with the database
   def is_admin?
     self.email == "mark.s.miller@gmail.com"
   end
 
+  def has_published_content?
+    x = (self.lores.where(:approved => true).count + self.timelines.where(:approved => true).count)
+    x > 0
+  end
 
 end

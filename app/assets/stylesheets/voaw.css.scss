@@ -63,6 +63,26 @@ background: #bcd !important;
 
 dd.accordion-navigation div.content {
     padding-top: 10px !important; padding-bottom: 10px !important;
+}
+
+span.minibullit {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+
+    -moz-border-radius: 12px; /* or 50% */
+    border-radius: 12px; /* or 50% */
+
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 8px auto 0 auto;
+
+    text-transform: uppercase;
+    margin-bottom: -5px;
 
 }
 

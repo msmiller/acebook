@@ -72,7 +72,7 @@ Timeline.create([
 		month: 8, year: 1995, game: "aw", kind: "convention", approved: true },
 	
 	{ user_id: 1, title: "Air Warrior Convention : Los Angeles", body: "", 
-		month: 7, year: 1992, game: "aw", kind: "convention", approved: true },
+		month: 6, year: 1992, game: "aw", kind: "convention", approved: true },
 
 	# ----
 

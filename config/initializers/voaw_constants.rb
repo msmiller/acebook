@@ -1,4 +1,4 @@
-Voaw::Games = {
+Acebook::Games = {
   "aw" => { 
     :name => "Air Warrior",
     :countries => [ "A-Land", "B-Land", "C-Land" ]
@@ -13,7 +13,7 @@ Voaw::Games = {
     }
 }
 
-Voaw::Icons = [
+Acebook::Icons = [
   "sheep",
   "crosshairs",
   "a6m",
@@ -47,7 +47,7 @@ Voaw::Icons = [
 
 require 'versionomy'
 
-Voaw::Version = Versionomy.create(
+Acebook::Version = Versionomy.create(
   :major => 1,
   :minor => 0,
   :tiny => 2,
@@ -56,4 +56,4 @@ Voaw::Version = Versionomy.create(
   #:preview_version => 3
   )
 
-Voaw::Date = "6.AUG.2014"
+Acebook::Date = "6.AUG.2014"

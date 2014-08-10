@@ -19,7 +19,7 @@ ActiveAdmin.register Lore do
       f.input :user
       f.input :title
       f.input :body
-      f.input :game, as: :select, collection: Voaw::Games.keys
+      f.input :game, as: :select, collection: Acebook::Games.keys
       f.input :kind, as: :select, collection: Lore::KINDS.keys # collect { |x| x[0] }
       f.input :approved
 

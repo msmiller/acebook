@@ -21,7 +21,7 @@ ActiveAdmin.register Timeline do
       f.input :year, as: :select, collection: (1985..2015).to_a
       f.input :title
       f.input :body
-      f.input :game, as: :select, collection: Voaw::Games.keys
+      f.input :game, as: :select, collection: Acebook::Games.keys
       f.input :kind, as: :select, collection: Timeline::KINDS.keys # collect { |x| x[0] }
       f.input :approved
 

@@ -8,7 +8,7 @@
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
         <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
       </span>
-      <span class="minibullit"><%= tl.game %></span>
+      <span class="minibullit game_<%= tl.game %>"><%= tl.game %></span>
       <div class="timelinedate"><%= Date::MONTHNAMES[tl.month] %> <%= tl.year %></div>
       <b><%= tl.title %></b></a>
     <div id="panel_<%= i %>" class="content">

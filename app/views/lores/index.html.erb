@@ -8,8 +8,8 @@
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
         <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
       </span>
-      <span class="minibullit"><%= tl.game %></span>
-      &nbsp; &nbsp; &nbsp; <b><%= tl.title %></b>
+      <span class="minibullit game_<%= tl.game %>""><%= tl.game %></span>
+      &nbsp; &nbsp; &nbsp; <b>&ldquo;<%= tl.title %>&rdquo;</b>
     </a>
     <div id="panel_<%= i %>" class="content">
       <%= tl.body %>

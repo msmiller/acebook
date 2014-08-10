@@ -12,7 +12,7 @@
       &nbsp; &nbsp; &nbsp; <b>&ldquo;<%= tl.title %>&rdquo;</b>
     </a>
     <div id="panel_<%= i %>" class="content">
-      <%= tl.body %>
+      <%= auto_html(tl.body) { simple_format; link(:target => 'blank') } %>
       <div class="contentlegend">
         <%= tl.user.user_info.handle %>
         <% if current_user.is_admin? || tl.user_id == current_user.id -%>

@@ -1,6 +1,8 @@
 class Lore < ActiveRecord::Base
 
   belongs_to :user
+  
+  include AutoHtml
 
   KINDS = {
     "jargon" => "Jargon",

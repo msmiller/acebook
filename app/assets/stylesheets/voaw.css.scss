@@ -105,3 +105,6 @@ a.contenteditlink:hover {
 }
 
 a.close-reveal-modal { text-decoration: none; }
+
+.content.active p a { background: none !important; }
+.content.active p a:hover { text-decoration: underline; }

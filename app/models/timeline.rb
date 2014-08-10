@@ -2,6 +2,7 @@ class Timeline < ActiveRecord::Base
 
   belongs_to :user
   
+  include AutoHtml
 
   KINDS = {
     "convention" => "Convention",

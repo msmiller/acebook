@@ -9,4 +9,9 @@ class LoresController < ApplicationController
     render :layout => nil
   end
 
+  def edit
+    @lore = Lore.find_by_id(params[:id])
+    render :layout => nil
+  end
+
 end

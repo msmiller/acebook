@@ -11,4 +11,9 @@ class TimelinesController < ApplicationController
     render :layout => nil
   end
 
+  def edit
+    @timeline = Timeline.find_by_id(params[:id])
+    render :layout => nil
+  end
+
 end

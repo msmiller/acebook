@@ -1,3 +1,4 @@
+<% title "Acebook - Lore" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
 <H2><%= render :partial => "shared/add_content_button" %>Lore</h2>
 <dl class="accordion" data-accordion>
@@ -15,7 +16,9 @@
       <div class="contentlegend">
         <%= tl.user.user_info.handle %>
         <% if current_user.is_admin? || tl.user_id == current_user.id -%>
-          | <%= link_to "EDIT", "#", :class => "contenteditlink", :style => "background: white !important;" %>
+          | <%= link_to "EDIT", "/lores/#{tl.id}/edit", 
+                :class => "contenteditlink", :style => "background: white !important;", 
+                "data-reveal-id" => "myModal", "data-reveal-ajax" => "true" %>
         <% end -%>
       </div>
     </div>

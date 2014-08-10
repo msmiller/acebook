@@ -52,6 +52,10 @@ class VoawController < ApplicationController
 
     @avg_start_years = UserInfo.where("handle IS NOT NULL AND year_started IS NOT NULL AND year_started != 0").sum(:year_started)
     @avg_start_players = UserInfo.where("handle IS NOT NULL AND year_started IS NOT NULL AND year_started != 0").count
+
+    @num_lores = Lore.all.count
+    @num_timelines = Timeline.all.count
+    
   end
 
 end

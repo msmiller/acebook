@@ -1,6 +1,7 @@
 class Timeline < ActiveRecord::Base
 
   belongs_to :user
+  
 
   KINDS = {
     "convention" => "Convention",
@@ -17,7 +18,7 @@ class Timeline < ActiveRecord::Base
   private
 
   def timeline_params
-    params.require(:timeline).permit(:month, :year, :title, :body, :user_id)
+    params.require(:timeline).permit(:month, :year, :title, :body, :game, :kind)
   end
 
 end

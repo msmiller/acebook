@@ -75,7 +75,7 @@ span.minibullit {
     -moz-border-radius: 12px; /* or 50% */
     border-radius: 12px; /* or 50% */
 
-    /* background-color: #333; */
+    background-color: #777;
     color: white;
     text-align: center;
     font-size: 10px;
@@ -86,9 +86,9 @@ span.minibullit {
     margin-bottom: -5px;
 }
 
-.game_aw { background-color: OliveDrab; }
-.game_wb { background-color: #c33; }
-.game_ah { background-color: SlateGrey; }
+.game_aw { background-color: OliveDrab !important; }
+.game_wb { background-color: #c33 !important; }
+.game_ah { background-color: SlateGrey !important; }
 
 .contentlegend {
   text-align: right;

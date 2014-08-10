@@ -1,7 +1,7 @@
 class LoresController < ApplicationController
 
   def index
-    @lores = Lore.where(:approved => true).order("title ASC")
+    @lores = Lore.where(:approved => true).sort{ |x,y| x.title.downcase <=> y.title.downcase }
   end
 
   def new

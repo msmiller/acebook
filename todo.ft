@@ -2,6 +2,7 @@
 - Admin breaks for editing infos and socials
 - Asset crashes for IE stuff @done(2014-08-02)
 - Add http:// to links @done(2014-08-06)
+- Forgot password doesn't work (probably emailer)
 
 # TODO.todo
 - Before/after photo links
@@ -11,8 +12,8 @@
 - Extend cpid's to 16 chars @done(2014-08-02)
 - acebook.us @done(2014-08-03)
 - Acebook icon @done(2014-08-03)
-- Timeline
-- Lore
+- Timeline @done(2014-08-10)
+- Lore @done(2014-08-10)
 - Links
 - Add RTE for lore/links
 	http://alex-d.github.io/Trumbowyg

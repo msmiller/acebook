@@ -300,75 +300,19 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/timelines_controller.rb",
+			"file": "app/cells/copyright_cell.rb",
 			"settings":
 			{
-				"buffer_size": 158,
+				"buffer_size": 68,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/lores_controller.rb",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 132,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/migrate/20140807080812_extend_timelines_and_lores.rb",
-			"settings":
-			{
-				"buffer_size": 398,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/voaw.css.scss",
-			"settings":
-			{
-				"buffer_size": 2532,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/timeline.rb",
-			"settings":
-			{
-				"buffer_size": 390,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/timelines/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 606,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 305,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 1124,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/initializers/assets.rb",
-			"settings":
-			{
-				"buffer_size": 389,
-				"line_ending": "Unix"
+				"buffer_size": 394,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -436,6 +380,15 @@
 	},
 	"file_history":
 	[
+		"/Users/msmiller/Development/acebook/app/models/user.rb",
+		"/Users/msmiller/Development/acebook/config/initializers/assets.rb",
+		"/Users/msmiller/Development/acebook/app/controllers/timelines_controller.rb",
+		"/Users/msmiller/Development/acebook/app/controllers/lores_controller.rb",
+		"/Users/msmiller/Development/acebook/db/migrate/20140807080812_extend_timelines_and_lores.rb",
+		"/Users/msmiller/Development/acebook/app/assets/stylesheets/voaw.css.scss",
+		"/Users/msmiller/Development/acebook/app/models/timeline.rb",
+		"/Users/msmiller/Development/acebook/app/views/timelines/index.html.erb",
+		"/Users/msmiller/Development/acebook/app/controllers/application_controller.rb",
 		"/Users/msmiller/Development/voaw/app/views/voaw/_voaw_row.html.erb",
 		"/Users/msmiller/Development/voaw/app/views/voaw/_social_icons.html.erb",
 		"/Users/msmiller/Development/voaw/app/cells/footerlinks/show.html.erb",
@@ -554,16 +507,7 @@
 		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/page.rb",
 		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/media_list.rb",
 		"/Users/msmiller/Work/DialedIn/DEV/di23/app/assets/javascripts/designer/components/rtetext/redactor_list_formatting_helper.js.coffee",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/assets/javascripts/designer/components/rtetext/rtetext.js",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/lib/resque/resque_process_csv.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/user.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/account.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/controllers/organizationadmin_controller.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/div.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/sent_email_delivery_info.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/models/sendgrid_event.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/app/controllers/mailings_controller.rb",
-		"/Users/msmiller/Work/DialedIn/DEV/di23/config/domainmaps.yml"
+		"/Users/msmiller/Work/DialedIn/DEV/di23/app/assets/javascripts/designer/components/rtetext/rtetext.js"
 	],
 	"find":
 	{
@@ -744,177 +688,15 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/timelines_controller.rb",
+					"file": "app/cells/copyright_cell.rb",
 					"settings":
 					{
-						"buffer_size": 158,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/lores_controller.rb",
-					"settings":
-					{
-						"buffer_size": 132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								100,
-								100
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "db/migrate/20140807080812_extend_timelines_and_lores.rb",
-					"settings":
-					{
-						"buffer_size": 398,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								135,
-								135
-							],
-							[
-								189,
-								189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/voaw.css.scss",
-					"settings":
-					{
-						"buffer_size": 2532,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2415,
-								2415
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1037.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/models/timeline.rb",
-					"settings":
-					{
-						"buffer_size": 390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/timelines/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 606,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/controllers/application_controller.rb",
-					"settings":
-					{
-						"buffer_size": 305,
+						"buffer_size": 68,
 						"regions":
 						{
 						},
@@ -938,63 +720,31 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 7,
-					"file": "app/models/user.rb",
+					"buffer": 1,
+					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 1124,
+						"buffer_size": 394,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1038,
-								1038
-							],
-							[
-								1086,
-								1086
+								394,
+								394
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 367.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "config/initializers/assets.rb",
-					"settings":
-					{
-						"buffer_size": 389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 20.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

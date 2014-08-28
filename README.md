@@ -16,3 +16,20 @@ http://activeadmin.info/documentation.html
 http://foundation.zurb.com/docs/components/reveal.html
 
 https://bitbucket.org/msmiller/voaw
+
+
+##Password Reset
+
+*(From the console)*
+
+
+```
+user_id = u
+new_password = p
+theuser = User.find(u)
+if theuser
+  theuser.password = new_password
+  theuser.password_confirmation = new_password
+  theuser.save
+end
+```

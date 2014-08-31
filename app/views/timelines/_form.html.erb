@@ -1,16 +1,16 @@
 <%= semantic_form_for @timeline do |f| %>
   <div class="row">
     <div class="large-3 columns">
-      <%= f.input :month, as: :select, collection: Date::MONTHNAMES.each_with_index.collect{|m, i| [m, i]} %>
+      <%= f.input :month, as: :select, collection: Date::MONTHNAMES.compact.each_with_index.collect{|m, i| [m, i]}, :include_blank => false %>
     </div>
     <div class="large-3 columns">
-      <%= f.input :year, as: :select, collection: (1985..2015).to_a %>
+      <%= f.input :year, as: :select, collection: (1985..2015).to_a, :include_blank => false %>
     </div>
     <div class="large-3 columns">
-      <%= f.input :game, as: :select, collection: Acebook::Games.keys %>
+      <%= f.input :game, as: :select, collection: Acebook::Games.keys, :include_blank => false %>
     </div>
     <div class="large-3 columns">
-      <%= f.input :kind, as: :select, collection: Timeline::KINDS.keys %>
+      <%= f.input :kind, as: :select, collection: Timeline::KINDS.keys, :include_blank => false %>
     </div>
   </div>
   <div class="row">

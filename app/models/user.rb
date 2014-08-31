@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 
   after_create :after_create
 
+  has_many :comments
+
   def after_create
 
     self.user_info = UserInfo.new

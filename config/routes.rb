@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'timeline' => 'timelines#index'
   resources :lores
   get 'lore' => 'lores#index'
+  resources :comments
 
   # Example resource route with options:
   #   resources :products do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807080812) do
+ActiveRecord::Schema.define(version: 20140831015708) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -45,6 +45,23 @@ ActiveRecord::Schema.define(version: 20140807080812) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "comments", force: true do |t|
+    t.integer  "commentable_id",   default: 0
+    t.string   "commentable_type"
+    t.string   "title"
+    t.text     "body"
+    t.string   "subject"
+    t.integer  "user_id",          default: 0, null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "game_infos", force: true do |t|
     t.integer  "user_id"
@@ -117,6 +134,7 @@ ActiveRecord::Schema.define(version: 20140807080812) do
     t.string   "city"
     t.string   "state"
     t.string   "country"
+    t.text     "message"
     t.string   "planes"
     t.string   "aw_cpid",       limit: 16
     t.string   "wb_cpid",       limit: 16
@@ -126,7 +144,6 @@ ActiveRecord::Schema.define(version: 20140807080812) do
     t.string   "ah_country"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "message"
     t.integer  "year_started"
     t.string   "icon"
   end

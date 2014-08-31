@@ -72,6 +72,8 @@ gem "activeadmin", github: 'gregbell/active_admin'
 gem 'jquery-datatables-rails', '~> 2.1.10.0.4'
 # https://github.com/rweng/jquery-datatables-rails
 
+gem 'acts_as_commentable_with_threading'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

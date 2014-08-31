@@ -4,6 +4,8 @@ class Lore < ActiveRecord::Base
   
   include AutoHtml
 
+  acts_as_commentable
+
   KINDS = {
     "jargon" => "Jargon",
     "story" => "Story"

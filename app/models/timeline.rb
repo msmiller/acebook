@@ -4,6 +4,8 @@ class Timeline < ActiveRecord::Base
   
   include AutoHtml
 
+  acts_as_commentable
+
   KINDS = {
     "convention" => "Convention",
     "scenario" => "Scenario",

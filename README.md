@@ -25,7 +25,7 @@ https://bitbucket.org/msmiller/voaw
 
 ```
 user_id = u
-new_password = p
+new_password = "bloodpig"
 theuser = User.find(u)
 if theuser
   theuser.password = new_password

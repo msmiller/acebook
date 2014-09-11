@@ -17,6 +17,9 @@ http://foundation.zurb.com/docs/components/reveal.html
 
 https://bitbucket.org/msmiller/voaw
 
+##
+
+Test passwords: password
 
 ##Password Reset
 

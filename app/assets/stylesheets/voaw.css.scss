@@ -108,3 +108,25 @@ a.close-reveal-modal { text-decoration: none; }
 
 .content.active p a { background: none !important; }
 .content.active p a:hover { text-decoration: underline; }
+
+#roster_outer {
+  padding-top: 10px;
+}
+
+.roster_tile_outer {
+  float:left;
+  display: block;
+  width: 320px;
+  height: 80px;
+  overflow: hidden;
+  background-image: url(./acebook-tile.jpg);
+  margin-bottom: 4px;
+}
+
+.roster_tile_inner {
+  margin: 10px;
+}
+
+.monotype {
+    font-family: 'PT Mono', courier;
+}

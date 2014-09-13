@@ -1,5 +1,5 @@
 # BUGS.todo
-- Admin breaks for editing infos and socials
+- Admin breaks for editing infos and socials @done(2014-09-13)
 - Asset crashes for IE stuff @done(2014-08-02)
 - Add http:// to links @done(2014-08-06)
 - Forgot password doesn't work (probably emailer)
@@ -14,19 +14,19 @@
 - Acebook icon @done(2014-08-03)
 - Timeline @done(2014-08-10)
 - Lore @done(2014-08-10)
-- Links
+- Links @done(2014-09-13)
 - Add RTE for lore/links
 	http://alex-d.github.io/Trumbowyg
 - Make name/address only visible to registered users @done(2014-08-06)
 - Social icons on registry @done(2014-08-06)
-- Masonry view mode
+- Masonry view mode @done(2014-09-13)
 
 # Icons for.todo
 - B17 @done(2014-08-02)
 - Zeke @done(2014-08-03)
-- P40
+- P40 @done(2014-09-13)
 - Sturmi @done(2014-08-03)
-- B25
+- B25 @done(2014-09-13)
 - Yak @done(2014-08-03)
 - F4U @done(2014-08-03)
 - Stuka

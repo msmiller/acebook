@@ -4,7 +4,7 @@
     <div class="large-12 columns">
       <%= f.input :title %>
       <%= f.input :url %>
-      <%= f.input :description, :input_html => { :rows => 8 }, :label => "BODY <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
+      <%= f.input :description, :as => :text, :input_html => { :rows => 8 }, :label => "DESCRIPTION <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
     </div>
   </div>
   <%= f.actions do %>

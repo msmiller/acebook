@@ -41,9 +41,11 @@ class User < ActiveRecord::Base
     self.email == "mark.s.miller@gmail.com"
   end
 
+	# Disable this for now ... re-enable when spammers come
   def has_published_content?
-    x = (self.lores.where(:approved => true).count + self.timelines.where(:approved => true).count + self.links.where(:approved => true).count)
-    x > 0
+    #x = (self.lores.where(:approved => true).count + self.timelines.where(:approved => true).count + self.links.where(:approved => true).count)
+    #x > 0
+    true
   end
 
 end

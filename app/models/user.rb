@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :lores
   has_many :timelines
+  has_many :links
 
   after_create :after_create
 

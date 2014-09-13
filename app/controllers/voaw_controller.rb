@@ -64,6 +64,7 @@ class VoawController < ApplicationController
 
     @num_lores = Lore.all.count
     @num_timelines = Timeline.all.count
+    @num_links = Link.all.count
     
   end
 

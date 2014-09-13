@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container { padding-top: 5px; padding-bottom: 5px; }
 .slideright { text-align: right; }
 .slideleft { text-align: left; }
 .footer { font-size: 12px; border-top: 1px solid #ddd; margin-top: 10px; padding-top: 5px; }
@@ -129,5 +130,6 @@ font-family: 'Walter Turncoat', cursive;
 }
 
 .monotype {
+color: #777;
     font-family: 'PT Mono', courier;
 }

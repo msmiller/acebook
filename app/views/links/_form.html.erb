@@ -1,0 +1,13 @@
+
+<%= semantic_form_for @link do |f| %>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= f.input :title %>
+      <%= f.input :url %>
+      <%= f.input :description, :input_html => { :rows => 8 }, :label => "BODY <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
+    </div>
+  </div>
+  <%= f.actions do %>
+      <%= f.action :submit, :button_html => { :class => "button tiny radius" } %>
+    <% end %>
+<% end %>

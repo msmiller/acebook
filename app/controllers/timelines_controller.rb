@@ -26,7 +26,7 @@ class TimelinesController < ApplicationController
 		@timeline = Timeline.new
 		@timeline.update_attributes(timeline_params)
 		@timeline.update_attribute(:user_id, current_user.id)
-		if (current_user.timelines.count + current_user.lores.count) > 1
+    if current_user.has_published_content?
 			@timeline.update_attribute(:approved, true)
 		else
 			@timeline.update_attribute(:approved, false)

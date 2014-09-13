@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
   end
 
   def has_published_content?
-    x = (self.lores.where(:approved => true).count + self.timelines.where(:approved => true).count)
+    x = (self.lores.where(:approved => true).count + self.timelines.where(:approved => true).count + self.links.where(:approved => true).count)
     x > 0
   end
 

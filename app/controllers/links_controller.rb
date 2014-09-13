@@ -24,7 +24,7 @@ class LinksController < ApplicationController
     @link = Link.new
     @link.update_attributes(link_params)
     @link.update_attribute(:user_id, current_user.id)
-    if (current_user.links.count + current_user.links.count) > 1
+    if current_user.has_published_content?
       @link.update_attribute(:approved, true)
     else
       @link.update_attribute(:approved, false)

@@ -50,10 +50,10 @@ require 'versionomy'
 Acebook::Version = Versionomy.create(
   :major => 1,
   :minor => 0,
-  :tiny => 3,
+  :tiny => 5,
   #:tiny2 => 0,
   #:release_type => :preview,
   #:preview_version => 3
   )
 
-Acebook::Date = "30.AUG.2014"
+Acebook::Date = "12.SEP.2014"

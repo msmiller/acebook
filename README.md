@@ -1,38 +1,7 @@
 # README #
 
+This was a quick and fun summer project to create an online directory of pilots from vintage
+online flight sim games. Some of these relationships go back 35 years, so a need to document
+everyone while we were all still breathing was recognized.
 
-Host with [ninefold.com](http://ninefold.com)
-
-To add an admin panel:
-
-rails generate active_admin:resource [MyModelName]
-
-Some links ...
-
-http://stackoverflow.com/questions/22521049/rails-4-and-active-admin-activemodelforbiddenattributeserror
-
-http://activeadmin.info/documentation.html
-
-http://foundation.zurb.com/docs/components/reveal.html
-
-https://bitbucket.org/msmiller/voaw
-
-##
-
-Test passwords: password
-
-##Password Reset
-
-*(From the console)*
-
-
-```
-user_id = u
-new_password = "bloodpig"
-theuser = User.find(u)
-if theuser
-  theuser.password = new_password
-  theuser.password_confirmation = new_password
-  theuser.save
-end
-```
+There's no test code because this was just recreational coding. 

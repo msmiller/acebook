@@ -1,89 +1,54 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
-
-group :development do  
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-  gem "quiet_assets"
-  gem "better_errors"
-  gem "binding_of_caller"
-end
-
+gem 'rails', '~> 6.0.2'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.4'
+# Use Puma as the app server
+gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
+gem 'sass-rails', '>= 6'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 4.0'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-# Use ActiveModel has_secure_password
+gem 'jbuilder', '~> 2.7'
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 4.0'
+# Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Use Active Storage variant
+# gem 'image_processing', '~> 1.2'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.2', require: false
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-gem 'compass'
-gem 'foundation-rails'
-
-# gem 'formtastic', "~> 2.2"
-
-#gem "will_paginate", "~> 3.0.5"             # 
-#gem "mail_form", "~> 1.5.0"                 # 
-gem "auto_html", "~> 1.6.4"                 # 
-#gem "vpim", "~> 13.11.11"                   # 
-#gem "acts-as-taggable-on", "~> 3.2.6"       # 
-
-gem "agent_orange"
-
-gem "colorize"
-gem "cancan"
-gem "cells"
-gem "devise"
-
-gem "high_voltage"
-gem "gritter"
-
-gem "versionomy"
-gem 'country_select', github: 'stefanpenner/country_select'
-gem 'activevalidators'
-
-gem "activeadmin", github: 'gregbell/active_admin'
-
-gem 'jquery-datatables-rails', '~> 2.1.10.0.4'
-# https://github.com/rweng/jquery-datatables-rails
-
-gem 'acts_as_commentable_with_threading'
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem "better_errors"
-  #gem "binding_of_caller"
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
+end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

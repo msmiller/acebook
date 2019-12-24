@@ -1,9 +1,0 @@
-<div class="acomment">
-  <b><%= display_comment.user.user_info.handle %></b> @ <%= display_comment.created_at.to_s:db %>
-  <% if @current_user && ((@current_user.id == display_comment.user_id) || current_user.is_admin?) -%>
-    &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "[delete]", "/comments/#{display_comment.id}?from=#{controller.controller_name}", 
-      :style => "background: transparent !important;", :method => :delete %>
-  <% end -%>
-  <br>
-  <%= display_comment.body %>
-</div>

@@ -49,6 +49,7 @@ gem 'trestle'
 gem 'better_settings'
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
+gem 'awesome_print'
 
 group :development do
   gem "better_errors"

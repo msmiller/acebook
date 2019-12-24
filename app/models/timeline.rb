@@ -2,7 +2,7 @@ class Timeline < ApplicationRecord
 
   belongs_to :user
   
-  include AutoHtml
+  # include AutoHtml
 
   acts_as_commentable
 

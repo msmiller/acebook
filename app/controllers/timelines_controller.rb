@@ -1,9 +1,11 @@
 class TimelinesController < ApplicationController
 
-  include AutoHtml
+  # include AutoHtml
 
   def index
-    @timelines = Timeline.where(:approved => true).order("year DESC, month DESC")
+    @timelines = Timeline.all # where(:approved => true).order("year DESC, month DESC")
+    p "----"
+    ap @timelines
   end
   
   def new

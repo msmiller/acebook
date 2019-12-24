@@ -7,7 +7,7 @@
   <dd class="accordion-navigation">
     <a href="#panel_<%= i %>">
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
-        <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
+        <%= image_pack_tag "media/images/content/#{tl.kind}_24.png", :align => "center" %>
       </span>
       <span class="minibullit game_<%= tl.game %>"><%= tl.game %></span>
       <div class="timelinedate"><%= Date::MONTHNAMES[tl.month] %> <%= tl.year %></div>
@@ -17,7 +17,7 @@
       <% end -%>
     </a>
     <div id="panel_<%= i %>" class="content">
-      <%= auto_html(tl.body) { simple_format; link(:target => 'blank') } %>
+      <%= Rinku.auto_link(tl.body.to_s) { simple_format; link(:target => 'blank') } %>
 
       <% if current_user -%>
         <div class="komments">

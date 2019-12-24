@@ -18,7 +18,7 @@
   border-radius:6px;
 }
 
-h1#title { font-size: 44px; line-height: 44px;}
+h1#title { font-size: 44px; line-height: 56px;  }
 h1#title a:hover { color: black !important; text-decoration: none; }
 #logobtn:hover { background-color: black !important; text-decoration: none; }
 
@@ -54,10 +54,10 @@ a:hover { text-decoration: underline; }
   font-family: 'Walter Turncoat', cursive;
   }
 
-#menulist { background: black; }
+#menulist { background: black;  }
 #menulist a { text-decoration: none; }
 #menulist a:hover { color: gold;}
-#menulist a { color: white;}
+#menulist a { color: white; padding: 14px; }
 
 /* --- FOR LORE/TIMELINE --- */
 

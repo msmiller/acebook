@@ -47,6 +47,8 @@ gem 'sendgrid-ruby'
 gem 'bugsnag'
 gem 'trestle'
 gem 'better_settings'
+gem 'foundation-rails'
+gem 'autoprefixer-rails'
 
 group :development do
   gem "better_errors"

@@ -22,3 +22,9 @@ import "controllers"
 // https://stackoverflow.com/questions/47380333/rails-js-erb-templates-no-longer-work-with-webpack
 import 'expose-loader?$!jquery';
 import 'expose-loader?jQuery!jquery';
+
+import "../css/application.scss";
+
+$(document).on('turbolinks:load', function() {
+    $(function(){ $(document).foundation(); });
+});

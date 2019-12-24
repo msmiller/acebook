@@ -28,6 +28,35 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+######## ACEBOOK START
+
+gem "agent_orange"
+gem 'cells-rails'
+gem 'cells-erb'
+gem "devise"
+gem "high_voltage"
+gem "gritter"
+gem 'active_interaction'
+gem 'draper'
+gem 'acts_as_commentable_with_threading'
+gem 'rinku' # instead of autohtml
+gem 'namae'
+gem 'finishing_moves'
+gem 'seedbank'
+gem 'sendgrid-ruby'
+gem 'bugsnag'
+
+group :development do
+  gem "better_errors"
+  gem 'foreman'
+end
+
+group :production do
+  gem 'pg'
+end
+
+######## ACEBOOK END
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

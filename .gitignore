@@ -6,7 +6,7 @@
 app/.DS_Store
 app/assets/.DS_Store
 .DS_Store
-voaw.sublime-workspace
+*.sublime-*
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
@@ -16,3 +16,4 @@ voaw.sublime-workspace
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+

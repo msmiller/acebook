@@ -1,0 +1,2 @@
+module LoreHelper
+end

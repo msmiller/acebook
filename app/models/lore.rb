@@ -1,4 +1,4 @@
-class Lore < ActiveRecord::Base
+class Lore < ApplicationRecord
 
   belongs_to :user
   

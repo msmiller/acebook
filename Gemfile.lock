@@ -76,6 +76,7 @@ GEM
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
+    better_settings (1.0.0)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -292,6 +293,7 @@ DEPENDENCIES
   acts_as_commentable_with_threading
   agent_orange
   better_errors
+  better_settings
   bootsnap (>= 1.4.2)
   bugsnag
   byebug

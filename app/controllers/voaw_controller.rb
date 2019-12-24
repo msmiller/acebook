@@ -1,6 +1,6 @@
 class VoawController < ApplicationController
 
-  include AutoHtml
+  include Rinku
 
   def index
     @current_user = current_user

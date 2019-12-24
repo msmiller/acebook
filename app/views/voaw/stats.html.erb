@@ -1,0 +1,93 @@
+<% title "Acebook - Stats" %>
+<h2>Statistics</h2>
+
+<div class="row">
+  <div class="large-4 columns">
+
+    <table>
+      <tbody>
+        <tr>
+          <td>Earliest Start</td>
+          <td><%= @earliest.year_started %></td>
+        </tr>
+        <tr>
+          <td>Latest Start</td>
+          <td><%= @latest.year_started %></td>
+        </tr>
+        <tr>
+          <td>Average Start</td>
+          <td><%= @avg_start_years / @avg_start_players %></td>
+        </tr>
+       <tr>
+          <td>Total Pilots</td>
+          <td><%= @allplayers %></td>
+        </tr>
+       <tr>
+          <td>Timeline Items</td>
+          <td><%= @num_timelines %></td>
+        </tr>
+       <tr>
+          <td>Lore Items</td>
+          <td><%= @num_lores %></td>
+        </tr>
+       <tr>
+          <td>Link Items</td>
+          <td><%= @num_links %></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="large-4 columns">
+
+    <table>
+      <tbody>
+        <tr>
+          <td><b>Air Warrior Pilots</b></td>
+          <td><%= @awplayers %></td>
+        </tr>
+        <% @awcountries.each_pair do |k,v| -%>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
+        </tr>
+        <% end -%>
+        <tr>
+          <td><b>WarBirds Pilots</b></td>
+          <td><%= @wbplayers %></td>
+        </tr>
+        <% @wbcountries.each_pair do |k,v| -%>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
+        </tr>
+        <% end -%>
+        <tr>
+          <td><b>Aces High Pilots</b></td>
+          <td><%= @ahplayers %></td>
+        </tr>
+        <% @ahcountries.each_pair do |k,v| -%>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= k %></td><td><%= v.to_i %></td>
+        </tr>
+        <% end -%>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="large-4 columns">
+
+    <table>
+      <tbody>
+        <% @icons.each do |i| -%>
+        <% unless i[0].blank? %>
+        <tr>
+          <td><%= image_tag "icons/#{i[0]}.gif", :class => 'miniicon' %></td>
+          <td><%= i[0] %></td>
+          <td><%= i[1] %></td>
+        </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>

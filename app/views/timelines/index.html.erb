@@ -1,0 +1,40 @@
+<% title "Acebook - Timeline" %>
+<div id="myModal" class="reveal-modal" data-reveal></div>
+<H2><%= render :partial => "shared/add_content_button" %>Timeline</h2>
+<dl class="accordion" data-accordion>
+  <% @timelines.each_with_index do |tl,i| -%>
+  <% komments = tl.comment_threads %>
+  <dd class="accordion-navigation">
+    <a href="#panel_<%= i %>">
+      <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
+        <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
+      </span>
+      <span class="minibullit game_<%= tl.game %>"><%= tl.game %></span>
+      <div class="timelinedate"><%= Date::MONTHNAMES[tl.month] %> <%= tl.year %></div>
+      <b><%= tl.title %></b>
+      <% if current_user && !komments.empty?-%>
+      <span class="commentbullet">(<%= komments.length %>)</span>
+      <% end -%>
+    </a>
+    <div id="panel_<%= i %>" class="content">
+      <%= auto_html(tl.body) { simple_format; link(:target => 'blank') } %>
+
+      <% if current_user -%>
+        <div class="komments">
+          <%= render :partial => "/comments/display_comment", :collection => komments unless komments.empty? %>
+          <%= render :partial => "/comments/item_form", :locals => { :item_id => tl.id, :item_type => "Timeline" } %>
+        </div>
+      <% end -%>
+
+      <div class="contentlegend">
+        <%= tl.user.user_info.handle %>
+        <% if current_user && (current_user.is_admin? || tl.user_id == current_user.id) -%>
+          | <%= link_to "EDIT", "/timelines/#{tl.id}/edit", 
+                :class => "contenteditlink", :style => "background: white !important;",
+                "data-reveal-id" => "myModal", "data-reveal-ajax" => "true" %>
+        <% end -%>
+      </div>
+    </div>
+  </dd>
+  <% end -%>
+</dl>

@@ -1,0 +1,31 @@
+<br>
+<table id="voawpilots" class="datatable" style="width:100%;">
+  <thead>
+    <tr>
+      <th>Handle / Squadron</th>
+      <% if @current_user -%>
+      <th>In Real Life</th>
+      <% end -%>
+      <th width="120">Air Warrior</th>
+      <th width="120">WarBirds</th>
+      <th width="120">Aces High</th>
+      <th width="80">Start</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'voaw_row', :collection => @pilots %>
+  </tbody>
+</table>
+
+<div id="myModal" class="reveal-modal" data-reveal></div>
+
+<script type="text/javascript">
+$('.datatable').dataTable({
+  "paging": false,
+    "info": false
+  // Optional, if you want full pagination controls.
+  // Check dataTables documentation to learn more about available options.
+  // http://datatables.net/reference/option/pagingType
+});
+</script>
+

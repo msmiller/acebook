@@ -1,4 +1,4 @@
-class Timeline < ActiveRecord::Base
+class Timeline < ApplicationRecord
 
   belongs_to :user
   

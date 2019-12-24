@@ -1,4 +1,4 @@
-class SocialInfo < ActiveRecord::Base
+class SocialInfo < ApplicationRecord
 
   #validates :homepage_url, :url   => true
   #validates :twitter_url,  :url   => true

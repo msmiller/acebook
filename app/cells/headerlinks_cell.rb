@@ -1,7 +1,7 @@
-class HeaderlinksCell < Cell::Rails
-
-  def show(args)
-    @user    = args[:user]
+class HeaderlinksCell < Cell::ViewModel
+  
+  def show(options)
+    @user    = options[:user]
     render
   end
 

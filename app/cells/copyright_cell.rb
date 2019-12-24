@@ -1,4 +1,4 @@
-class CopyrightCell < Cell::Rails
+class CopyrightCell < Cell::ViewModel
 
   def show
     render

@@ -128,7 +128,7 @@ a.close-reveal-modal { text-decoration: none; }
   width: 320px;
   height: 80px;
   overflow: hidden;
-//  background-image: url(image-path('acebook-tile.jpg'));
+  background-image: url('../images/acebook-tile.jpg');
   margin-bottom: 4px;
 }
 
@@ -157,3 +157,6 @@ color: #777;
   margin-bottom: 0px;
   margin-left: 14px;
 }
+
+h2 { font-size: 2rem; margin-top: 10px; }
+

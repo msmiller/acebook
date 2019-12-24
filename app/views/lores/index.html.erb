@@ -1,13 +1,13 @@
 <% title "Acebook - Lore" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
 <H2><%= render :partial => "shared/add_content_button" %>Lore</h2>
-<dl class="accordion" data-accordion>
+<ul class="accordion" data-accordion data-multi-expand="true" id="lorelist"  data-allow-all-closed="true">
   <% @lores.each_with_index do |tl,i| -%>
   <% komments = tl.comment_threads %>
-  <dd class="accordion-navigation">
-    <a href="#panel_<%= i %>">
+  <li class="accordion-item" data-accordion-item>
+    <a href="#panel_<%= i %>" class="accordion-title">
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
-        <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
+        <%= image_pack_tag "media/images/content/#{tl.kind}_24.png", :align => "center" %>
       </span>
       <span class="minibullit game_<%= tl.game %>""><%= tl.game %></span>
       &nbsp; &nbsp; &nbsp; <b>&ldquo;<%= tl.title %>&rdquo;</b>
@@ -15,8 +15,8 @@
       <span class="commentbullet">(<%= komments.length %>)</span>
       <% end -%>
     </a>
-    <div id="panel_<%= i %>" class="content">
-      <%= auto_html(tl.body) { simple_format; link(:target => 'blank') } %>
+    <div id="panel_<%= i %>" class="accordion-content" data-tab-content>
+      <%= Rinku.auto_link(tl.body) { simple_format; link(:target => 'blank') } %>
                 
       <% if current_user-%>
         <div class="komments">

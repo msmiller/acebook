@@ -31,15 +31,22 @@
 
   <body>
 
-    <div class="container">
+    <div class="grid-container fluid" style="max-width: 1000px;">
 
       <div class="row header">
-        <div class="large-5 columns" style="line-height:60px;">
+        <div class="large-5 columns" style="">
+        </div>
+        <div class="large-7 columns" style="text-align:right;">
+          <%= cell(:headerlinks).(:show, user: @current_user) %>
+        </div>
+      </div>
+
+      <div class="row header">
+        <div class="large-5 columns" style="">
           <h1 style="vertical-align:middle;margin-top:20px;" id="title"><%= link_to image_pack_tag("acebook.gif", :id => "logoimage") + " Acebook", root_url, :id => "logo" %>
         </div>
         <div class="large-7 columns" style="text-align:right;">
-          <%= render_cell :headerlinks, :show, :user => @current_user if false %>
-          <p id="legend">An online directory for the lost tribes of Air Warrior, WarBirds, and Aces High.</p>
+          <p id="legend" class="show-for-medium show-for-large">An online directory for the lost tribes of Air Warrior, WarBirds, and Aces High.</p>
         </div>
       </div>
 
@@ -53,12 +60,20 @@
 
       <div class="row footer">
         <div class="large-6 column slideleft ">
-          <%= render_cell :footerlinks, :show, :user => @current_user if false %>
+          <%= cell(:footerlinks).(:show, user: @current_user) %>
         </div>
-        <div class="large-6 column slideright ">
-          <%= render_cell :copyright, :show if false %>
+        <div class="large-6 column slideright">
+          <%= cell(:copyright).(:show) %>
         </div>
       </div>
+
+
+      <div class="row">
+        <div class="large-12 columns">
+          &nbsp;
+        </div>
+      </div>
+
     </div>
 
   </body>

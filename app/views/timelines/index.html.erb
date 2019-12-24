@@ -1,11 +1,11 @@
 <% title "Acebook - Timeline" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
 <H2><%= render :partial => "shared/add_content_button" %>Timeline</h2>
-<dl class="accordion" data-accordion>
+<ul class="accordion" data-accordion data-multi-expand="true" id="timelinelist"  data-allow-all-closed="true">
   <% @timelines.each_with_index do |tl,i| -%>
   <% komments = tl.comment_threads %>
-  <dd class="accordion-navigation">
-    <a href="#panel_<%= i %>">
+  <li class="accordion-item" data-accordion-item>
+    <a href="#panel_<%= i %>" class="accordion-title">
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
         <%= image_pack_tag "media/images/content/#{tl.kind}_24.png", :align => "center" %>
       </span>
@@ -16,7 +16,7 @@
       <span class="commentbullet">(<%= komments.length %>)</span>
       <% end -%>
     </a>
-    <div id="panel_<%= i %>" class="content">
+    <div id="panel_<%= i %>" class="accordion-content" data-tab-content>
       <%= Rinku.auto_link(tl.body.to_s) { simple_format; link(:target => 'blank') } %>
 
       <% if current_user -%>

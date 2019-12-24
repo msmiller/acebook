@@ -1,7 +1,8 @@
-class FooterlinksCell < Cell::Rails
+class FooterlinksCell < Cell::ViewModel
 
-  def show(args)
-    @user    = args[:user]
+
+  def show(options)
+    @user    = options[:user]
     @numpilots = User.count
     @num_pending_lores = (Lore.count - Lore.where(:approved => true).count)
     @num_pending_timelines = (Timeline.count - Timeline.where(:approved => true).count)

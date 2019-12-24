@@ -45,6 +45,7 @@ gem 'finishing_moves'
 gem 'seedbank'
 gem 'sendgrid-ruby'
 gem 'bugsnag'
+gem 'trestle'
 
 group :development do
   gem "better_errors"

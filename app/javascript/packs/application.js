@@ -15,3 +15,10 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import "controllers"
+
+// Expose jQuery
+// https://stackoverflow.com/questions/47380333/rails-js-erb-templates-no-longer-work-with-webpack
+import 'expose-loader?$!jquery';
+import 'expose-loader?jQuery!jquery';

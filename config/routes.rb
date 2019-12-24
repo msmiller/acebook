@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   get 'links' => 'links#index'
   resources :comments
 
+mount Thredded::Engine => '/forum'
+
 end

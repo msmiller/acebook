@@ -52,6 +52,8 @@ gem 'autoprefixer-rails'
 gem 'awesome_print'
 gem 'formtastic'
 
+gem 'thredded', '~> 0.16.14'
+
 group :development do
   gem "better_errors"
   gem 'foreman'

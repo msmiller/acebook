@@ -136,6 +136,8 @@ GEM
     ffi (1.11.3)
     finishing_moves (1.0.1)
     foreman (0.86.0)
+    formtastic (3.1.5)
+      actionpack (>= 3.2.13)
     foundation-rails (6.6.1.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0)
@@ -327,6 +329,7 @@ DEPENDENCIES
   draper
   finishing_moves
   foreman
+  formtastic
   foundation-rails
   gritter
   high_voltage

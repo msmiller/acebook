@@ -80,7 +80,7 @@
         <% @icons.each do |i| -%>
         <% unless i[0].blank? %>
         <tr>
-          <td><%= image_tag "icons/#{i[0]}.gif", :class => 'miniicon' %></td>
+          <td><%= image_pack_tag "media/images/icons/#{i[0]}.gif", :class => 'miniicon' %><b></td>
           <td><%= i[0] %></td>
           <td><%= i[1] %></td>
         </tr>

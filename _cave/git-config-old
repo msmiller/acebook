@@ -1,0 +1,35 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "bitbucket"]
+	url = https://msmiller@bitbucket.org/msmiller/voaw.git
+	fetch = +refs/heads/*:refs/remotes/bitbucket/*
+[branch "master"]
+	remote = bitbucket
+	merge = refs/heads/master
+[remote "heroku"]
+	url = git@heroku.com:acebook.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[branch "caching"]
+	remote = heroku
+	merge = refs/heads/caching
+[mergetool "tower"]
+	cmd = \"/Applications/Tower.app/Contents/Resources/kaleidoscope.sh\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[remote "github"]
+	url = https://msmiller@github.com/msmiller/acebook.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+	sslVerify = true
+	gtServiceAccountIdentifier = 46886d1369e8cb913bae71ce1dde0b01f6417f0335fbce84435d084efaa25594
+[atomGithub]
+	historySha = 144ab5847d0d938ad3c440fd466bed47b21b4f4a
+[branch "rails6"]
+	remote = bitbucket
+	merge = refs/heads/rails6
+[branch "rails6thredded"]
+	remote = bitbucket
+	merge = refs/heads/rails6thredded

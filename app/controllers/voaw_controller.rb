@@ -39,7 +39,7 @@ class VoawController < ApplicationController
     @current_user = current_user
 
     @pilot = User.find(params[:id])
-    render :layout => nil
+    # render :layout => nil
   end
 
   def stats

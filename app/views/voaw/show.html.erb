@@ -17,7 +17,7 @@
 </div>
 <div class="large-2 columns" style="text-align:right;">
   <%= @pilot.user_info.year_started %><br>
-  <%= image_tag "icons/#{@pilot.user_info.get_icon}.gif", :class => 'proficon' %>
+  <%= image_pack_tag "icons/#{@pilot.user_info.get_icon}.gif", :class => 'proficon' %>
 </div>
 </div>
 
@@ -47,7 +47,7 @@
 
 <div style="border-top: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px;">
   <div class="row"><div class="large-12 columns">
-    <%= auto_html(@pilot.user_info.message) { simple_format; link(:target => 'blank') } %>
+    <%= Rinku.auto_link(@pilot.user_info.message).html_safe %>
   </div></div>
 </div>
 

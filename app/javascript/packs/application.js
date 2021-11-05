@@ -15,6 +15,8 @@ require("channels")
 //
 const images = require.context('../images', true)
 const imagePath = (name) => images(name, true)
+const socialimages = require.context('../images/social', true)
+const socialimagePath = (name) => socialimages(name, true)
 
 import "controllers"
 

@@ -113,6 +113,13 @@ GEM
     childprocess (3.0.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
+    countries (3.1.0)
+      i18n_data (~> 0.11.0)
+      sixarm_ruby_unaccent (~> 1.1)
+      unicode_utils (~> 1.4)
+    country_select (4.0.0)
+      countries (~> 3.0)
+      sort_alphabetical (~> 1.0)
     crass (1.0.5)
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
@@ -148,6 +155,7 @@ GEM
     high_voltage (3.1.2)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.11.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     kaminari (1.1.1)
@@ -255,6 +263,9 @@ GEM
       rubyzip (>= 1.2.2)
     sendgrid-ruby (6.0.0)
       ruby_http_client (~> 3.3.0)
+    sixarm_ruby_unaccent (1.2.0)
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -286,6 +297,7 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
+    unicode_utils (1.4.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
@@ -325,6 +337,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   cells-erb
   cells-rails
+  country_select (~> 4.0)
   devise
   draper
   finishing_moves

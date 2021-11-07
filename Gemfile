@@ -51,6 +51,7 @@ gem 'foundation-rails'
 gem 'autoprefixer-rails'
 gem 'awesome_print'
 gem 'formtastic'
+gem 'country_select', '~> 4.0'
 
 group :development do
   gem "better_errors"

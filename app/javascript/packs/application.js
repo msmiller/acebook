@@ -28,5 +28,6 @@ import 'expose-loader?jQuery!jquery';
 import "../css/application.scss";
 
 $(document).on('turbolinks:load', function() {
+    console.log("FOUNDATION");
     $(function(){ $(document).foundation(); });
 });

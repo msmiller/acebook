@@ -6,6 +6,13 @@
 *
 * Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 */
+
+#legend {
+  @apply hidden md:block text-gray-500;
+  font-family: 'Walter Turncoat', cursive;
+}
+
+
 /*
 .frodus {
   @apply text-rose-500;

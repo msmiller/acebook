@@ -9,6 +9,8 @@
 # Flipper.enable(:some_feature, User.last)
 # Flipper.disable(:some_feature, User.last)
 
+=begin
+
 require 'flipper'
 require 'flipper/adapters/redis'
 
@@ -38,3 +40,4 @@ Rails.application.configure do
   # config.flipper.preload = false
 end
 
+=end

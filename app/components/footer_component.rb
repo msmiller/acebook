@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class FooterComponent < ViewComponent::Base
-
   def initialize(current_user:)
     @current_user = current_user
     @numpilots = User.count
@@ -13,7 +12,4 @@ class FooterComponent < ViewComponent::Base
   def render?
     true
   end
-
-
-
 end

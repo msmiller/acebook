@@ -2,7 +2,7 @@
   <div class="roster_tile_inner">
     <div style="border-bottom: 1px dotted #ccc; margin-bottom: 5px; padding-bottom: 5px; line-height: 1rem;">
       <a href="/show/<%= voaw_tile.user_id %>" >
-        <%= image_pack_tag "media/images/icons/#{voaw_tile.get_icon}.gif", :class => 'miniicon' %><b><%= voaw_tile.handle %></b>
+        <%= image_tag "/assets/icons/#{voaw_tile.get_icon}.gif", :class => 'miniicon' %><b><%= voaw_tile.handle %></b>
       </a>
       <br>
       <span class="smallertext"><%= voaw_tile.squadron %>&nbsp;</span>

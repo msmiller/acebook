@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full bg-gray-100">
+<html class="h-full">
   <head>
     <title>Headlist</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -42,7 +42,7 @@
       </div>
     </main>
 
-    <%= render(FooterComponent.new()) if false %>
+    <%= render(FooterComponent.new(current_user: current_user)) %>
 
   </div>
 </div>

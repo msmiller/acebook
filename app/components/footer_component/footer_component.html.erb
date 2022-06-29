@@ -1,0 +1,24 @@
+<footer class="border-t text-center my-4 py-4 text-sm">
+
+<div class="space-x-8">
+  <%= link_to "About", "/pages/about" %>
+  <span><%= Konfig.version_string %></span>
+</div>
+
+<div>
+  Copyright &copy; 2014-<%= Time.now.year %>
+  <%= link_to "GonZoville.com", "http://www.gonzoville.com", target: '_blank' %>
+  &
+  <%= link_to "Sharp Stone Codewerks", "http://www.sharp-stone.net", target: '_blank' %>
+</div>
+
+<div class="space-x-8">
+  <span><%= pluralize(@numpilots, "pilot") %> in database</span>
+  <% if @current_user && @current_user.is_admin? -%>
+    <%= link_to "Admin", "/admin", :target => "_blank" %>
+    <span>Pending: L(<%= @num_pending_lores %>) / T(<%= @num_pending_timelines %> / U(<%= @num_pending_links %>)</span>
+  <% end -%>
+</div>
+
+</footer>
+

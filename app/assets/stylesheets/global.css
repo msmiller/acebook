@@ -8,11 +8,21 @@
 */
 
 #legend {
-  @apply hidden md:block text-gray-500;
+  @apply hidden md:block text-gray-500 text-right;
   font-family: 'Walter Turncoat', cursive;
 }
 
+.navitem {
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-4;
+}
+.navactive {
+  @apply bg-cyan-600 text-white px-3 py-4;
+}
 
+.pagetitle {
+  font-family: 'Special Elite', serif;
+  @apply text-4xl mb-4 uppercase;
+}
 /*
 .frodus {
   @apply text-rose-500;

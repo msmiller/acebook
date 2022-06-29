@@ -1,5 +1,9 @@
 class LoresController < ApplicationController
 
+  before_action do
+    @navbar_active = 'lore'
+  end
+
   def index
     @lores = Lore.where(:approved => true).sort{ |x,y| x.title.downcase <=> y.title.downcase }
   end

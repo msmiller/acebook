@@ -4,6 +4,7 @@ class VoawController < ApplicationController
 
   def index
     @current_user = current_user
+    @navbar_active = 'roster'
     #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
     @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
     if @current_user && @current_user.user_info.handle.blank?
@@ -13,6 +14,7 @@ class VoawController < ApplicationController
 
   def roster
     @current_user = current_user
+    @navbar_active = 'roster'
     #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
     @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
     if @current_user && @current_user.user_info.handle.blank?

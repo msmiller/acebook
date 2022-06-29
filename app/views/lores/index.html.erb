@@ -1,13 +1,13 @@
-<% title "Acebook - Lore" %>
+<% set_title "Acebook - Lore" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
-<H2><%= render :partial => "shared/add_content_button" %>Lore</h2>
+<H1 class='pagetitle'><%= render :partial => "shared/add_content_button" %>Lore</h1>
 <ul class="accordion" data-accordion data-multi-expand="true" id="lorelist"  data-allow-all-closed="true">
   <% @lores.each_with_index do |tl,i| -%>
   <% komments = tl.comment_threads %>
   <li class="accordion-item" data-accordion-item>
     <a href="#panel_<%= i %>" class="accordion-title">
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
-        <%= image_pack_tag "media/images/content/#{tl.kind}_24.png", :align => "center" %>
+        <%= image_tag "/assets/content/#{tl.kind}_24.png", :align => "center" %>
       </span>
       <span class="minibullit game_<%= tl.game %>""><%= tl.game %></span>
       &nbsp; &nbsp; &nbsp; <b>&ldquo;<%= tl.title %>&rdquo;</b>

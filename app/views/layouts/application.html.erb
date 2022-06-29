@@ -11,6 +11,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
   </head>
 
 
@@ -29,9 +30,8 @@
 
   <%== render(HeaderComponent.new(current_user: current_user)) %>
 
-  <%= render(Nav::NavbarComponent.new(current_user: current_user, active: @navbar_active)) if false %>
+  <%= render(NavbarComponent.new(current_user: current_user, active: @navbar_active)) %>
 
-  <%= render(Nav::SubnavComponent.new(current_user: current_user, active: @subnav_active, menuset: @subnav_menuset)) if false %>
 
   <div class="py-4">
 

@@ -1,36 +1,34 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  resources :editions
+  resources :articles
+  resources :newsletters
   devise_for :users
+  get 'home/index'
+  get 'home/foo'
+  get 'home/front'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  get 'pages/about' => 'high_voltage/pages#show', id: 'about'
+  # Defines the root path route ("/")
+  root "home#index"
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  resources :sections
+  resources :instances do
+    get 'sections', to: 'instances#sections', as: 'sections'
+    get 'add_section', to: 'instances#add_section', as: 'add_section'
+  end
 
-  # You can have the root of your site routed with "root"
-  root 'voaw#roster'
+  if Rails.env.development?
+    mount Lookbook::Engine, at: "/lookbook"
+  end
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-  get 'profile' => 'voaw#profile'
-  post 'profile' => 'voaw#profile'
-  get 'show/:id' => 'voaw#show'
-
-  get 'stats' => 'voaw#stats'
-  get 'roster' => 'voaw#roster'
-  get 'index' => 'voaw#index'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :timelines
-  get 'timeline' => 'timelines#index'
-  resources :lores
-  get 'lore' => 'lores#index'
-  resources :links
-  get 'links' => 'links#index'
-  resources :comments
+#  authenticate :user, lambda { |u| u.root? } do
+#    mount Sidekiq::Web => '/sidekiq'
+#    # mount RedisBrowser::Web => '/redis-browser'
+#    mount Avo::Engine, at: Avo.configuration.root_path
+    mount Flipper::UI.app(Flipper) => '/flipper'
+#
+#    get 'switch_user', to: 'switch_user#set_current_user'
+#    get 'switch_user/remember_user', to: 'switch_user#remember_user'
+#  end
 
 end

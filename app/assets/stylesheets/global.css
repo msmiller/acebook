@@ -1,0 +1,30 @@
+/*
+* @Author: msmiller
+* @Date:   2022-01-10 17:28:37
+* @Last Modified by:   msmiller
+* @Last Modified time: 2022-05-10 17:44:47
+*
+* Copyright (c) Sharp Stone Codewerks / Mark S. Miller
+*/
+/*
+.frodus {
+  @apply text-rose-500;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.ackoop {
+  @apply text-rose-500;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h1 { text-decoration: underline !important; color: orange; }
+*/
+
+#yield-wrapper {
+  /* @apply min-h-screen; */
+  min-height: 240px;
+}
+
+.boxpanel { @apply bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 max-w-md; }

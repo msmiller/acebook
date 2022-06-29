@@ -1,0 +1,16 @@
+default: &default
+  major: "1"
+  minor: "2"
+  update: "3"
+  patch: "4"
+  milestone: "beta"
+  date: "2022-01-23"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

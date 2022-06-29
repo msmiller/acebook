@@ -77,7 +77,7 @@ end
 ######## APPLICATION GEMS ########
 
 # CORE
-gem 'aasm'
+### gem 'aasm'
 gem 'acts-as-taggable-on', '~> 9.0'
 gem 'anyway_config', '~> 2.0' # https://github.com/palkan/anyway_config
 ### gem 'better_settings'
@@ -90,7 +90,7 @@ gem 'interactor' # https://github.com/collectiveidea/interactor
 gem 'interactor-rails'
 gem 'pagy'
 gem 'rolify'
-gem 'blueprinter'
+### gem 'blueprinter'
 ### gem "audited", "~> 5.0"
 ### gem 'passwordless' # https://github.com/mikker/passwordless
 ### gem 'addressable' # https://github.com/sporkmonger/addressable
@@ -101,7 +101,7 @@ gem 'blueprinter'
 gem 'devise'
 ### gem 'devise-passwordless' # https://github.com/abevoelker/devise-passwordless
 ### gem 'noticed'
-gem 'ice_cube'
+### gem 'ice_cube'
 
 # CORE/DB
 ### gem 'pg_search'
@@ -114,9 +114,9 @@ gem 'papercraft'
 gem 'view_component'
 
 # FLIPPER
-gem 'flipper'
-gem 'flipper-redis'
-gem 'flipper-ui'
+### gem 'flipper'
+### gem 'flipper-redis'
+### gem 'flipper-ui'
 
 # UI
 gem 'active_link_to'

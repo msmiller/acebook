@@ -1,0 +1,23 @@
+defaults: &defaults
+  release:
+    major: 1
+    minor: 1
+    update: 0
+    patch: 0
+    milestone: 
+    date: 2019-12-23
+
+development:
+  <<: *defaults
+
+test:
+  release:
+    major: 1
+    minor: 2
+    update: 3
+    patch: 4
+    milestone: test
+    date: 2018-01-01
+
+production:
+  <<: *defaults

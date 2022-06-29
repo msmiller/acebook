@@ -23,13 +23,13 @@
   ```
 -->
 <div class="min-h-full">
-  <%= render(Nav::NavbarComponent.new(current_user: current_user, active: @navbar_active)) %>
+  <%= render(Nav::NavbarComponent.new(current_user: current_user, active: @navbar_active)) if false %>
 
-  <%= render(Nav::SubnavComponent.new(current_user: current_user, active: @subnav_active, menuset: @subnav_menuset)) %>
+  <%= render(Nav::SubnavComponent.new(current_user: current_user, active: @subnav_active, menuset: @subnav_menuset)) if false %>
 
   <div class="py-4">
 
-    <%== render(HeaderComponent.new(title: @header_title)) %>
+    <%== render(HeaderComponent.new(title: @header_title)) if false %>
     <main>
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <!-- Replace with your content -->
@@ -42,7 +42,7 @@
       </div>
     </main>
 
-    <%= render(FooterComponent.new()) %>
+    <%= render(FooterComponent.new()) if false %>
 
   </div>
 </div>

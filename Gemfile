@@ -142,6 +142,11 @@ gem 'redcarpet'
 # gem "rchardet"
 # gem 'sitemap_generator'
 
+# Acebook stuff
+gem 'rinku'
+gem 'acts_as_commentable_with_threading'
+gem 'better_settings' # TODO: REMOVE ME AND config/konfig !!!!
+
 # ADMIN / TOOLING
 gem 'avo'
 

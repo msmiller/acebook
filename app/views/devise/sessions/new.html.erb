@@ -11,10 +11,12 @@
     <%= f.password_field :password, autocomplete: "current-password", class: 'form-input' %>
   </div>
 
+  <% if false %>
   <div class="field">
     <%= f.label :password %><br />
     <%= f.text_field :name, autocomplete: "current-password", class: 'form-input' %>
   </div>
+  <% end %>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">

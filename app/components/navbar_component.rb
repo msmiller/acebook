@@ -11,7 +11,6 @@ class NavbarComponent < ViewComponent::Base
   end
 
   def class_for(item)
-    p "#{@active} == #{item}"
     @active == item ? 'navactive' : 'navitem'
   end
 

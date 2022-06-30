@@ -664,12 +664,16 @@ select {
 .btn-primary {
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 600;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -696,6 +700,10 @@ select {
 
 .relative {
   position: relative;
+}
+
+.float-right {
+  float: right;
 }
 
 .mx-auto {
@@ -876,11 +884,6 @@ select {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -931,6 +934,14 @@ select {
   vertical-align: middle;
 }
 
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -944,6 +955,10 @@ select {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-bold {
@@ -1189,11 +1204,13 @@ div.field label {
 }
 
 .pagetitle {
-  font-family: 'Special Elite', serif;
   margin-bottom: 1rem;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
+  font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 
 /*

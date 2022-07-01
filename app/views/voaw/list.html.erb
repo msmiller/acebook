@@ -1,0 +1,22 @@
+<div class="mx-0 overflow-hidden w-full">
+  <table class="" id="roster-table">
+    <thead class="uppercase text-sm font-semibold text-gray-900 text-left">
+      <tr>
+        <th scope="col" class="">Handle / Squadron</th>
+        <% if current_user -%>
+        <th scope="col" class="medium-plus">In Real Life</th>
+        <th scope="col" class="medium-plus">Social</th>
+        <% end %>
+        <th scope="col" class="medium-plus">Air Warrior</th>
+        <th scope="col" class="medium-plus">WarBirds</th>
+        <th scope="col" class="medium-plus">Aces High</th>
+        <th scope="col" class="medium-plus">1st Flight</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200 bg-white text-sm font-medium text-gray-900">
+      <%= render :partial => 'voaw_row', :collection => @pilots %>
+    </tbody>
+  </table>
+</div>
+
+<div id="myModal" class="reveal-modal" data-reveal></div>

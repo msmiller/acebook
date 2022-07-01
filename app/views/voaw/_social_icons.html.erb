@@ -6,6 +6,10 @@
   <%= link_to image_tag("https://simpleicons.org/icons/facebook.svg", :class => 'socialicon', alt: 'Fakebook'), 
       add_http(socials.facebook_url), :class => "", :target => "_blank"  unless socials.facebook_url.blank? %>
   <%= link_to image_tag("https://simpleicons.org/icons/instagram.svg", :class => 'socialicon', alt: 'Instagram'), 
-      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.instagram_url.blank? %>
+      add_http(socials.instagram_url), :class => "", :target => "_blank"  unless socials.instagram_url.blank? %>
+  <%= link_to image_tag("https://simpleicons.org/icons/github.svg", :class => 'socialicon', alt: 'Github'), 
+      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.github_url.blank? %>
+  <%= link_to image_tag("https://simpleicons.org/icons/youtube.svg", :class => 'socialicon', alt: 'YouTube'), 
+      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.youtube_url.blank? %>
 </div>
 

@@ -1,4 +1,4 @@
-<tr>
+<!--tr>
   <td nowrap>
     <a href="/show/<%= voaw_row.user_id %>">
       <%= image_tag "/assets/icons/#{voaw_row.get_icon}.gif", :class => 'miniicon' %><b><%= voaw_row.handle %></b></a>
@@ -17,4 +17,24 @@
   <td><%= voaw_row.wb_cpid %></td>
   <td><%= voaw_row.ah_cpid %></td>
   <td><%= voaw_row.year_started %></td>
+</tr -->
+
+<tr>
+  <td class="whitespace-nowrap text-base">
+    <a href="/show/<%= voaw_row.user_id %>" class="hover:bg-slate-200 pl-1 group leading-10 w-full inline-block rounded-md">
+      <%= user_icon voaw_row, 'miniicon' %>
+      <div class='align-middle ml-1 inline-block underline text-gray-500 group-hover:text-black'><%= voaw_row.name %></div>
+    </a>
+  </td>
+  <% if current_user -%>
+  <td class="medium-plus"><%= truncate(voaw_row.row_addr, length: 30)  %></td>
+  <td class="medium-plus">
+    <%= render :partial => "social_icons", :locals => { :socials => voaw_row.user.social_info } %>
+  </td>
+  <% end %>
+  <td class="medium-plus"><%= voaw_row.aw_cpid %></td>
+  <td class="medium-plus"><%= voaw_row.wb_cpid %></td>
+  <td class="medium-plus"><%= voaw_row.ah_cpid %></td>
+  <td class="medium-plus"><%= voaw_row.year_started %></td>
 </tr>
+

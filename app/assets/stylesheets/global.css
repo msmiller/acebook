@@ -22,6 +22,28 @@
 .pagetitle {
   @apply text-4xl font-light mb-4 uppercase font-serif tracking-wide;
 }
+
+.miniicon {
+  @apply h-8 w-8 inline-block ring-2 rounded-full bg-slate-200 ring-slate-200;
+}
+
+.socialicon {
+  @apply inline w-5 h-5 hover:ring ring-cyan-500 ring-offset-1 rounded-md;
+}
+
+/* Roster Table and other tables ... */
+#roster-table {
+  @apply w-full divide-y divide-gray-300 table-auto;
+}
+#roster-table th {
+  @apply py-2;
+}
+#roster-table td {
+  @apply py-1;
+}
+td.medium-plus, th.medium-plus {
+  @apply hidden  sm:table-cell;
+}
 /*
 .frodus {
   @apply text-rose-500;

@@ -1,32 +1,24 @@
 <img width="24" height="24" src="https://simpleicons.org/icons/twitter.svg" alt="Twitter" />
 <br>
-<table id="voawpilots" class="datatable" style="width:100%;">
-  <thead>
-    <tr>
-      <th>Handle / Squadron</th>
-      <% if @current_user -%>
-      <th>In Real Life</th>
-      <% end -%>
-      <th width="120">Air Warrior</th>
-      <th width="120">WarBirds</th>
-      <th width="120">Aces High</th>
-      <th width="80">Start</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render :partial => 'voaw_row', :collection => @pilots %>
-  </tbody>
-</table>
+<div class="mx-0 overflow-hidden w-full">
+  <table class="" id="roster-table">
+    <thead class="uppercase text-sm font-semibold text-gray-900 text-left">
+      <tr>
+        <th scope="col" class="">Handle / Squadron</th>
+        <% if current_user -%>
+        <th scope="col" class="medium-plus">In Real Life</th>
+        <th scope="col" class="medium-plus">Social</th>
+        <% end %>
+        <th scope="col" class="medium-plus">Air Warrior</th>
+        <th scope="col" class="medium-plus">WarBirds</th>
+        <th scope="col" class="medium-plus">Aces High</th>
+        <th scope="col" class="medium-plus">1st Flight</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200 bg-white text-sm font-medium text-gray-900">
+      <%= render :partial => 'voaw_row', :collection => @pilots %>
+    </tbody>
+  </table>
+</div>
 
 <div id="myModal" class="reveal-modal" data-reveal></div>
-
-<!-- script type="text/javascript">
-//  $('.datatable').dataTable({
-//    "paging": false,
-//      "info": false
-//    // Optional, if you want full pagination controls.
-//    // Check dataTables documentation to learn more about available options.
-//    // http://datatables.net/reference/option/pagingType
-//  });
-</script -->
-

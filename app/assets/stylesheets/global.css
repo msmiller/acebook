@@ -12,6 +12,8 @@
   font-family: 'Walter Turncoat', cursive;
 }
 
+.legend-font { font-family: 'Walter Turncoat', cursive; }
+
 .navitem {
   @apply text-gray-300 hover:bg-gray-600 hover:text-white px-3 py-4;
 }
@@ -24,8 +26,12 @@
 }
 
 .miniicon {
-  @apply h-8 w-8 inline-block ring-2 rounded-full bg-slate-200 ring-slate-200;
+  @apply h-8 w-8 inline-block ring-2 rounded-full bg-stone-200 ring-stone-200;
 }
+.rostericon {
+  @apply h-8 w-8 inline-block;
+}
+
 
 .socialicon {
   @apply inline w-5 h-5 hover:ring ring-cyan-500 ring-offset-1 rounded-md;

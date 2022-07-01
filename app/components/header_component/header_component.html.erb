@@ -1,4 +1,4 @@
-<header id="header" class='p-4 w-full'>
+<header id="header" class='p-4 px-6 w-full'>
   <div class="flex">
     <div class="flex-none">
       <h1 id="title" class='text-cyan-600 text-4xl font-bold'>
@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="grow">
-      <div class="text-right text-cyan-600 space-x-2">
+      <div class="text-right text-cyan-600 space-x-2 text-xs md:text-sm lg:text-base">
         <% if @current_user.nil? -%>
           <%= link_to "Login", "/users/sign_in" %>
           <span class='text-gray-800'>&bull;</span>

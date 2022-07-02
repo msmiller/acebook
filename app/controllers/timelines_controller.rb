@@ -1,6 +1,8 @@
 class TimelinesController < ApplicationController
 
-  # include AutoHtml
+  before_action do
+    @navbar_active = 'timeline'
+  end
 
   def index
     @timelines = Timeline.where(:approved => true).order("year DESC, month DESC")

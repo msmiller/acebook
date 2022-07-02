@@ -1,0 +1,12 @@
+default: &default
+  read_mode:      'true' # Disable 'Add Item' buttons
+  allow_signup:   'false' # For when we're messing with the database or whatever
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

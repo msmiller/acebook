@@ -1,7 +1,8 @@
 defaults: &defaults
-  setting:
-    ack: 1
-    oop: 0
+  games:
+    aw: Air Warrior
+    ah: Aces High
+    wb: WarBirds
 
 development:
   <<: *defaults

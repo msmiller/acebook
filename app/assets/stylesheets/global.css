@@ -72,3 +72,7 @@ h1 { text-decoration: underline !important; color: orange; }
 }
 
 .boxpanel { @apply bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 max-w-md; }
+
+.gamename_aw { @apply text-green-600; }
+.gamename_wb { @apply text-red-600; }
+.gamename_ah { @apply text-sky-600; }

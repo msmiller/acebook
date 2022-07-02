@@ -1,7 +1,19 @@
 <% set_title "Acebook - Timeline" %>
+<h1 class="pagetitle"><%= render :partial => "shared/add_content_button" %>Timeline</h1>
+
+
+<div class="flow-root mt-8">
+  <ul role="list" class="-mb-8">
+    <% @last_id = @timelines.last.id %>
+    <%= render partial: 'timeline', collection: @timelines %>
+  </ul>
+</div>
+
+
+<% if false %>
+<hr>
 
 <div id="myModal" class="reveal-modal" data-reveal></div>
-<h1 class="pagetitle"><%= render :partial => "shared/add_content_button" %>Timeline</h1>
 <ul class="accordion" data-accordion data-multi-expand="true" id="timelinelist"  data-allow-all-closed="true">
   <% @timelines.each_with_index do |tl,i| -%>
   <% komments = tl.comment_threads %>
@@ -39,3 +51,5 @@
   </dd>
   <% end -%>
 </dl>
+
+<% end %>

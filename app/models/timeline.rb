@@ -12,10 +12,21 @@ class Timeline < ApplicationRecord
     "news" => "Game/Company News",
     "event" => "Other Event"
   }
-  
+
+  HEROICONS = {
+    "convention" => "briefcase",
+    "scenario" => "fire",
+    "news" => "newspaper",
+    "event" => "calendar"
+  }
+
   def create
     #@user = User.new(user_params)
     # ...
+  end
+
+  def heroicon_for
+    HEROICONS[kind]
   end
 
   private

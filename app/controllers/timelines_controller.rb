@@ -4,8 +4,6 @@ class TimelinesController < ApplicationController
 
   def index
     @timelines = Timeline.where(:approved => true).order("year DESC, month DESC")
-    p "----"
-    ap @timelines
   end
   
   def new

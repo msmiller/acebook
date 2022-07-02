@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one :user_info, dependent: :destroy
   has_one :social_info, dependent: :destroy
   #has_many :game_infos, dependent: :destroy #, :order => "id ASC"
+  delegate :handle, to: :user_info
 
   has_many :lores
   has_many :timelines

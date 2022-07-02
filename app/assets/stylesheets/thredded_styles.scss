@@ -1,0 +1,10 @@
+$thredded-brand: #27a7b0;
+$thredded-grid-container-max-width: 80rem !default;
+@import "thredded";
+
+
+/* .thredded--user-navigation--unread-topics--followed-count { float: right; border: 1px solid green; width: 24px !important; display:inline; } */
+/*  .thredded--user-navigation--item */
+
+.thredded--unread-topics--followed-icon { display: none !important; }
+

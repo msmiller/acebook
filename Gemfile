@@ -146,6 +146,7 @@ gem 'redcarpet'
 gem 'rinku'
 gem 'acts_as_commentable_with_threading'
 gem 'better_settings' # TODO: REMOVE ME AND config/konfig !!!!
+gem 'thredded', '~> 1.0'
 
 # ADMIN / TOOLING
 gem 'avo'

@@ -1,6 +1,8 @@
 default: &default
-  read_mode:      'true' # Disable 'Add Item' buttons
-  allow_signup:   'false' # For when we're messing with the database or whatever
+  read_mode:        true # Disable 'Add Item' buttons
+  allow_signup:     false # For when we're messing with the database or whatever
+  allow_comments:   false # For when we're messing with the database or whatever
+  allow_salutes:    true # For when we're messing with the database or whatever
 
 development:
   <<: *default

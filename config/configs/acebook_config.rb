@@ -2,5 +2,5 @@
 
 class AcebookConfig < ApplicationConfig
   config_name :acebook
-  attr_config :read_mode, :allow_signup
+  attr_config :read_mode, :allow_signup, :allow_comments
 end

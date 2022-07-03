@@ -12,7 +12,7 @@
       <% ids << "AW:#{voaw_tile.aw_cpid}" unless voaw_tile.aw_cpid.blank? -%>
       <% ids << "WB:#{voaw_tile.wb_cpid}" unless voaw_tile.wb_cpid.blank? -%>
       <% ids << "AH:#{voaw_tile.ah_cpid}" unless voaw_tile.ah_cpid.blank? -%>
-      &nbsp;<%= ids.join(" / ").html_safe %>
+      <%= ids.join(" / ").html_safe %>
     </div>
   </a>
 </div>

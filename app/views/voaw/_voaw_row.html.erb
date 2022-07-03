@@ -23,18 +23,19 @@
   <td class="whitespace-nowrap text-base">
     <a href="/show/<%= voaw_row.user_id %>" class="hover:bg-stone-200 pl-1 group leading-10 w-full inline-block rounded-md">
       <%= user_icon voaw_row, 'miniicon' %>
-      <div class='align-middle ml-1 inline-block underline text-gray-500 group-hover:text-black'><%= voaw_row.name %></div>
+      <div class='align-middle ml-1 inline-block underline text-gray-500 group-hover:text-black'><%= voaw_row.handle %></div>
     </a>
   </td>
-  <% if current_user -%>
-  <td class="medium-plus"><%= truncate(voaw_row.row_addr, length: 30)  %></td>
-  <td class="medium-plus">
+  <td><%= voaw_row.squadron %></td>
+  <td class="medium-plus font-mono"><%= voaw_row.aw_cpid %></td>
+  <td class="medium-plus font-mono"><%= voaw_row.wb_cpid %></td>
+  <td class="medium-plus font-mono"><%= voaw_row.ah_cpid %></td>
+  <% if current_user && false -%>
+  <td class="large-plus"><%= truncate(voaw_row.row_addr, length: 30)  %></td>
+  <td class="large-plus">
     <%= render :partial => "social_icons", :locals => { :socials => voaw_row.user.social_info } %>
   </td>
   <% end %>
-  <td class="medium-plus"><%= voaw_row.aw_cpid %></td>
-  <td class="medium-plus"><%= voaw_row.wb_cpid %></td>
-  <td class="medium-plus"><%= voaw_row.ah_cpid %></td>
-  <td class="medium-plus"><%= voaw_row.year_started %></td>
+  <% if false %><td class="medium-plus"><%= voaw_row.year_started %></td><% end %>
 </tr>
 

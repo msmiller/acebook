@@ -48,7 +48,10 @@
   @apply py-1;
 }
 td.medium-plus, th.medium-plus {
-  @apply hidden  sm:table-cell;
+  @apply hidden sm:table-cell;
+}
+td.large-plus, th.large-plus {
+  @apply hidden lg:table-cell;
 }
 /*
 .frodus {

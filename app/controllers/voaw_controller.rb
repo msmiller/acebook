@@ -38,6 +38,7 @@ class VoawController < ApplicationController
   end
 
   def show
+    @navbar_active = 'index'
     @current_user = current_user
 
     @pilot = User.find(params[:id])

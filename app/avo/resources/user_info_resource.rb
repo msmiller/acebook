@@ -1,5 +1,5 @@
 class UserInfoResource < Avo::BaseResource
-  self.title = :id
+  self.title = :handle
   self.includes = []
   # self.search_query = ->(params:) do
   #   scope.ransack(id_eq: params[:q], m: "or").result(distinct: false)
@@ -7,6 +7,7 @@ class UserInfoResource < Avo::BaseResource
 
   field :id, as: :id
   # add fields here
+
   field :handle, as: :text
   field :name, as: :text
   field :other_handles, as: :text, hide_on: [:index]

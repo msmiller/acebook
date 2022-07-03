@@ -36,7 +36,7 @@ Avo.configure do |config|
   # config.locale = 'en-US'
 
   ## == Customization ==
-  # config.app_name = 'Avocadelicious'
+  config.app_name = 'Back to Acebook'
   # config.timezone = 'UTC'
   # config.currency = 'USD'
   # config.per_page = 24

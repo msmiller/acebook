@@ -1,13 +1,16 @@
+<% if false %>
 <div class="row">
 <div class="large-9 columns">
 </div>
+
 <div class="w-full mb-4">
 <form id="live-search" action="" class="styled  w-64" method="post" style="padding:0px;margin:0px;">
   <input type="text" class="form-input" id="filter" value="" placeholder="Search..." style="padding:0px;margin:0px;margin-top:8px;padding:4px;" />
 </form>
 </div>
-</div>
 
+</div>
+<% end %>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
   <%= render :partial => 'voaw_tile', :collection => @pilots %>

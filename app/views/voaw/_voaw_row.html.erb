@@ -23,7 +23,10 @@
   <td class="whitespace-nowrap text-base">
     <a href="/show/<%= voaw_row.user_id %>" class="hover:bg-stone-200 pl-1 group leading-10 w-full inline-block rounded-md">
       <%= user_icon voaw_row, 'miniicon' %>
-      <div class='align-middle ml-1 inline-block underline text-gray-500 group-hover:text-black'><%= voaw_row.handle %></div>
+      <div class='align-middle ml-1 inline-block underline text-gray-500 group-hover:text-black'>
+        <%= voaw_row.handle %>
+        <%= image_tag "/assets/medal.svg", class: "inline-block ml-1 w-5 h-5" if voaw_row.user.rip? %>
+      </div>
     </a>
   </td>
   <td><%= voaw_row.squadron %></td>

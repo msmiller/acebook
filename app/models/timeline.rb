@@ -1,6 +1,6 @@
 class Timeline < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :timelines
   
   # include AutoHtml
 

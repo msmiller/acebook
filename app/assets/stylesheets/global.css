@@ -22,7 +22,12 @@
 }
 
 .pagetitle {
-  @apply text-4xl font-light mb-4 uppercase font-serif tracking-wide;
+  @apply text-4xl font-light mb-4 uppercase tracking-wide;
+  font-family: 'Georgia', serif;
+}
+
+.titlefont {
+  font-family: 'Georgia', serif;
 }
 
 .miniicon {
@@ -53,21 +58,6 @@ td.medium-plus, th.medium-plus {
 td.large-plus, th.large-plus {
   @apply hidden lg:table-cell;
 }
-/*
-.frodus {
-  @apply text-rose-500;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.ackoop {
-  @apply text-rose-500;
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-h1 { text-decoration: underline !important; color: orange; }
-*/
 
 #yield-wrapper {
   /* @apply min-h-screen; */

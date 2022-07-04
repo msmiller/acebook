@@ -1,5 +1,7 @@
 class VoawController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index, :show, :list, :stats]
+
   include Rinku
 
   def list

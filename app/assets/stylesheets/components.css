@@ -1,5 +1,14 @@
 @layer components {
   .btn-primary {
-    @apply text-sm uppercase font-sans py-2 px-4 bg-cyan-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    @apply text-sm uppercase font-sans py-2 px-4 bg-cyan-600 text-white font-semibold rounded shadow-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
   }
+
+  .btn-secondary {
+    @apply text-sm uppercase font-sans py-2 px-4 bg-gray-600 text-white font-semibold rounded shadow-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
+  .btn-secondary-small {
+    @apply text-xs uppercase font-sans py-1 px-3 bg-gray-600 text-white rounded shadow-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
 }

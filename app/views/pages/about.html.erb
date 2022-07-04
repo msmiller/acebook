@@ -1,8 +1,52 @@
-<h2>About</h2>
+<h2  class="pagetitle">About</h2>
+
+<div class="prose prose-li:list-disc max-w-none mt-6 mb-8 text-red-500 font-mono border-red-500 border p-4 rounded-lg">
+SITE STATUS: Things are more or less working in "read mode". No new content can be added, comments are disabled,
+and I haven't enabled the forums ... yet.
+</div>
+
+
+<div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <span class="px-4 bg-white text-gray-500 text-lg titlefont shadow-inner border border-gray-300 rounded-full">Summer 2022</span>
+  </div>
+</div>
+
+<div class="prose prose-li:list-disc max-w-none my-4">
+
+<p>
+After almost a decade of being sidelined, the app no longer runs on Heroku. I tried getting it to run again, but it was too big a hassle. So I decided
+to upgrade the entire codebase. So this new version runs on Rails 7, which should hold up for the next 4 or 5 years. I also switched all the UI
+to use Tailwind as the CSS toolkit.
+</p>
+
+<p>
+The rewrite isn't 100% done as of this writing. I've disabled a bunch of stuff that I haven't had time to work on yet. There will be a couple of new
+things added before it's properly re-released. One is a forum, using the 'Thredded' gem. No one has to use it, but if the remaining community
+wants a place to have discussions free from censorious scumwaffles, it'll be there. The other is a "missing man flight" flag on users, indicating
+that they have passed on. This flag will enable a feature to allow other members to leave comments on their profile. Can be a simple "&lt;S&gt;", or
+it can be an anecdote or memory of the person.
+</p>
+
+</div>
+
+<div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <span class="px-4 bg-white text-gray-500 text-lg titlefont shadow-inner border border-gray-300 rounded-full">Summer 2014</span>
+  </div>
+</div>
+
+<div class="prose prose-li:list-disc max-w-none mt-4">
 <p>I built this site so all the players from Air Warrior, WarBirds, and Aces High had some way to find each other. Some way to maintain a contact list of social media presences. Since pretty much everyone has a Facebook page or Twitter account or <b>something</b> that they check regularly, this seemed like a better way to help people connect than just emails ... which are spam magnets anyway.</p>
 <p>I tossed this together in a couple evenings so "it is what it is." It's written in Rails 4, so it's pretty flexible if we ever want to do more. But for now, I'm happy just to have a place where all this info can be gathered before we all get too freakin' old and senile to work a keyboard.</p>
 <p>A few notes for whatever it's worth:</p>
-<ul><ul>
+<ul>
   <li>Even though emails addresses are used for logging in, they are not exposed on the site. Use the various social media links to connect with others. Spammers can rot in the fierest depths of the most horrific sub-divisions of Hell.</li>
   <li>If you need an email list for an event or get-together, contact me and I can run a database query based on whatever criteria you need. I can't guarantee overnight turn-around, so give me lead time.</li>
   <li>I didn't put image uploads into this for photos. If enough people ask, I can add a field for specifying a photo url to be used in place of the icons I found. The reason for this is the hassle of keeping an eye out for dickwads who look for any site with an upload form and try to crash it or upload the Library of Congress onto the server.</li>
@@ -17,4 +61,4 @@
     <li>A proper mailing list generator for anyone who's planning an event in the real world.</li>
   </ul>
 </ul>
-</ul>
+</div>

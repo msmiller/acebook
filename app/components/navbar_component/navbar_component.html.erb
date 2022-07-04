@@ -5,7 +5,9 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="/" class="<%= class_for('index') %>" aria-current="page">Roster</a>
         <a href="/list" class="<%= class_for('list') %>">List</a>
-        <a href="/forum" class="<%= class_for('forum') %>">Forum</a>
+        <% if AcebookConfig.forums_enabled %>
+          <a href="/forum" class="<%= class_for('forum') %>">Forum</a>
+        <% end %>
         <a href="/timeline" class="<%= class_for('timeline') %>">Timeline</a>
         <a href="/lore" class="<%= class_for('lore') %>">Lore</a>
         <a href="/links" class="<%= class_for('links') %>">Links</a>

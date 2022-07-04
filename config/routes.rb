@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   end
 
-  mount Thredded::Engine => '/forum'
+  if AcebookConfig.forums_enabled
+    mount Thredded::Engine => '/forum'
+  end
 
   devise_for :users
 
-  get 'pages/about' => 'high_voltage/pages#show', id: 'about'
+  # get 'pages/about' => 'high_voltage/pages#show', id: 'about'
+  get "/pages/*id" => 'pages#show', as: :page, format: false
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,6 +1,6 @@
 class UserInfo < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :user_info
 
   def self.active_squads
     UserInfo.all.collect{|u| u.squadron }.compact.uniq.sort

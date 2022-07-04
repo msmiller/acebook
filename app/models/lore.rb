@@ -1,6 +1,6 @@
 class Lore < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :lores
   
   # include AutoHtml
 

@@ -1,5 +1,7 @@
 class TimelinesController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index]
+
   before_action do
     @navbar_active = 'timeline'
   end

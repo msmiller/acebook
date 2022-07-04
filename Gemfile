@@ -151,6 +151,10 @@ gem 'thredded', '~> 1.0'
 # ADMIN / TOOLING
 gem 'avo'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'rubocop'
   gem 'rubocop-rails'

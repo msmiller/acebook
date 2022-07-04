@@ -1,5 +1,11 @@
 class LoresController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index]
+
+  before_action do
+    @navbar_active = 'lore'
+  end
+
   def index
     @lores = Lore.where(:approved => true).sort{ |x,y| x.title.downcase <=> y.title.downcase }
   end

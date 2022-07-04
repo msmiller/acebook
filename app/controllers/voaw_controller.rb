@@ -1,19 +1,23 @@
 class VoawController < ApplicationController
 
-  include AutoHtml
+  skip_before_action :authenticate_user!, only: [:index, :show, :list, :stats]
 
-  def index
+  include Rinku
+
+  def list
     @current_user = current_user
-    #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
+    @navbar_active = 'list'
+    # @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
     @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
     if @current_user && @current_user.user_info.handle.blank?
       redirect_to "/profile"
     end
   end
 
-  def roster
+  def index
     @current_user = current_user
-    #@pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
+    @navbar_active = 'index'
+    # @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
     @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
     if @current_user && @current_user.user_info.handle.blank?
       redirect_to "/profile"
@@ -25,10 +29,10 @@ class VoawController < ApplicationController
     @pilot = current_user.user_info
     @social = current_user.social_info
     unless params[:button].nil?
-      wtf = {}.merge(params['pilot'])
+      wtf = {}.merge(params.to_unsafe_hash['pilot'])
       wtf['year_started'] = params['date']['year']
       @pilot.update_attributes(wtf)
-      soc = {}.merge(params['social'])
+      soc = {}.merge(params.to_unsafe_hash['social'])
       @social.update_attributes(soc)
       flash.now[:notice] = "Profile updated."
     end
@@ -36,10 +40,11 @@ class VoawController < ApplicationController
   end
 
   def show
+    @navbar_active = 'index'
     @current_user = current_user
 
     @pilot = User.find(params[:id])
-    render :layout => nil
+    # render :layout => nil
   end
 
   def stats

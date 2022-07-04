@@ -1,4 +1,4 @@
-class CreateSocialInfos < ActiveRecord::Migration
+class CreateSocialInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :social_infos do |t|
 

@@ -1,5 +1,6 @@
-class Link < ActiveRecord::Base
-  belongs_to :user
+class Link < ApplicationRecord
+ 
+  belongs_to :user, inverse_of: :links
   
   acts_as_commentable
 

@@ -1,65 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="description" content="An online directory for the lost tribes of Air Warrior, WarBirds, and Aces High." />
-    <title><%= content_for?(:title) ? yield(:title) : "Acebook" %></title>
-
-    <meta property="og:image" content="http://www.acebook.us/images/acebook.gif"/>
-
-    <%= favicon_link_tag '/favicon.ico' %>
-
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <title>Headlist</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "applicationtw", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- link href="https://fonts.googleapis.com/css2?family=Playfair+Display" rel="stylesheet" -->
+
+    <!-- link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css' -->
     <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-
+    <!-- link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' -->
+    
   </head>
 
-  <body>
 
-    <%= gflash %>
+  <body class="h-full">
 
-    <% # http://foundation.zurb.com/docs/index.php -%>
-    <div class="container">
+<!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+  This example requires updating your template:
 
-      <div class="row header">
-        <div class="large-5 columns" style="line-height:60px;">
-          <h1 style="vertical-align:middle;margin-top:20px;" id="title"><%= link_to image_tag("acebook.gif", :id => "logoimage") + " Acebook", root_url, :id => "logo" %>
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div class="min-h-full">
+
+  <%== render(HeaderComponent.new(current_user: current_user)) %>
+
+  <%= render(NavbarComponent.new(current_user: current_user, active: @navbar_active)) %>
+
+
+  <div class="py-4">
+
+    
+    <main>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <!-- Replace with your content -->
+        <div class="px-4 py-4 sm:px-0">
+          <div id="yield-wrapper">
+            <%= yield %>
+          </div>
         </div>
-        <div class="large-7 columns" style="text-align:right;">
-          <%= render_cell :headerlinks, :show, :user => @current_user %>
-          <p id="legend">An online directory for the lost tribes of Air Warrior, WarBirds, and Aces High.</p>            
-        </div>
+        <!-- /End replace -->
       </div>
+    </main>
 
-      <%= render :partial => "/layouts/menu" %>
-      
-      <div class="row" id="yield">
-        <div class="large-12 columns">
-          <%= yield %>
-        </div>
-      </div>
+    <%= render(FooterComponent.new(current_user: current_user)) %>
 
-      <div class="row footer">
-        <div class="large-6 column slideleft ">
-          <%= render_cell :footerlinks, :show, :user => @current_user %>        
-        </div>
-        <div class="large-6 column slideright ">
-          <%= render_cell :copyright, :show %>        
-        </div>
-      </div>
-    </div>
-
-    <% flash.each do |name, msg|    -%>
-      <%= js add_gritter(flash[name.to_sym], :title => "A Notice Has Been Recorded:")  %>
-    <% end -%>
+  </div>
+</div>
 
   </body>
 </html>

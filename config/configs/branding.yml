@@ -1,0 +1,15 @@
+default: &default
+  favicon:      'favicon.png'                     # File needs to be in repo for now
+  app_name:     'Acebook'                         # Instance name: Used in help text, etc.
+  dotcom_name:  'acebook.us'                      # Domain name: used in headers, emails, etc.
+  logo_image:   'logotext.cropped.white.beta.png' # Logo Image - 200x50 - file needs to be added to repo
+  instance_name: INSTANCE_NAME
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

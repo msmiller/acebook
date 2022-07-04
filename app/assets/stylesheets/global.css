@@ -1,0 +1,71 @@
+/*
+* @Author: msmiller
+* @Date:   2022-01-10 17:28:37
+* @Last Modified by:   msmiller
+* @Last Modified time: 2022-05-10 17:44:47
+*
+* Copyright (c) Sharp Stone Codewerks / Mark S. Miller
+*/
+
+#legend {
+  @apply hidden md:block text-gray-500 text-right;
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.legend-font { font-family: 'Walter Turncoat', cursive; }
+
+.navitem {
+  @apply text-gray-300 hover:bg-gray-600 hover:text-white px-3 py-4;
+}
+.navactive {
+  @apply bg-cyan-600 text-white px-3 py-4;
+}
+
+.pagetitle {
+  @apply text-4xl font-light mb-4 uppercase tracking-wide;
+  font-family: 'Georgia', serif;
+}
+
+.titlefont {
+  font-family: 'Georgia', serif;
+}
+
+.miniicon {
+  @apply h-8 w-8 inline-block ring-2 rounded-full bg-stone-200 ring-stone-200;
+}
+.rostericon {
+  @apply h-8 w-8 inline-block;
+}
+
+
+.socialicon {
+  @apply inline w-5 h-5 hover:ring ring-cyan-500 ring-offset-1 rounded-md;
+}
+
+/* Roster Table and other tables ... */
+#roster-table {
+  @apply w-full divide-y divide-gray-300 table-auto;
+}
+#roster-table th {
+  @apply py-2;
+}
+#roster-table td {
+  @apply py-1;
+}
+td.medium-plus, th.medium-plus {
+  @apply hidden sm:table-cell;
+}
+td.large-plus, th.large-plus {
+  @apply hidden lg:table-cell;
+}
+
+#yield-wrapper {
+  /* @apply min-h-screen; */
+  min-height: 240px;
+}
+
+.boxpanel { @apply bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 max-w-md; }
+
+.gamename_aw { @apply text-green-600; }
+.gamename_wb { @apply text-red-600; }
+.gamename_ah { @apply text-sky-600; }

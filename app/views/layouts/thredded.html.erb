@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="h-full">
+  <head>
+    <title>Headlist</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "applicationtw", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <%= stylesheet_link_tag 'thredded_styles', 'data-turbolinks-track': 'reload'  %>
+
+    <!-- link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css' -->
+    <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+    <!-- link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' -->
+  </head>
+
+
+  <body class="h-full">
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div class="min-h-full">
+
+  <%== render(HeaderComponent.new(current_user: current_user)) %>
+
+  <%= render(NavbarComponent.new(current_user: current_user, active: 'forum')) %>
+
+  <div class="py-4">
+
+    
+    <main>
+      <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <%= yield %>
+      </div>
+    </main>
+
+    <%= render(FooterComponent.new(current_user: current_user)) %>
+
+  </div>
+</div>
+
+  </body>
+</html>

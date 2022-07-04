@@ -1,4 +1,4 @@
-<% title "Acebook - Edit Profile" %>
+<% set_title "Acebook - Edit Profile" %>
 <h4>Pilot Profile</h4>
 
 <%= form_tag("/profile") do %>
@@ -18,14 +18,14 @@
       </div>
       <div><%= label_tag "Other Handles" %><%= text_field_tag :other_handles, @pilot.other_handles, :name => "pilot[other_handles]" %></div>
     </div>
-    <div class="large-3 columns" style="background: #eee;">
+    <div class="large-3 columns" style="background: #eee; padding: 10px;">
       <div><%= label_tag "Air Warrior ID" %><%= text_field_tag :aw_cpid, @pilot.aw_cpid, :name => "pilot[aw_cpid]", :placeholder => "16-char max" %></div>
       <div><%= label_tag "WarBirds ID" %><%= text_field_tag :wb_cpid, @pilot.wb_cpid, :name => "pilot[wb_cpid]", :placeholder => "16-char max" %></div>
       <div><%= label_tag "Aces High ID" %><%= text_field_tag :ah_cpid, @pilot.ah_cpid, :name => "pilot[ah_cpid]", :placeholder => "16-char max" %></div>
       <div><%= label_tag "Planes" %><%= text_field_tag :planes, @pilot.planes, :name => "pilot[planes]" %></div>
       <div><%= label_tag "Icon" %><%= select_tag :icon, options_for_select(Acebook::Icons, @pilot.icon), :name => "pilot[icon]" %></div>
     </div>
-    <div class="large-3 columns" style="background: #eee;">
+    <div class="large-3 columns" style="background: #eee; padding: 10px;">
       <div><%= label_tag "Air Warrior Country" %>
         <%= select_tag :aw_country, options_for_select(Acebook::Games['aw'][:countries], @pilot.aw_country), :name => "pilot[aw_country]" %></div>
       <div><%= label_tag "WarBirds Country" %>
@@ -71,6 +71,6 @@
     </div>
   </div>
 
-  <%= button_tag "Submit" %>
+  <%= button_tag "Submit", class: 'button' %>
 
 <% end -%>

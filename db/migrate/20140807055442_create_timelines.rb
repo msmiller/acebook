@@ -1,4 +1,4 @@
-class CreateTimelines < ActiveRecord::Migration
+class CreateTimelines < ActiveRecord::Migration[6.0]
   def change
     create_table :timelines do |t|
 

@@ -1,8 +1,8 @@
-class Lore < ActiveRecord::Base
+class Lore < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :lores
   
-  include AutoHtml
+  # include AutoHtml
 
   acts_as_commentable
 

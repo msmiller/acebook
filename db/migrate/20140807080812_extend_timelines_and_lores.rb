@@ -1,4 +1,4 @@
-class ExtendTimelinesAndLores < ActiveRecord::Migration
+class ExtendTimelinesAndLores < ActiveRecord::Migration[6.0]
   def change
     add_column "lores", "approved", :boolean
     add_column "lores", "game", :string, :limit => 16

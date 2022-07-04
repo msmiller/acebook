@@ -1,8 +1,8 @@
-class Timeline < ActiveRecord::Base
+class Timeline < ApplicationRecord
 
-  belongs_to :user
+  belongs_to :user, inverse_of: :timelines
   
-  include AutoHtml
+  # include AutoHtml
 
   acts_as_commentable
 
@@ -12,10 +12,21 @@ class Timeline < ActiveRecord::Base
     "news" => "Game/Company News",
     "event" => "Other Event"
   }
-  
+
+  HEROICONS = {
+    "convention" => "briefcase",
+    "scenario" => "fire",
+    "news" => "newspaper",
+    "event" => "calendar"
+  }
+
   def create
     #@user = User.new(user_params)
     # ...
+  end
+
+  def heroicon_for
+    HEROICONS[kind]
   end
 
   private

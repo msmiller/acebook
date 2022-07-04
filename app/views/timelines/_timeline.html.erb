@@ -1,0 +1,30 @@
+    <li>
+      <div class="relative pb-8">
+        <% unless timeline.id == @last_id -%>
+        <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+        <% end %>
+        <div class="relative flex items-start space-x-5">
+          <div class="relative">
+            <%= heroicon timeline.heroicon_for, variant: 'solid', 
+                options: { class: 'shadow-inner h-10 w-10 ring-4 ring-gray-200 p-1 bg-stone-100 rounded-full flex items-center justify-center text-stone-600' } %>
+          </div>
+          <div class="min-w-0 flex-1 -mt-2">
+            <div>
+              <div class="text-lg font-medium">
+                <span class="text-gray-900"><%= timeline.title %></span>
+              </div>
+              <p class="mt-0.5 text-sm divide-x-1 divide-red-500">
+                <span class="uppercase font-bold mr-2 gamename_<%= timeline.game %>"><%= Konfig.games.send(timeline.game) %></span>
+                /
+                <span class="text-gray-500 ml-2"><%= Date::MONTHNAMES[timeline.month] %> <%= timeline.year %></span>
+              </p>
+            </div>
+            <% unless timeline.body.blank? %>
+            <div class="mt-2 text-sm text-gray-700 prose">
+              <%= Rinku.auto_link(timeline.body.to_s) { simple_format; link(:target => 'blank') } %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </li>

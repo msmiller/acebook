@@ -1,13 +1,32 @@
-<% title "Acebook - Lore" %>
+<% set_title "Acebook - Lore" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
-<H2><%= render :partial => "shared/add_content_button" %>Lore</h2>
-<dl class="accordion" data-accordion>
+<H1 class='pagetitle'><%= render :partial => "shared/add_content_button" %>Lore</h1>
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+  <% @lores.each_with_index do |lore,i| -%>
+  <div class="relative rounded-lg border border-stone-300 bg-stone-50 px-6 py-5 flex xxxitems-center space-x-3">
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-gray-900">
+        <span class='align-middle'><%= lore.title %></span>
+        <span class="uppercase text-base font-bold float-right align-middle gamename_<%= lore.game %>"><%= Konfig.games.send(lore.game) %></span>
+      </p>
+      <p class="text-sm text-gray-500 prose w-full mb-7"><%= lore.body %></p>
+      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">Submitted by: <%= lore&.user&.user_info&.handle %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<% if false %>
+
+<ul class="accordion" data-accordion data-multi-expand="true" id="lorelist"  data-allow-all-closed="true">
   <% @lores.each_with_index do |tl,i| -%>
   <% komments = tl.comment_threads %>
-  <dd class="accordion-navigation">
-    <a href="#panel_<%= i %>">
+  <li class="accordion-item" data-accordion-item>
+    <a href="#panel_<%= i %>" class="accordion-title">
       <span style="width:24px;display:inline-block;text-align:center;margin-right:5px;">
-        <%= image_tag "content/#{tl.kind}_24.png", :align => "center" %>
+        <%= image_tag "/assets/content/#{tl.kind}_24.png", :align => "center" %>
       </span>
       <span class="minibullit game_<%= tl.game %>""><%= tl.game %></span>
       &nbsp; &nbsp; &nbsp; <b>&ldquo;<%= tl.title %>&rdquo;</b>
@@ -15,8 +34,8 @@
       <span class="commentbullet">(<%= komments.length %>)</span>
       <% end -%>
     </a>
-    <div id="panel_<%= i %>" class="content">
-      <%= auto_html(tl.body) { simple_format; link(:target => 'blank') } %>
+    <div id="panel_<%= i %>" class="accordion-content" data-tab-content>
+      <%= Rinku.auto_link(tl.body) { simple_format; link(:target => 'blank') } %>
                 
       <% if current_user-%>
         <div class="komments">
@@ -37,3 +56,5 @@
   </dd>
   <% end -%>
 </dl>
+
+<% end %>

@@ -1,17 +1,18 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :rememberable, :trackable, :validatable
 #         :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :user_info, dependent: :destroy
-  has_one :social_info, dependent: :destroy
+  has_one :user_info, inverse_of: :user, dependent: :destroy
+  has_one :social_info, inverse_of: :user, dependent: :destroy
   #has_many :game_infos, dependent: :destroy #, :order => "id ASC"
+  delegate :handle, to: :user_info
 
-  has_many :lores
-  has_many :timelines
-  has_many :links
+  has_many :lores, inverse_of: :user
+  has_many :timelines, inverse_of: :user
+  has_many :links, inverse_of: :user
 
   after_create :after_create
 

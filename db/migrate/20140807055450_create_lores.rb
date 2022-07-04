@@ -1,4 +1,4 @@
-class CreateLores < ActiveRecord::Migration
+class CreateLores < ActiveRecord::Migration[6.0]
   def change
     create_table :lores do |t|
 

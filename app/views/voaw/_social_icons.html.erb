@@ -1,12 +1,15 @@
-<div style='float:right;'>
-  <%= link_to image_tag("social/social-home.png", :class => ''), 
+<div class='space-x-1'>
+  <%= link_to heroicon('home', variant: 'solid', options: { class: 'socialicon' }), 
       add_http(socials.homepage_url), :class => "", :target => "_blank" unless socials.homepage_url.blank? %>
-  <%= link_to image_tag("social/social-twitter.png", :class => ''), 
+  <%= link_to image_tag("https://simpleicons.org/icons/twitter.svg", :class => 'socialicon', alt: 'Twitter'), 
       add_http(socials.twitter_url), :class => "", :target => "_blank" unless socials.twitter_url.blank? %>
-  <%= link_to image_tag("social/social-facebook.png", :class => ''), 
+  <%= link_to image_tag("https://simpleicons.org/icons/facebook.svg", :class => 'socialicon', alt: 'Fakebook'), 
       add_http(socials.facebook_url), :class => "", :target => "_blank"  unless socials.facebook_url.blank? %>
-  <%= link_to image_tag("social/social-google_plus.png", :class => ''), 
-      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.googleplus_url.blank? %>
-  <%= link_to image_tag("social/social-wordpress.png", :class => ''), 
-      add_http(socials.wordpress_url), :class => "", :target => "_blank"  unless socials.wordpress_url.blank? %>
+  <%= link_to image_tag("https://simpleicons.org/icons/instagram.svg", :class => 'socialicon', alt: 'Instagram'), 
+      add_http(socials.instagram_url), :class => "", :target => "_blank"  unless socials.instagram_url.blank? %>
+  <%= link_to image_tag("https://simpleicons.org/icons/github.svg", :class => 'socialicon', alt: 'Github'), 
+      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.github_url.blank? %>
+  <%= link_to image_tag("https://simpleicons.org/icons/youtube.svg", :class => 'socialicon', alt: 'YouTube'), 
+      add_http(socials.googleplus_url), :class => "", :target => "_blank"  unless socials.youtube_url.blank? %>
 </div>
+

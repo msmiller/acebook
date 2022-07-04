@@ -1,5 +1,11 @@
 class LinksController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index]
+
+  before_action do
+    @navbar_active = 'links'
+  end
+
   def index
     @links = Link.where(:approved => true).sort{ |x,y| x.title.downcase <=> y.title.downcase }
   end

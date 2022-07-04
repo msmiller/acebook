@@ -1,4 +1,4 @@
-class CreateUserInfos < ActiveRecord::Migration
+class CreateUserInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :user_infos do |t|
 

@@ -1,6 +1,10 @@
 class TimelinesController < ApplicationController
 
-  include AutoHtml
+  skip_before_action :authenticate_user!, only: [:index]
+
+  before_action do
+    @navbar_active = 'timeline'
+  end
 
   def index
     @timelines = Timeline.where(:approved => true).order("year DESC, month DESC")

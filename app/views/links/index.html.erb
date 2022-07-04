@@ -1,7 +1,30 @@
-<%= stylesheet_link_tag    "links" %>
-<% title "Acebook - Links" %>
+<% set_title "Acebook - Links" %>
 <div id="myModal" class="reveal-modal" data-reveal></div>
-<H2><%= render :partial => "shared/add_content_button" %>Links</h2>
+<h1 class="pagetitle"><%= render :partial => "shared/add_content_button" %>Links</h1>
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+  <% @links.each_with_index do |link,i| -%>
+  <div class="relative rounded-lg border border-stone-300 bg-stone-50 px-6 py-5 flex xxxitems-center space-x-3">
+    <div class="flex-1 min-w-0">
+      <p class="font-bold text-gray-900">
+        <%= link_to add_http(link.url), target: '_blank', class: 'text-cyan-600 hover:underline hover:text-black' do %>
+          <span class='align-middle'><%= link.title %></span>
+          <%= heroicon 'link', variant: 'solid', options: { class: 'h-4 w-4 inline-block ml-1 align-middle' } %>
+        <% end %>
+      </p>
+      <p class="text-sm text-gray-500 prose w-full mb-7"><%= link.description %></p>
+      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">Submitted by: <%= link&.user&.user_info&.handle %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<% if false %>
+
+<hr>
+
+
 
 <table width="100%" id="linkstable" cellspacing="0">
   <% @links.each_with_index do |tl,i| -%>
@@ -19,3 +42,5 @@
   </td></tr>
   <% end -%>
 </table>
+
+<% end %>

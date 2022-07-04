@@ -19,7 +19,7 @@
   <span><%= pluralize(@numpilots, "pilot") %> in database</span>
   <% if @current_user && @current_user.is_admin? -%>
     <span class='text-gray-800'>&bull;</span>
-    <%= link_to "Admin", "/admin", :target => "_blank" %>
+    <%= link_to "Admin", "/avo", :target => "_blank" %>
     <span class='text-gray-800'>&bull;</span>
     <span>Pending: L(<%= @num_pending_lores %>) / T(<%= @num_pending_timelines %> / U(<%= @num_pending_links %>)</span>
   <% end -%>

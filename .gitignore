@@ -17,3 +17,4 @@ app/assets/.DS_Store
 yarn-debug.log*
 .yarn-integrity
 
+/dump.rdb

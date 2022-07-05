@@ -31,9 +31,11 @@ class VoawController < ApplicationController
     unless params[:button].nil?
       wtf = {}.merge(params.to_unsafe_hash['pilot'])
       wtf['year_started'] = params['date']['year']
-      @pilot.update_attributes(wtf)
+      # @pilot.update_attributes(wtf)
+      @pilot.update(wtf)
       soc = {}.merge(params.to_unsafe_hash['social'])
-      @social.update_attributes(soc)
+      # @social.update_attributes(soc)
+      @social.update(soc)
       flash.now[:notice] = "Profile updated."
     end
 

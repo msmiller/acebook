@@ -18,7 +18,7 @@
         <%= text_field_tag :squadron, @pilot.squadron, :name => "pilot[squadron]", class: 'form-input' %>
         <i class='pl-3'>Or choose an existing squadron ...</i>
         <%= select_tag :known_squads, options_for_select(UserInfo::active_squads, @pilot.squadron.to_s),
-            :onchange => "$('#squadron').val(this.value);", class: 'form-select' %>
+            :onchange => "var s = document.getElementById('squadron'); s.value = this.value;", class: 'form-select' %>
       </div>
       <div class="field">
         <%= label_tag "City" %>

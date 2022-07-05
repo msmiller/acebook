@@ -21,7 +21,7 @@
             </div>
             <% unless timeline.body.blank? %>
             <div class="mt-2 text-sm text-gray-700 prose">
-              <%= Rinku.auto_link(timeline.body.to_s) { simple_format; link(:target => 'blank') } %>
+              <%== Rinku.auto_link(timeline.body.to_s) { simple_format; link(:target => 'blank') } %>
             </div>
             <% end %>
           </div>

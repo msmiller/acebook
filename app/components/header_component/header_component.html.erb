@@ -19,7 +19,9 @@
           <span class='text-gray-800'>&bull;</span>
           <%= link_to "Account", "/users/edit" %>
           <span class='text-gray-800'>&bull;</span>
-          <%= link_to "Esc-P", "/users/sign_out", :method => :delete%>
+          <span class='inline-block'>
+          <%= button_to "Esc-P", "/users/sign_out", method: :delete, data: { 'turbo' => "false", 'turbo-frame' => '_top' } %>
+          </span>
         <% end -%>
       </div>
       <p id="legend">An online directory for the lost tribes of Air Warrior, WarBirds, and Aces High.</p>

@@ -1,6 +1,7 @@
 <h2 class="pagetitle">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'max-w-md' }, data: { 'turbo' => "false", 'turbo-frame' => '_top'}) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), 
+              html: { class: 'max-w-md space-y-4' }, data: { 'turbo' => "false", 'turbo-frame' => '_top'}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">

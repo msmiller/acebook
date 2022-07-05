@@ -8,3 +8,6 @@ select.form-select { @apply block w-full mt-1 rounded-md bg-gray-100 border-gray
 
 div.field label { @apply uppercase text-sm font-medium text-gray-400; }
 
+div.field em, div.field i { @apply text-xs text-gray-500; }
+
+

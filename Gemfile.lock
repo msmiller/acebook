@@ -147,6 +147,8 @@ GEM
     countries (5.0.1)
       i18n_data (~> 0.16.0)
       sixarm_ruby_unaccent (~> 1.1)
+    country_select (8.0.0)
+      countries (~> 5.0)
     crass (1.0.6)
     css-class-string (0.1.1)
     cssbundling-rails (1.1.0)
@@ -545,6 +547,7 @@ DEPENDENCIES
   bootsnap
   capybara
   classy_hash
+  country_select
   css-class-string
   cssbundling-rails
   database_cleaner-active_record

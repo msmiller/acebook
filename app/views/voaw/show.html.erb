@@ -78,13 +78,13 @@
       </div>
       <% end %>
 
+      <% if @current_user %>
       <% unless @pilot.user_info.message.blank? %>
       <div class="py-2 sm:py-3 sm:px-6 prose">
         <p><%= Rinku.auto_link(@pilot.user_info.message).html_safe %></p>
       </div>
       <% end %>
 
-      <% if @current_user %>
       <div class="py-2 sm:py-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:px-6">
       <% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
         <%= link_to k.gsub("_url", ""), add_http(v), :class => "underline hover:text-black", :target => "_blank" unless v.blank? %>

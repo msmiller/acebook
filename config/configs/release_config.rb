@@ -7,4 +7,8 @@ class ReleaseConfig < ApplicationConfig
   def release_string
     "#{major}.#{minor}.#{update}.#{patch} #{milestone}"
   end
+
+  def self.version_string
+    "Acebook v#{major}.#{minor}.#{update}.#{patch} #{milestone} @ #{date}"
+  end
 end

@@ -69,3 +69,5 @@ td.large-plus, th.large-plus {
 .gamename_aw { @apply text-green-600; }
 .gamename_wb { @apply text-red-600; }
 .gamename_ah { @apply text-sky-600; }
+
+footer a { @apply hover:text-black hover:underline; }

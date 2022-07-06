@@ -13,6 +13,9 @@ class UserResource < Avo::BaseResource
   field :rip, as: :boolean, hide_on: [:index]
   field :forum_admin, as: :boolean, hide_on: [:index]
   field :forum_mod, as: :boolean, hide_on: [:index]
+  field :forum_name, as: :text, hide_on: [:index]
+  field :confirmed_at, as: :date, hide_on: [:index]
+  field :last_sign_in_at, as: :date, hide_on: [:index, :edit]
 
   field :user_info, as: :has_one
   field :social_info, as: :has_one

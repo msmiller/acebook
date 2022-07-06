@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_05_001717) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_06_200918) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace", limit: 255
     t.text "body"
@@ -56,6 +56,43 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_001717) do
     t.datetime "updated_at", precision: nil
     t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "forum_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "slug", null: false
+    t.string "color", default: "000000"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+  end
+
+  create_table "forum_posts", force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.text "body"
+    t.boolean "solved", default: false
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+  end
+
+  create_table "forum_subscriptions", force: :cascade do |t|
+    t.integer "forum_thread_id"
+    t.integer "user_id"
+    t.string "subscription_type"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+  end
+
+  create_table "forum_threads", force: :cascade do |t|
+    t.integer "forum_category_id"
+    t.integer "user_id"
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.integer "forum_posts_count", default: 0
+    t.boolean "pinned", default: false
+    t.boolean "solved", default: false
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -423,6 +460,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_05_001717) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "forum_posts", "forum_threads"
+  add_foreign_key "forum_posts", "users"
+  add_foreign_key "forum_subscriptions", "forum_threads"
+  add_foreign_key "forum_subscriptions", "users"
+  add_foreign_key "forum_threads", "forum_categories"
+  add_foreign_key "forum_threads", "users"
   add_foreign_key "thredded_messageboard_users", "thredded_messageboards", on_delete: :cascade
   add_foreign_key "thredded_messageboard_users", "thredded_user_details", on_delete: :cascade
   add_foreign_key "thredded_user_post_notifications", "thredded_posts", column: "post_id", on_delete: :cascade

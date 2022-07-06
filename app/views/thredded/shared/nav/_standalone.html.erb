@@ -1,4 +1,17 @@
-<div class="absolute top-200">xxxxxx
+<% if true %>
+<%
+# Disable the login/logout since that gets handled by the site
+%>
+<div class="absolute top-200">
+<li class="thredded--user-navigation--standalone--session thredded--user-navigation--item">
+  <% resource_name = Thredded.user_class_name.demodulize.underscore %>
+  <%= link_to "/" do %>
+    Return to Acebook Site
+  <% end %>
+</li>
+</div>
+<% else %>
+<div class="absolute top-200">
 <li class="thredded--user-navigation--standalone--session thredded--user-navigation--item">
   <% resource_name = Thredded.user_class_name.demodulize.underscore %>
   <% if thredded_signed_in? %>
@@ -12,3 +25,4 @@
   <% end %>
 </li>
 </div>
+<% end %>

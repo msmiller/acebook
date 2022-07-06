@@ -23,7 +23,7 @@ Thredded.user_name_column = :handle
 # setting this to always return nil effectively disables all user links.
 Thredded.user_path = ->(user) {
   user_path = :"#{Thredded.user_class_name.demodulize.underscore}_path"
-  main_app.respond_to?(user_path) ? main_app.send(user_path, user) : "/users/#{user.to_param}"
+  main_app.respond_to?(user_path) ? main_app.send(user_path, user) : "/show/#{user.to_param}"
 }
 
 # This method is used by Thredded controllers and views to fetch the currently signed-in user
@@ -65,7 +65,7 @@ Thredded.show_messageboard_group_page = true
 Thredded.show_topic_followers = false
 
 # Whether the list of users who are currently online is displayed.
-Thredded.currently_online_enabled = true
+Thredded.currently_online_enabled = false
 
 # Whether private messaging functionality is enabled.
 Thredded.private_messaging_enabled = true

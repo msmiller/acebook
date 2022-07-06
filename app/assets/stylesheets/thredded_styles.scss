@@ -1,10 +1,36 @@
-$thredded-brand: #27a7b0;
-$thredded-grid-container-max-width: 80rem !default;
+$thredded-brand: #008cba;
+$thredded-grid-container-max-width: 60rem !default;
 @import "thredded";
 
 
 /* .thredded--user-navigation--unread-topics--followed-count { float: right; border: 1px solid green; width: 24px !important; display:inline; } */
 /*  .thredded--user-navigation--item */
-
+/*  
 .thredded--unread-topics--followed-icon { display: none !important; }
 
+nav.thredded--navigation { margin-top: 100px;  }
+
+*/
+
+#thredded_logo_link {
+  vertical-align: middle;
+  text-decoration: none;
+  color: #008cba;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#return_button {
+  vertical-align: middle;
+  text-decoration: none;
+  background: #008cba;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+#return_button:hover {
+  background: #1f2937;
+}

@@ -1,52 +1,35 @@
 <!DOCTYPE html>
-<html class="h-full">
+<html>
   <head>
-    <title>Headlist</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "applicationtw", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
+    <title>Thredded | <%= yield :thredded_page_title %></title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <%= stylesheet_link_tag 'thredded', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'thredded_styles', 'data-turbolinks-track': 'reload'  %>
-
-    <!-- link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css' -->
-    <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-    <!-- link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' -->
+    <%= csrf_meta_tag %>
+    <%= csp_meta_tag %>
+    <%= javascript_include_tag 'thredded',
+                               async: !Rails.application.config.assets.debug,
+                               defer: true,
+                               'data-turbolinks-track': 'reload' %>
+    <%= RailsGravatar.prefetch_dns_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
+  <body>
 
+  <header id="header" style="max-width: 60rem; padding-bottom: 0.5rem; margin: 0 auto; font-family: sans-serif; border-bottom: 1rem solid #1f2937;">
+  <table border="0" style="width: 100%;"><tbody><tr>
+    <td style="vertical-align: middle;">
+      <a href="/forum" id="thredded_logo_link">
+        <%= image_tag("acebook.gif", :id => "logoimage", style: 'vertical-align: middle; border-radius: 4px; display: inline; width: 2rem; height: 2rem;') %>
+        <span  style="vertical-align: middle;">Acebook Forum</span>
+      </a>
+    </td>
+    <td style="text-align: right;">
+      <%= link_to 'Return to Acebook', '/', id: 'return_button' %>
+    </td>
+  </tr></tbody></table>
+</header>
 
-  <body class="h-full">
-
-<!-- This example requires Tailwind CSS v2.0+ -->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-gray-100">
-  <body class="h-full">
-  ```
--->
-<div class="min-h-full">
-
-  <%== render(HeaderComponent.new(current_user: current_user)) %>
-
-  <%= render(NavbarComponent.new(current_user: current_user, active: 'forum')) %>
-
-  <div class="py-4">
-
-    
-    <main>
-      <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <%= yield %>
-      </div>
-    </main>
-
-    <%= render(FooterComponent.new(current_user: current_user)) %>
-
-  </div>
-</div>
-
+    <%= yield %>
   </body>
 </html>

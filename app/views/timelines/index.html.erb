@@ -2,7 +2,7 @@
 <h1 class="pagetitle text-center"><%= render :partial => "shared/add_content_button" %>Timeline</h1>
 
 
-<div class="flow-root mt-8 mx-auto max-w-lg">
+<div class="flow-root mt-8 mx-auto max-w-xl">
   <ul role="list" class="-mb-8">
     <% @last_id = @timelines.last.id %>
     <%= render partial: 'timeline', collection: @timelines %>

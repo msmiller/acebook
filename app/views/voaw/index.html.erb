@@ -1,14 +1,8 @@
-<% if false %>
-<div class="row">
-<div class="large-9 columns">
-</div>
-
-<div class="w-full mb-4">
-<form id="live-search" action="" class="styled  w-64" method="post" style="padding:0px;margin:0px;">
-  <input type="text" class="form-input" id="filter" value="" placeholder="Search..." style="padding:0px;margin:0px;margin-top:8px;padding:4px;" />
+<% if true %>
+<div class="w-full mb-4 grid justify-items-end">
+<form id="live-search" action="" class="w-64 block" method="post">
+  <input type="text" class="form-input focus:!ring focus:!ring-cyan-500" id="filter" value="" placeholder="Search..."  />
 </form>
-</div>
-
 </div>
 <% end %>
 
@@ -29,7 +23,7 @@ $(document).ready(function(){
         // Retrieve the input field text and reset the count to zero
         var filter = $(this).val(), count = 0;
  
-        // Loop through the comment list
+        // Loop through the tile list
         $(".roster_tile_outer").each(function(){
  
             // If the list item does not contain the text phrase fade it out

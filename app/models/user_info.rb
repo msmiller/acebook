@@ -2,6 +2,12 @@ class UserInfo < ApplicationRecord
 
   belongs_to :user, inverse_of: :user_info
 
+  after_update :transcribe_forum_name
+
+  def transcribe_forum_name
+    self.user.update forum_name: handle
+  end
+
   def self.active_squads
     UserInfo.all.collect{|u| u.squadron }.compact.uniq.sort
   end

@@ -1295,6 +1295,14 @@ select {
   margin-top: 0.25rem;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }

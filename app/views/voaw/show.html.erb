@@ -2,11 +2,11 @@
 <h3>Pilot not found!</h3>
 <% else -%>
 
-<div class="text-stone-600 border border-stone-200 bg-stone-50 overflow-hidden rounded-lg max-w-2xl mx-auto">
+<div class="text-stone-500 border border-stone-200 bg-stone-50 overflow-hidden rounded-lg max-w-2xl mx-auto">
 
   <div class="px-4 py-5 sm:px-6 text-center space-y-1">
     <%= image_tag "icons/#{@pilot.user_info.get_icon}.gif",
-        :class => 'inline-block w-24 h-24 rounded-full ring-8 ring-stone-200 p-1 bg-white my-4 border border-stone-300' %>
+        :class => 'inline-block w-24 h-24 rounded-full ring-8 ring-stone-200 p-1 bg-white my-4 border border-stone-300 shadow-inner' %>
     <h3 class="text-2xl leading-6 font-medium text-gray-900 font-serif align-middle">
       <span class=' align-middle'><%= @pilot.user_info.handle %></span>
       <%= image_tag "/assets/medal.svg", class: "inline-block w-5 h-5 align-middle" if @pilot.rip? %>
@@ -86,10 +86,14 @@
       <% end %>
 
       <div class="py-2 sm:py-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:px-6">
-      <% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
-        <%= link_to k.gsub("_url", ""), add_http(v), :class => "underline hover:text-black", :target => "_blank" unless v.blank? %>
-      <% end -%>
+        <% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
+          <% unless v.blank? %><%= link_to add_http(v), :class => "underline hover:text-black", :target => "_blank" do %>
+            <%= k.gsub("_url", "") %>
+            <%= heroicon 'external-link', variant: 'solid', options: { class: 'w-4 h-4 inline' } unless v.blank? %>
+          <% end %><% end %>
+        <% end -%>
       </div>
+
       <% end %>
 
     </dl>
@@ -150,11 +154,13 @@
 </div>
 
 <div style="line-height:12px; border-top: 1px solid #ccc; padding-top: 10px;">
-    <div class="row"><div class="large-12 columns">
-<% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
-<%= link_to k.gsub("_url", ""), add_http(v), :class => "tiny radius button socialbtn", :target => "_blank" unless v.blank? %>
-<% end -%>
-  </div></div>
+  <div class="row">
+    <div class="large-12 columns">
+      <% @pilot.social_info.attributes.reject{ |x,y| !x.include? "_url"  }.each_pair do |k,v| %>
+        <%= link_to k.gsub("_url", ""), add_http(v), :class => "tiny radius button socialbtn", :target => "_blank" unless v.blank? %>
+      <% end -%>
+    </div>
+  </div>
 </div>
 
 </div>

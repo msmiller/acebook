@@ -1,0 +1,31 @@
+<h2  class="pagetitle">DoK's 'Demotivators'</h2>
+
+<div class="prose prose-li:list-disc max-w-none my-4">
+  <p>A take-off on the 'Demotivators' that became popular in the last 90's ...</p>
+</div>
+
+<% @images = [
+  'altmonkey.jpg',
+  'awareness.jpg',
+  'coad.jpg',
+  'dweeb.jpg',
+  'gangbang.jpg',
+  'gotperks.jpg',
+  'griefer.jpg',
+  'headon.jpg',
+  'horde.jpg',
+  'luftwhiner.jpg',
+  'porking.jpg',
+  'sheep.jpg',
+  'spit.jpg',
+  'twoweeks.jpg',
+  'uber.jpg',
+  'vultching.jpg',
+  'vultching2.jpg'
+] %>
+
+<div class="grid grid-cols-1 gap-4 max-w-4xl mx-auto">
+  <% @images.each_with_index do |despair| -%>
+      <%= image_tag "demotivators/#{despair}", class: 'rounded-md mx-auto' %>
+  <% end %>
+</div>

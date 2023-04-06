@@ -1,10 +1,10 @@
 default: &default
   major: "1"
   minor: "2"
-  update: "1"
+  update: "2"
   patch: "0"
   milestone: ""
-  date: "2022-07-06"
+  date: "2023-04-06"
 
 development:
   <<: *default

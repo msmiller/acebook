@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
@@ -8,8 +10,4 @@ class PagesController < ApplicationController
   def set_navbar_active
     @navbar_active = 'despair' if params[:id] == 'demotivators'
   end
-
-  private
-
-
 end

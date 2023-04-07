@@ -15,7 +15,7 @@
 
     <!-- link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css' -->
     <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-    <!-- link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' -->
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     
   </head>
 
@@ -33,14 +33,12 @@
 -->
 <div class="min-h-full">
 
+<div class="sticky top-0 bg-white z-50">
   <%== render(HeaderComponent.new(current_user: current_user)) %>
-
   <%= render(NavbarComponent.new(current_user: current_user, active: @navbar_active)) %>
-
-
+</div>
   <div class="py-4">
 
-    
     <main>
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <!-- Replace with your content -->

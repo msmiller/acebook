@@ -2,7 +2,7 @@
 * @Author: msmiller
 * @Date:   2022-01-10 17:28:37
 * @Last Modified by:   msmiller
-* @Last Modified time: 2022-05-10 17:44:47
+* @Last Modified time: 2023-04-07 00:54:53
 *
 * Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 */
@@ -13,6 +13,7 @@
 }
 
 .legend-font { font-family: 'Walter Turncoat', cursive; }
+.specialelite-font { font-family: 'Special Elite', 'Walter Turncoat', cursive; }
 
 .navitem {
   @apply text-gray-300 hover:bg-gray-600 hover:text-white px-3 py-4;

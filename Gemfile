@@ -109,8 +109,8 @@ gem 'devise'
 ### gem 'hiredis'
 
 # CORE UI/COMPONENTS
-gem 'lookbook' # https://github.com/allmarkedup/lookbook
-gem 'papercraft'
+### gem 'lookbook' # https://github.com/allmarkedup/lookbook
+### gem 'papercraft'
 gem 'view_component'
 
 # FLIPPER
@@ -146,7 +146,10 @@ gem 'redcarpet'
 gem 'rinku'
 gem 'acts_as_commentable_with_threading'
 gem 'better_settings' # TODO: REMOVE ME AND config/konfig !!!!
-gem 'thredded', '~> 1.0'
+### gem 'thredded', '~> 1.0'
+### gem 'simple_discussion'
+
+
 gem 'country_select'
 
 # ADMIN / TOOLING

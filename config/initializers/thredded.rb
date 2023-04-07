@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+=begin
+
 # Thredded configuration
 
 # ==> User Configuration
@@ -190,3 +192,5 @@ Thredded.email_from = 'no-reply@example.com'
 #
 # add in (must install separate gem (under development) as well):
 # Thredded.notifiers = [Thredded::EmailNotifier.new, Thredded::PushoverNotifier.new(ENV['PUSHOVER_APP_ID'])]
+
+=end

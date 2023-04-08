@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 #  if AcebookConfig.forums_enabled
 #    mount Thredded::Engine => '/forum'
 #  end
-  # mount SimpleDiscussion::Engine => "/forum"
+  mount SimpleDiscussion::Engine => "/forum"
 
   devise_for :users
 

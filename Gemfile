@@ -147,7 +147,7 @@ gem 'rinku'
 gem 'acts_as_commentable_with_threading'
 gem 'better_settings' # TODO: REMOVE ME AND config/konfig !!!!
 ### gem 'thredded', '~> 1.0'
-### gem 'simple_discussion'
+gem 'simple_discussion'
 
 
 gem 'country_select'

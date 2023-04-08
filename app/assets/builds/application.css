@@ -1436,6 +1436,10 @@ select {
   width: 1.5rem;
 }
 
+.w-1 {
+  width: 0.25rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1462,6 +1466,10 @@ select {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .flex-1 {
@@ -1629,6 +1637,14 @@ select {
   border-top-width: 1px;
 }
 
+.border-r-4 {
+  border-right-width: 4px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
 .border-stone-300 {
   --tw-border-opacity: 1;
   border-color: rgb(214 211 209 / var(--tw-border-opacity));
@@ -1666,6 +1682,16 @@ select {
 .border-rose-500 {
   --tw-border-opacity: 1;
   border-color: rgb(244 63 94 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
 .bg-gray-100 {
@@ -1862,6 +1888,10 @@ select {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .leading-10 {
@@ -2163,7 +2193,7 @@ textarea.form-textarea:focus {
 * @Author: msmiller
 * @Date:   2022-01-10 17:28:37
 * @Last Modified by:   msmiller
-* @Last Modified time: 2023-04-07 00:54:53
+* @Last Modified time: 2023-04-07 18:53:43
 *
 * Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 */
@@ -2227,7 +2257,8 @@ textarea.form-textarea:focus {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  font-family: 'Georgia', serif;
+  font-family: 'Special Elite', 'Walter Turncoat', cursive;
+  /* font-family: 'Georgia', serif; */
 }
 
 .titlefont {

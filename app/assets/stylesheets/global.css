@@ -2,7 +2,7 @@
 * @Author: msmiller
 * @Date:   2022-01-10 17:28:37
 * @Last Modified by:   msmiller
-* @Last Modified time: 2023-04-07 00:54:53
+* @Last Modified time: 2023-04-07 18:53:43
 *
 * Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 */
@@ -23,8 +23,8 @@
 }
 
 .pagetitle {
-  @apply text-4xl font-light mb-4 uppercase tracking-wide;
-  font-family: 'Georgia', serif;
+  @apply text-4xl font-light mb-4 uppercase tracking-wide specialelite-font;
+  /* font-family: 'Georgia', serif; */
 }
 
 .titlefont {

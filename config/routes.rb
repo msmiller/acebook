@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   end
 
-  if AcebookConfig.forums_enabled
-    mount Thredded::Engine => '/forum'
-  end
+#  if AcebookConfig.forums_enabled
+#    mount Thredded::Engine => '/forum'
+#  end
+  mount SimpleDiscussion::Engine => "/forum"
 
   devise_for :users
 

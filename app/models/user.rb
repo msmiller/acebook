@@ -32,6 +32,11 @@ class User < ApplicationRecord
 
   end
 
+  # For SimpleDiscussion
+  def name
+    self.user_info.handle
+  end
+
   # For ActiveAdmin
   def display_name
     self.user_info.name

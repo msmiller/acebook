@@ -1,15 +1,16 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <nav class="bg-gray-800 drop-shadow">
   <div class="mx-auto px-6">
-    <div class="relative flex text-sm font-medium">
+    <div class="relative flex text-sm font-medium uppercase">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="/" class="<%= class_for('index') %>" aria-current="page">Roster</a>
         <a href="/list" class="<%= class_for('list') %> hidden md:inline-block">List</a>
         <a href="/timeline" class="<%= class_for('timeline') %>">Timeline</a>
         <a href="/lore" class="<%= class_for('lore') %>">Lore</a>
-        <a href="/pages/demotivators" class="<%= class_for('despair') %>">Demotivators</a>
         <a href="/links" class="<%= class_for('links') %>">Links</a>
-        <% if AcebookConfig.forums_enabled %>
+        <a href="/pages/demotivators" class="<%= class_for('despair') %>">Demotivators</a>
+        <a href="/pages/videos" class="<%= class_for('videos') %>">Videos</a>
+        <% if false %>
           <a href="/forum" class="<%= class_for('forum') %>" target="_abforum">Forum&hellip;</a>
         <% end %>
     </div>

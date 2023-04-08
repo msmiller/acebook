@@ -9,5 +9,6 @@ class PagesController < ApplicationController
 
   def set_navbar_active
     @navbar_active = 'despair' if params[:id] == 'demotivators'
+    @navbar_active = 'videos' if params[:id] == 'videos'
   end
 end

@@ -1,10 +1,9 @@
-<% if true %>
-<div class="w-full mb-4 grid justify-items-end">
-<form id="live-search" action="" class="w-64 block" method="post">
-  <input type="text" class="form-input focus:!ring focus:!ring-cyan-500" id="filter" value="" placeholder="Search..."  />
-</form>
+<div class="w-full mb-4 flex justify-end">
+  <%= render :partial => 'notice' if @current_user %>
+  <form id="live-search" action="" class="w-72 min-w-72 block" method="post">
+    <input type="text" class="form-input focus:!ring focus:!ring-cyan-500" id="filter" value="" placeholder="Search..."  />
+  </form>
 </div>
-<% end %>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
   <%= render :partial => 'voaw_tile', :collection => @pilots %>

@@ -29,6 +29,12 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js'
   ],
+    safelist: [
+    'grid-cols-5', 'grid-cols-6',
+    {
+      pattern: /(bg|text|border)-(red|green|blue|yellow|amber|teal|cyan|rose|gray|stone|slate|purple|emerald|orange)-(50|100|200|300|400|500|600|700|800|900)/
+    }
+  ],
   plugins: [
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/forms'),

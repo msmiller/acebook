@@ -22,6 +22,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-input' %>
   </div>
 
+<%= f.invisible_captcha :usernote %>
+
   <div class="actions my-2">
     <%= f.submit "Sign up", class: 'btn-primary' %>
   </div>

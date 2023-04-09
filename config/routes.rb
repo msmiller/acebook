@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 #  end
   mount SimpleDiscussion::Engine => "/forum"
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: "users/registrations"}
 
   # get 'pages/about' => 'high_voltage/pages#show', id: 'about'
   get "/pages/*id" => 'pages#show', as: :page, format: false

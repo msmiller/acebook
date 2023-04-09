@@ -1,0 +1,26 @@
+class DropThredded < ActiveRecord::Migration[7.0]
+  def change
+    drop_table(:campaigns, if_exists: true)
+    drop_table(:thredded_categories, if_exists: true)
+    drop_table(:thredded_messageboard_groups, if_exists: true)
+    drop_table(:thredded_messageboard_notifications_for_followed_topics, if_exists: true)
+    drop_table(:thredded_messageboard_users, if_exists: true)
+    drop_table(:thredded_messageboards, if_exists: true)
+    drop_table(:thredded_notifications_for_followed_topics, if_exists: true)
+    drop_table(:thredded_notifications_for_private_topics, if_exists: true)
+    drop_table(:thredded_post_moderation_records, if_exists: true)
+    drop_table(:thredded_posts, if_exists: true)
+    drop_table(:thredded_private_posts, if_exists: true)
+    drop_table(:thredded_private_topics, if_exists: true)
+    drop_table(:thredded_private_users, if_exists: true)
+    drop_table(:thredded_topic_categories, if_exists: true)
+    drop_table(:thredded_topics, if_exists: true)
+    drop_table(:thredded_user_details, if_exists: true)
+    drop_table(:thredded_user_messageboard_preferences, if_exists: true)
+    drop_table(:thredded_user_post_notifications, if_exists: true)
+    drop_table(:thredded_user_preferences, if_exists: true)
+    drop_table(:thredded_user_private_topic_read_states, if_exists: true)
+    drop_table(:thredded_user_topic_follows, if_exists: true)
+    drop_table(:thredded_user_topic_read_states, if_exists: true)
+  end
+end

@@ -149,7 +149,8 @@ gem 'better_settings' # TODO: REMOVE ME AND config/konfig !!!!
 ### gem 'thredded', '~> 1.0'
 gem 'simple_discussion'
 
-
+gem "invisible_captcha"
+gem "sendgrid-ruby"
 gem 'country_select'
 
 # ADMIN / TOOLING

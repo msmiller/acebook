@@ -97,9 +97,18 @@
       <% end %>
 
     </dl>
+
+    <% if @pilot.rip? %>
+    <div class="sm:px-6 pb-4 flex align-middle">
+      <%= image_tag "salute.svg", class: "w-6 h-6 inline-block mt-0.5 mr-1 opacity-75" %>
+      <%= button_to "<S>", "#", class: "inline-block text-xs border py-0.5 px-1 rounded-md bg-gray-600 text-white hover:bg-cyan-600" %>
+    </div>
+    <% end %>
+
   </div>
-  
+
 </div>
+
 
 <% if false %>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_09_165024) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_11_162114) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace", limit: 255
     t.text "body"
@@ -227,6 +227,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_165024) do
     t.boolean "forum_mod", default: false
     t.string "role"
     t.boolean "rip", default: false
+    t.date "rip_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

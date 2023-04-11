@@ -1,5 +1,5 @@
 <% set_title "Acebook - Lore" %>
-<div id="myModal" class="reveal-modal" data-reveal></div>
+
 <H1 class='pagetitle'><%= render :partial => "shared/add_content_button" %>Lore</h1>
 
 <div class="grid grid-cols-1 gap-4 max-w-4xl mx-auto">
@@ -12,7 +12,12 @@
         <span class="uppercase text-base font-bold float-right align-middle gamename_<%= lore.game %>"><%= AcebookConfig.games[lore.game] %></span>
       </p>
       <p class="text-gray-500 prose max-w-none w-full mb-7"><%==  Rinku.auto_link(lore.body.nl2br) %></p>
-      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">Submitted by: <%= lore&.user&.user_info&.handle %></p>
+      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">
+        Submitted by: <%= lore&.user&.user_info&.handle %>
+        <% if @current_user && (@current_user.is_admin? || lore.user_id == @current_user.id) -%>
+          | <%= link_to "EDIT", "/lores/#{lore.id}/edit" %>
+        <% end -%>
+        </p>
     </div>
   </div>
   <% end %>

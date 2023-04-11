@@ -12,15 +12,15 @@ class LoresController < ApplicationController
 
   def new
     @lore = Lore.new
-    render :layout => nil
+    # render :layout => nil
   end
 
   def edit
     @lore = Lore.find_by_id(params[:id])
-    render :layout => nil
+    # render :layout => nil
   end
 
-	def update
+  def update
 		@lore = Lore.find_by_id(params[:id])
 		@lore.update_attributes(lore_params)
 		redirect_to '/lore'

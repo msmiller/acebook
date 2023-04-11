@@ -102,6 +102,7 @@ gem 'devise'
 ### gem 'devise-passwordless' # https://github.com/abevoelker/devise-passwordless
 ### gem 'noticed'
 ### gem 'ice_cube'
+gem 'formtastic', '~> 4.0'
 
 # CORE/DB
 ### gem 'pg_search'

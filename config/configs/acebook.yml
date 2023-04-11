@@ -1,5 +1,5 @@
 default: &default
-  read_mode:        <%= !Rails.env.production? %> # Disable 'Add Item' buttons
+  read_mode:        <%= Rails.env.production? %> # Disable 'Add Item' buttons
   allow_signup:     false # For when we're messing with the database or whatever
   allow_comments:   false # For when we're messing with the database or whatever
   allow_salutes:    true # For when we're messing with the database or whatever

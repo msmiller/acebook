@@ -22,13 +22,13 @@ class LoresController < ApplicationController
 
   def update
 		@lore = Lore.find_by_id(params[:id])
-		@lore.update_attributes(lore_params)
+		@lore.update(lore_params)
 		redirect_to '/lore'
 	end
 	
 	def create
 		@lore = Lore.new
-		@lore.update_attributes(lore_params)
+		@lore.update(lore_params)
 		@lore.update_attribute(:user_id, current_user.id)
     if current_user.has_published_content?
 			@lore.update_attribute(:approved, true)

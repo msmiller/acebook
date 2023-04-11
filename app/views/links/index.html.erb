@@ -14,7 +14,11 @@
         <% end %>
       </p>
       <p class="text-sm text-gray-500 prose w-full mb-7"><%= link.description %></p>
-      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">Submitted by: <%= link&.user&.user_info&.handle %></p>
+      <p class="text-xs text-gray-500 prose absolute bottom-2 w-full  border-t pt-3 mt-2">Submitted by: <%= link&.user&.user_info&.handle %>
+        <% if @current_user && (@current_user.is_admin? || link.user_id == @current_user.id) -%>
+          | <%= link_to "EDIT", "/links/#{link.id}/edit" %>
+        <% end -%>
+      </p>
     </div>
   </div>
   <% end %>

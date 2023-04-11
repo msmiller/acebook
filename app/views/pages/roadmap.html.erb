@@ -1,22 +1,21 @@
 <h2  class="pagetitle">Roadmap and Status</h2>
 
-<div class="prose prose-li:list-disc max-w-none mt-6 mb-8 text-red-500 font-mono border-red-500 bg-red-100 border p-4 rounded-lg">
-SITE STATUS: Things are more or less working in "read mode". No new content can be added, comments are disabled.
-The profile edit form should be working. I need to get email wired up to allow account recovery - maybe also add
-a CAPTCHA on the sign up form because I did have to zap about 20 fake accounts.
-The forums are working but I left them disabled until I get email issues
-sorted out (notifications and so forth). I may hold on that until I move this all off of Heroku.
+<%== divider("Known Issues") %>
+
+<div class="prose prose-li:list-disc max-w-none my-4">
+
+<ul>
+  <li>The forms to enter community info (Links, etc.) work again, but I didn't have time to hook
+  up validation. So make sure you enter all fields and use proper URL's.</li>
+  <li>Things seem to work but they haven't been tested thoroughly.</li>
+  <li>There's an invisible CAPTCHA on the sign-up form now, let me know if you have problems.</li>
+  <li>Email is now hooked up so password reset requests should work. Make sure to check your SPAM folder if you think yu didn't get an email.</li>
+</ul>
+
 </div>
 
+<%== divider("Roadmap") %>
 
-<div class="relative">
-  <div class="absolute inset-0 flex items-center" aria-hidden="true">
-    <div class="w-full border-t border-gray-300"></div>
-  </div>
-  <div class="relative flex justify-center">
-    <span class="px-4 bg-white text-gray-500 text-lg titlefont shadow-inner border border-gray-300 rounded-full">Roadmap</span>
-  </div>
-</div>
 
 <div class="prose prose-li:list-disc max-w-none my-4">
 

@@ -17,6 +17,9 @@
                 <span class="uppercase font-bold mr-2 gamename_<%= timeline.game %>"><%= AcebookConfig.games[timeline.game] %></span>
                 /
                 <span class="text-gray-500 ml-2"><%= Date::MONTHNAMES[timeline.month] %> <%= timeline.year %></span>
+                <% if current_user && (current_user.is_admin? || timeline.user_id == current_user.id) -%>
+          / <%= link_to "EDIT", "/timelines/#{timeline.id}/edit" %>
+        <% end -%>
               </p>
             </div>
             <% unless timeline.body.blank? %>

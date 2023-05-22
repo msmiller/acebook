@@ -75,4 +75,10 @@ class VoawController < ApplicationController
     
   end
 
+  def salute
+    @pilot = User.find_by_id(params[:id])
+    @pilot.pilot_salutes.find_or_create_by(user: @current_user)
+    redirect_to voaw_show_path(@pilot)
+  end
+
 end

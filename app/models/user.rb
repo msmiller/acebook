@@ -17,6 +17,12 @@ class User < ApplicationRecord
   after_create :after_create
 
   has_many :comments
+  has_many :flaggings, dependent: :destroy
+  has_many :salutes
+  has_many :pilot_salutes, as: :item, class_name: 'Salute'
+
+  acts_as_tagger
+
 
   def after_create
 

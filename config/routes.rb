@@ -25,7 +25,8 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'profile' => 'voaw#profile'
   post 'profile' => 'voaw#profile'
-  get 'show/:id' => 'voaw#show'
+  get 'show/:id' => 'voaw#show', as: "voaw_show"
+  post 'voaw/:id/salute' => 'voaw#salute', as: "voaw_salute"
 
   get 'stats' => 'voaw#stats'
   get 'list' => 'voaw#list'

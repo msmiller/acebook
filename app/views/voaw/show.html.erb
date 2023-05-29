@@ -5,11 +5,11 @@
 <div class="text-stone-500 border border-stone-200 bg-stone-50 overflow-hidden rounded-lg max-w-2xl mx-auto">
 
   <div class="px-4 py-5 sm:px-6 text-center space-y-1">
-    <%= image_tag "icons/#{@pilot.user_info.get_icon}.gif",
+    <%= image_tag @pilot.user_info.get_icon,
         :class => 'inline-block w-24 h-24 rounded-full ring-8 ring-stone-200 p-1 bg-white my-4 border border-stone-300 shadow-inner' %>
     <h3 class="text-2xl leading-6 font-medium text-gray-900 font-serif align-middle">
       <span class=' align-middle'><%= @pilot.user_info.handle %></span>
-      <%= image_tag "/assets/medal.svg", class: "inline-block w-5 h-5 align-middle" if @pilot.rip? %>
+      <%= image_tag "/assets/medal.svg", class: "inline-block w-5 h-5 align-middle" if false && @pilot.rip? %>
     </h3>
     <% if @pilot.user_info.squadron %>
       <h3 class="text-lg leading-6 font-medium text-gray-900"><%= @pilot.user_info.squadron %></h3>

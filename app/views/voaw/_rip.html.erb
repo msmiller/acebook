@@ -2,25 +2,41 @@
 # @Author: msmiller
 # @Date:   2023-05-21 23:29:04
 # @Last Modified by:   msmiller
-# @Last Modified time: 2023-05-21 23:49:38
+# @Last Modified time: 2023-06-10 22:59:18
 # 
 # Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 -%>
 
 <% if @pilot.pilot_salutes.length > 0 %>
+<div class="rounded bg-slate-300 mx-4 mb-4">
+  <div class="bg-slate-700  rounded-t text-white text-2xl pt-2 mb-4 uppercase text-center specialelite-font tracking-wider">memorial</div>
+
 <div class="space-y-2 pb-4">
     <% @pilot.pilot_salutes.each do |salute| %>
-      <div class="sm:px-6 flex items-center xxxspecialelite-font">
+      <div class="px-4 flex items-center text-slate-600">
         <%= image_tag "salute.svg", class: "w-6 h-6 inline-block mr-1" %>
         <span class="align-middle" style="font-family: 'Walter Turncoat', cursive;"><%= salute.user.handle %></span>
-        <span class="align-middle text-xs font-sans ml-2 text-gray-400">(<%= salute.created_at.to_date.to_s(:ordinal) %>)</span>
+        <span class="align-middle text-xs font-sans ml-2 text-slate-500">(<%= salute.created_at.to_date.to_s(:ordinal) %>)</span>
       </div>
     <% end %>
 </div>
-<% end %>
 
 <% if @current_user && !@pilot.pilot_salutes.exists?(user: @current_user) %>
-<div class="sm:px-6 pb-4 flex align-middle">
-  <%= button_to "Add your <S>", voaw_salute_path(@pilot), class: "inline-block   uppercase text-xs border py-1 px-2 rounded-md bg-gray-600 text-white hover:bg-cyan-600" %>
+<div class="px-4 pb-4 flex align-middle">
+  <%= button_to "Add your <S>alute", voaw_salute_path(@pilot), class: "inline-block   uppercase text-xs border py-1 px-2 rounded-md bg-gray-600 text-white hover:bg-cyan-600" %>
 </div>
 <% end %>
+
+  <div class="bg-slate-700 h-2 mb-2 text-center specialelite-font tracking-wider"></div>
+  
+<div class="mx-2">
+<%= render partial: "/comments/item_form", :locals => { :item_id => @pilot.id, :item_type => "User" } %>
+</div>
+
+<% komments = @pilot.comment_threads %>
+<%= render :partial => "/comments/display_comment", :collection => komments unless komments.empty? %>
+
+</div>
+<% end %>
+
+

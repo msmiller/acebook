@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    actionview-encoded_mail_to (1.0.9)
+      rails
     active_link_to (1.0.5)
       actionpack
       addressable
@@ -429,6 +431,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  actionview-encoded_mail_to
   active_link_to
   acts-as-taggable-on (~> 9.0)
   acts_as_commentable_with_threading

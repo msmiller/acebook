@@ -22,6 +22,7 @@ class User < ApplicationRecord
   has_many :pilot_salutes, as: :item, class_name: 'Salute'
 
   acts_as_tagger
+  acts_as_commentable
 
 
   def after_create

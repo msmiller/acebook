@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'stats' => 'voaw#stats'
   get 'list' => 'voaw#list'
   get 'index' => 'voaw#index'
+  get 'memorial' => 'voaw#memorial'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

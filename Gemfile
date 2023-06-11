@@ -103,6 +103,7 @@ gem 'devise'
 ### gem 'noticed'
 ### gem 'ice_cube'
 gem 'formtastic', '~> 4.0'
+gem 'actionview-encoded_mail_to'
 
 # CORE/DB
 ### gem 'pg_search'

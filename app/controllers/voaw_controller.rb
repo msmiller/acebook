@@ -24,6 +24,17 @@ class VoawController < ApplicationController
     end
   end
 
+  def memorial
+    @current_user = current_user
+    @navbar_active = 'memorial'
+    # @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
+    @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
+    @pilots = @pilots.reject{ |p| !p.user.rip? }
+    if @current_user && @current_user.user_info.handle.blank?
+      redirect_to "/profile"
+    end
+  end
+
   def profile
     @current_user = current_user
     @pilot = current_user.user_info

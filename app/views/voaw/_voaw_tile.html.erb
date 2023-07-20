@@ -1,8 +1,8 @@
 <div class="border text-stone-600 border-stone-300 bg-stone-100  hover:shadow-lg hover:bg-stone-200 hover:border-stone-400 p-4 rounded-md roster_tile_outer">
   <a href="/show/<%= voaw_tile.user_id %>" class="" >
-    <%= image_tag "medal.svg", class: "float-right w-5 h-5" if voaw_tile.user.rip? %>
+    <%= image_tag "medal.svg", class: "float-right w-5 h-5" if false && voaw_tile.user.rip? %>
     <div style="border-bottom: 1px dotted #ccc; margin-bottom: 5px; padding-bottom: 5px; line-height: 1rem;">
-        <%= image_tag "icons/#{voaw_tile.get_icon}.gif", :class => 'rostericon' %>
+        <%= image_tag voaw_tile.get_icon, :class => 'rostericon' %>
         <span class='ml-1 text-lg font-bold align-middle specialelite-font tracking-wide text-stone-800'><%= voaw_tile.handle %></span>
       <br>
       <span class="text-sm"><%= voaw_tile.squadron %>&nbsp;</span>
@@ -16,7 +16,6 @@
     </div>
   </a>
 </div>
-
 
 <% if false -%>
   <% if @current_user -%>

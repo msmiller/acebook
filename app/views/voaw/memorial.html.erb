@@ -1,0 +1,12 @@
+<h1 class="pagetitle">MEMORIALS</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
+  <%= render :partial => 'voaw_tile', :collection => @pilots %>
+</div>
+
+<% if @current_user %>
+<div class="mt-8 italic w-fit text-slate-500 border border-slate-300 bg-slate-200 rounded-md mx-auto p-2 " >
+  If you know of someone who has passed on and needs to be added to the memorial, email me 
+  <u><%= mail_to "mark.s.miller@protonmail.com", "here", encode: "hex" %></u>.
+</div>
+<% end %>

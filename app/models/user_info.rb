@@ -13,7 +13,11 @@ class UserInfo < ApplicationRecord
   end
 
   def get_icon
-    self.icon.blank? ? "sheep" : self.icon
+    if user.rip?
+      "medal.svg"
+    else
+      self.icon.blank? ? "icons/sheep.gif" : "icons/#{self.icon}.gif"
+    end
   end
 
   def row_addr

@@ -12,23 +12,21 @@ class LinksController < ApplicationController
 
   def new
     @link = Link.new
-    render :layout => nil
   end
 
   def edit
     @link = Link.find_by_id(params[:id])
-    render :layout => nil
   end
 
   def update
     @link = Link.find_by_id(params[:id])
-    @link.update_attributes(link_params)
+    @link.update(link_params)
     redirect_to '/links'
   end
   
   def create
     @link = Link.new
-    @link.update_attributes(link_params)
+    @link.update(link_params)
     @link.update_attribute(:user_id, current_user.id)
     if current_user.has_published_content?
       @link.update_attribute(:approved, true)

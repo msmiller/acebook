@@ -2,25 +2,19 @@
 <%= semantic_form_for @lore do |f| %>
   <div class="row">
     <div class="large-3 columns">
-      &nbsp;
+      <%= f.input :game, as: :select, collection: Acebook::Games.keys, :include_blank => false, input_html: {class: "form-select"} %>
     </div>
     <div class="large-3 columns">
-      &nbsp;
-    </div>
-    <div class="large-3 columns">
-      <%= f.input :game, as: :select, collection: Acebook::Games.keys, :include_blank => false %>
-    </div>
-    <div class="large-3 columns">
-      <%= f.input :kind, as: :select, collection: Lore::KINDS.keys, :include_blank => false %>
+      <%= f.input :kind, as: :select, collection: Lore::KINDS.keys, :include_blank => false, input_html: {class: "form-select"} %>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <%= f.input :title %>
-      <%= f.input :body, :input_html => { :rows => 8 }, :label => "BODY <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
+      <%= f.input :title,  :input_html => { class: "form-input"} %>
+      <%= f.input :body, :input_html => { :rows => 8, class: "form-textarea"}, :label => "BODY <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
     </div>
   </div>
   <%= f.actions do %>
-      <%= f.action :submit, :button_html => { :class => "button tiny radius" } %>
+      <%= f.action :submit, :button_html => { :class => "btn-primary" } %>
     <% end %>
 <% end %>

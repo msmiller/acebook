@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    actionview-encoded_mail_to (1.0.9)
+      rails
     active_link_to (1.0.5)
       actionpack
       addressable
@@ -166,6 +168,8 @@ GEM
     flutie (2.2.0)
     font-awesome-sass (6.4.0)
       sassc (~> 2.0)
+    formtastic (4.0.0)
+      actionpack (>= 5.2.0)
     friendly_id (5.5.0)
       activerecord (>= 4.0.0)
     gemoji (4.0.1)
@@ -427,6 +431,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  actionview-encoded_mail_to
   active_link_to
   acts-as-taggable-on (~> 9.0)
   acts_as_commentable_with_threading
@@ -451,6 +456,7 @@ DEPENDENCIES
   fakeredis
   finishing_moves
   flutie
+  formtastic (~> 4.0)
   friendly_id
   has_scope
   heroicon

@@ -11,12 +11,15 @@
           <div class="min-w-0 flex-1 -mt-2">
             <div>
               <div class="text-lg font-medium">
-                <span class="text-gray-900"><%= timeline.title %></span>
+                <span class="text-gray-900 specialelite-font"><%= timeline.title %></span>
               </div>
               <p class="mt-0.5 text-sm divide-x-1 divide-red-500">
                 <span class="uppercase font-bold mr-2 gamename_<%= timeline.game %>"><%= AcebookConfig.games[timeline.game] %></span>
                 /
                 <span class="text-gray-500 ml-2"><%= Date::MONTHNAMES[timeline.month] %> <%= timeline.year %></span>
+                <% if current_user && (current_user.is_admin? || timeline.user_id == current_user.id) -%>
+          / <%= link_to "EDIT", "/timelines/#{timeline.id}/edit" %>
+        <% end -%>
               </p>
             </div>
             <% unless timeline.body.blank? %>

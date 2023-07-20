@@ -1,9 +1,9 @@
 default: &default
-  read_mode:        true # Disable 'Add Item' buttons
+  read_mode:        <%= Rails.env.production? %> # Disable 'Add Item' buttons
   allow_signup:     false # For when we're messing with the database or whatever
   allow_comments:   false # For when we're messing with the database or whatever
   allow_salutes:    true # For when we're messing with the database or whatever
-  forums_enabled:   <%= !Rails.env.production? %> # For when we're messing with the database or whatever
+  forums_enabled:   false # <%= !Rails.env.production? %> # For when we're messing with the database or whatever
   games:
     aw: Air Warrior
     ah: Aces High

@@ -13,23 +13,21 @@ class TimelinesController < ApplicationController
 
   def new
     @timeline = Timeline.new
-    render layout: nil
   end
 
   def edit
     @timeline = Timeline.find_by_id(params[:id])
-    render layout: nil
   end
 
   def update
     @timeline = Timeline.find_by_id(params[:id])
-    @timeline.update_attributes(timeline_params)
+    @timeline.update(timeline_params)
     redirect_to '/timeline'
   end
 
   def create
     @timeline = Timeline.new
-    @timeline.update_attributes(timeline_params)
+    @timeline.update(timeline_params)
     @timeline.update_attribute(:user_id, current_user.id)
     if current_user.has_published_content?
       @timeline.update_attribute(:approved, true)

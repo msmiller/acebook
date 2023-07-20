@@ -1,7 +1,8 @@
 class Link < ApplicationRecord
- 
+
   belongs_to :user, inverse_of: :links
-  
+  validates :url, url: true
+
   acts_as_commentable
 
   def lore_params

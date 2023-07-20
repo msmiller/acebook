@@ -1,13 +1,24 @@
 
 <%= semantic_form_for @link do |f| %>
+  <% if @link.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this @link from being saved:</h2>
+
+      <ul>
+        <% @link.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="row">
     <div class="large-12 columns">
-      <%= f.input :title %>
-      <%= f.input :url %>
-      <%= f.input :description, :as => :text, :input_html => { :rows => 8 }, :label => "DESCRIPTION <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
+      <%= f.input :title, :input_html => { class: "form-input" } %>
+      <%= f.input :url, :input_html => { class: "form-input", type: "url" } %>
+      <%= f.input :description, :as => :text, :input_html => { :rows => 8, class: "form-textarea" }, :label => "DESCRIPTION <span style='text-transform:lowercase;margin-left:10px;'>(auto-links enabled)</span>".html_safe %>
     </div>
   </div>
   <%= f.actions do %>
-      <%= f.action :submit, :button_html => { :class => "button tiny radius" } %>
+      <%= f.action :submit, :button_html => { :class => "btn-primary" } %>
     <% end %>
 <% end %>

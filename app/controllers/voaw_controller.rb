@@ -24,6 +24,17 @@ class VoawController < ApplicationController
     end
   end
 
+  def memorial
+    @current_user = current_user
+    @navbar_active = 'memorial'
+    # @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").order("handle DESC") #.sort { |x,y| x.handle <=> y.handle }
+    @pilots = UserInfo.where("handle IS NOT NULL AND handle != ''").sort { |x,y| x.handle.downcase <=> y.handle.downcase }
+    @pilots = @pilots.reject{ |p| !p.user.rip? }
+    if @current_user && @current_user.user_info.handle.blank?
+      redirect_to "/profile"
+    end
+  end
+
   def profile
     @current_user = current_user
     @pilot = current_user.user_info
@@ -73,6 +84,12 @@ class VoawController < ApplicationController
     @num_timelines = Timeline.all.count
     @num_links = Link.all.count
     
+  end
+
+  def salute
+    @pilot = User.find_by_id(params[:id])
+    @pilot.pilot_salutes.find_or_create_by(user: @current_user)
+    redirect_to voaw_show_path(@pilot)
   end
 
 end

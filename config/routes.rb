@@ -25,11 +25,13 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'profile' => 'voaw#profile'
   post 'profile' => 'voaw#profile'
-  get 'show/:id' => 'voaw#show'
+  get 'show/:id' => 'voaw#show', as: "voaw_show"
+  post 'voaw/:id/salute' => 'voaw#salute', as: "voaw_salute"
 
   get 'stats' => 'voaw#stats'
   get 'list' => 'voaw#list'
   get 'index' => 'voaw#index'
+  get 'memorial' => 'voaw#memorial'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

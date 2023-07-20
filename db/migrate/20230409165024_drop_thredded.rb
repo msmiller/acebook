@@ -9,7 +9,6 @@ class DropThredded < ActiveRecord::Migration[7.0]
     drop_table(:thredded_notifications_for_followed_topics, if_exists: true)
     drop_table(:thredded_notifications_for_private_topics, if_exists: true)
     drop_table(:thredded_post_moderation_records, if_exists: true)
-    drop_table(:thredded_posts, if_exists: true)
     drop_table(:thredded_private_posts, if_exists: true)
     drop_table(:thredded_private_topics, if_exists: true)
     drop_table(:thredded_private_users, if_exists: true)
@@ -22,5 +21,6 @@ class DropThredded < ActiveRecord::Migration[7.0]
     drop_table(:thredded_user_private_topic_read_states, if_exists: true)
     drop_table(:thredded_user_topic_follows, if_exists: true)
     drop_table(:thredded_user_topic_read_states, if_exists: true)
+    drop_table(:thredded_posts, if_exists: true)
   end
 end

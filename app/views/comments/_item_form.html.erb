@@ -2,7 +2,7 @@
 <%= form_tag "/comments", :method => :post, :style => "margin: 0px !important; padding 0px !important; height: 45px;" %>
 <%= hidden_field_tag "comment[commentable_id]", item_id %>
 <%= hidden_field_tag "comment[commentable_type]", item_type %>
-<%= text_area_tag "comment[body]", "", class: "form-textarea block", style: "height: 150px !important;", :placeholder => "Enter Comment", :rows => 4 %>
+<%= text_area_tag "comment[body]", "", class: "form-textarea block", style: "height: 150px !important;", :placeholder => "Add Comment ...", :rows => 4 %>
 <%= submit_tag "Save Comment", :class => "btn-secondary-small mt-4"  %>
 </form>
 </div>

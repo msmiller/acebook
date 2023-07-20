@@ -1,9 +1,9 @@
-<div class="acomment">
-  <b><%= display_comment.user.user_info.handle %></b> @ <%= display_comment.created_at.to_s:db %>
+<div class="acomment border-t-2 border-gray-400 rounded-t-md pt-1 px-1 text-gray-600">
   <% if @current_user && ((@current_user.id == display_comment.user_id) || current_user.is_admin?) -%>
-    &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "[delete]", "/comments/#{display_comment.id}?from=#{controller.controller_name}", 
-      :style => "background: transparent !important;", :method => :delete %>
+    <span><%= button_to "[delete]", "/comments/#{display_comment.id}?from=#{controller.controller_name}", 
+      :style => "background: transparent !important; ", :method => :delete, class: "float-right" %></span>
   <% end -%>
-  <br>
-  <%= display_comment.body %>
+    <div class=" specialelite-font"><b class=""><%= display_comment.user.user_info.handle %></b> @ <%= display_comment.created_at.to_date.to_s(:long_ordinal) %></div>
+
+  <p class="text-sm mt-1"><%== display_comment.body.nl2br %></p>
 </div>

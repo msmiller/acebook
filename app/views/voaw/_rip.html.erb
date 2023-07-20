@@ -2,7 +2,7 @@
 # @Author: msmiller
 # @Date:   2023-05-21 23:29:04
 # @Last Modified by:   msmiller
-# @Last Modified time: 2023-06-10 22:59:18
+# @Last Modified time: 2023-07-20 12:46:43
 # 
 # Copyright (c) Sharp Stone Codewerks / Mark S. Miller
 -%>
@@ -20,6 +20,7 @@
       </div>
     <% end %>
 </div>
+<% end %>
 
 <% if @current_user && !@pilot.pilot_salutes.exists?(user: @current_user) %>
 <div class="px-4 pb-4 flex align-middle">
@@ -28,15 +29,18 @@
 <% end %>
 
   <div class="bg-slate-700 h-2 mb-2 text-center specialelite-font tracking-wider"></div>
-  
+
+<% komments = @pilot.comment_threads %>
+<% unless komments.empty? %>
+<div class="mx-4 pb-4 space-y-2">
+<%= render :partial => "/comments/display_comment", :collection => komments unless komments.empty? %>
+</div>
+<% end %>
+
 <div class="mx-2">
 <%= render partial: "/comments/item_form", :locals => { :item_id => @pilot.id, :item_type => "User" } %>
 </div>
 
-<% komments = @pilot.comment_threads %>
-<%= render :partial => "/comments/display_comment", :collection => komments unless komments.empty? %>
-
 </div>
-<% end %>
 
 
